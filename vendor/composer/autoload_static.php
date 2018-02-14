@@ -231,6 +231,13 @@ class ComposerStaticInitb82f97cdf82207d6cccfcbd6127982e6
                 0 => __DIR__ . '/..' . '/knplabs/knp-components/src',
             ),
         ),
+        'F' => 
+        array (
+            'FOS\\UserBundle' => 
+            array (
+                0 => __DIR__ . '/..' . '/friendsofsymfony/user-bundle',
+            ),
+        ),
         'D' => 
         array (
             'Doctrine\\ORM\\' => 
