@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/var/www/html/Alphabus/app/console</file>
+            <file>file:/var/www/html/Alphabus/vendor/twig/twig/lib/Twig/Loader/Filesystem.php</file>
+            <file>file:/var/www/html/Alphabus/app/config/config.yml</file>
+            <file>file:/var/www/html/Alphabus/app/config/services.yml</file>
+            <file>file:/var/www/html/Alphabus/app/config/config_dev.yml</file>
+            <file>file:/var/www/html/Alphabus/app/AppKernel.php</file>
+            <file>file:/var/www/html/Alphabus/app/.htaccess</file>
+            <file>file:/var/www/html/Alphabus/web/config.php</file>
+            <file>file:/var/www/html/Alphabus/vendor/coresphere/console-bundle/Resources/views/Console/console.html.twig</file>
+            <file>file:/var/www/html/Alphabus/app/config/parameters.yml</file>
+            <file>file:/var/www/html/Alphabus/web/.htaccess</file>
+            <file>file:/var/www/html/Alphabus/vendor/coresphere/console-bundle/Resources/views/Console/htmlTemplates.html.twig</file>
+            <file>file:/var/www/html/Alphabus/vendor/coresphere/console-bundle/Controller/ConsoleController.php</file>
+            <file>file:/var/www/html/Alphabus/app/config/routing.yml</file>
+        </group>
+    </open-files>
+</project-private>
