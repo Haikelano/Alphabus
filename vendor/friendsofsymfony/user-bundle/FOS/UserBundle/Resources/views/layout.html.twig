@@ -2,16 +2,22 @@
 <html>
     <head>
         <meta charset="UTF-8" />
+        {% block stylesheets %}
+
+            <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+            <script src="{{ asset('js/jquery.min.js') }}"></script>
+            <script src="{{ asset('js/bootstrap.js') }}"></script>
+        {% endblock %}
     </head>
     <body>
         <div>
             {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
+                {{ 'Connection '|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
                 <a href="{{ path('fos_user_security_logout') }}">
-                    {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                    {{ 'Logout'|trans({}, 'FOSUserBundle') }}
                 </a>
             {% else %}
-                <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+                <a href="{{ path('fos_user_security_login') }}">{{ 'Connection'|trans({}, 'FOSUserBundle') }}</a>
             {% endif %}
         </div>
 
