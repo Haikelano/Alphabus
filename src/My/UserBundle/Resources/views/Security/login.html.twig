@@ -1,0 +1,45 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+
+{% block fos_user_content %}
+    <div class="row">
+    <div class="alert-danger">
+        <div class="col-sm-8">
+    {% if error %}
+        <div>{{ 'vous devez entre votre login et mot de passe  '|trans({}, 'FOSUserBundle') }}</div>
+    {% endif %}
+    </div>
+    </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+               <form action="{{ path("fos_user_security_check") }}" method="post">
+                   <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                   <br/><br/>
+                   <label for="username">{{ 'Nom d\'utilisateur'|trans({}, 'FOSUserBundle') }}</label>
+                   <div class="input-group">
+                       <span class="input-group-addon" ><i class="fa fa-user "></i> User</span>
+
+                       <input type="text" class="form-control" aria-describedby="basic-addon1" id="username" name="_username" value="{{ last_username }}" required="required" />
+                   </div>
+                   <br/>
+                   <label for="password">{{ 'Password'|trans({}, 'FOSUserBundle') }}</label>
+
+                   <div class="input-group">
+
+                       <span class="input-group-addon" ><i class="fa fa-key ">Pass </i> </span>
+
+                       <input type="password" class="form-control" id="password" name="_password" required="required" />
+                   </div>
+                   <br/>
+                   <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+                   <label for="remember_me">{{ 'Remember_me'|trans({}, 'FOSUserBundle') }}</label>
+                   <br/>
+                   <input type="submit" class="btn btn-block btn-success" id="_submit" name="_submit" value="{{ 'Submit'|trans({}, 'FOSUserBundle') }}" />
+
+               </form>
+            </div>
+        </div>
+    </div>
+{% endblock fos_user_content %}

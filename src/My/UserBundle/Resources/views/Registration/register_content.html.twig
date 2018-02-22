@@ -1,0 +1,37 @@
+
+<form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <label for="email">Adresse mail </label><div class="input-group"><span class="input-group-addon" >
+                        <i class="fa fa-user "></i> email</span>{{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder' : 'Adresse Mail'}} ) }}</div>
+
+
+                <label for="username">Username </label>
+                <div class="input-group">
+                    <span class="input-group-addon" ><i class="fa fa-user "></i> user</span>
+                    {{ form_widget(form.username, {'attr': {'class': 'form-control', 'placeholder' : 'username'}} ) }}
+                </div>
+
+
+                <label for="form.plainPassword.first">Votre mot de passe  </label>
+                <div class="input-group">
+                    <span class="input-group-addon" ><i class="fa fa-user "></i> pass</span>
+                    {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control', 'placeholder' : 'votre mot de passe '}} ) }}
+                </div>
+
+
+                <label for="email"> Confirmer Votre mot de passe  </label>
+                <div class="input-group">
+                    <span class="input-group-addon" ><i class="fa fa-user "></i> conf</span>
+                    {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control', 'placeholder' : 'Confirmer votre mot de passe '}} ) }}
+                </div>
+
+
+                {{ form_widget(form) }}<br/><input type="submit" value="{{ 'Submit'|trans({}, 'FOSUserBundle') }}" class="btn btn-success" />
+
+            </div>
+         </div>
+    </div>
+</form>

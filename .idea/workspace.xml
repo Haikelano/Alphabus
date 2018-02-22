@@ -2,30 +2,180 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf407208-2f58-4e5a-adf5-5ca0666b368d" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/My/UserBundle/Resources/views/ChangePassword/changePassword.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/My/UserBundle/Resources/views/ChangePassword/changePassword_content.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Group/edit.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Group/edit_content.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Group/list.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Group/list_content.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Group/new.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Group/new_content.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Group/show.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Group/show_content.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Profile/edit.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Profile/edit_content.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Profile/show.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Profile/show_content.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Registration/checkEmail.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Registration/confirmed.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Registration/email.txt.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Registration/register.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Registration/register_content.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Resetting/checkEmail.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Resetting/email.txt.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Resetting/passwordAlreadyRequested.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Resetting/request.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Resetting/request_content.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Resetting/reset.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Resetting/reset_content.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Security/login.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/My/UserBundle/Resources/views/layout.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/css/bootstrap-theme.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/css/bootstrap-theme.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/css/bootstrap-theme.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/css/bootstrap-theme.min.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/css/main.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/css/util.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.woff2" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/Linearicons-Free-v1.0.0/icon-font.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/HELP-US-OUT.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/css/font-awesome.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/less/animated.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/less/bordered-pulled.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/less/core.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/less/fixed-width.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/less/font-awesome.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/less/icons.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/less/larger.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/less/list.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/less/mixins.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/less/path.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/less/rotated-flipped.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/less/screen-reader.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/less/stacked.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/less/variables.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/scss/_animated.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/scss/_core.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/scss/_icons.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/scss/_larger.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/scss/_list.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/scss/_mixins.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/scss/_path.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/scss/_stacked.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/scss/_variables.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/scss/font-awesome.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.woff2" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/iconic/css/material-design-iconic-font.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/iconic/css/material-design-iconic-font.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/iconic/fonts/Material-Design-Iconic-Font.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/iconic/fonts/Material-Design-Iconic-Font.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/iconic/fonts/Material-Design-Iconic-Font.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/iconic/fonts/Material-Design-Iconic-Font.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/iconic/fonts/Material-Design-Iconic-Font.woff2" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/poppins/Poppins-Black.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/poppins/Poppins-BlackItalic.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/poppins/Poppins-Bold.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/poppins/Poppins-BoldItalic.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/poppins/Poppins-ExtraBold.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/poppins/Poppins-ExtraBoldItalic.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/poppins/Poppins-ExtraLight.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/poppins/Poppins-ExtraLightItalic.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/poppins/Poppins-Italic.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/poppins/Poppins-Light.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/poppins/Poppins-LightItalic.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/poppins/Poppins-Medium.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/poppins/Poppins-MediumItalic.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/poppins/Poppins-Regular.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/poppins/Poppins-SemiBold.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/poppins/Poppins-SemiBoldItalic.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/poppins/Poppins-Thin.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/poppins/Poppins-ThinItalic.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/ubuntu/UFL.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/ubuntu/Ubuntu-Bold.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/ubuntu/Ubuntu-BoldItalic.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/ubuntu/Ubuntu-Italic.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/ubuntu/Ubuntu-Light.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/ubuntu/Ubuntu-LightItalic.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/ubuntu/Ubuntu-Medium.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/ubuntu/Ubuntu-MediumItalic.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/fonts/ubuntu/Ubuntu-Regular.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/bg-01.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/icons/favicon.ico" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/icons/manager-128.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/icons/manager-512.bin" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-3.2.1.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/main.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/npm.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/animate/animate.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/animsition/css/animsition.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/animsition/css/animsition.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/animsition/js/animsition.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/animsition/js/animsition.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/bootstrap/css/bootstrap-grid.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/bootstrap/css/bootstrap-grid.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/bootstrap/css/bootstrap-grid.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/bootstrap/css/bootstrap-grid.min.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/bootstrap/css/bootstrap-reboot.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/bootstrap/css/bootstrap-reboot.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/bootstrap/css/bootstrap-reboot.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/bootstrap/css/bootstrap-reboot.min.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/bootstrap/css/bootstrap.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/bootstrap/css/bootstrap.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/bootstrap/css/bootstrap.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/bootstrap/css/bootstrap.min.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/bootstrap/js/bootstrap.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/bootstrap/js/bootstrap.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/bootstrap/js/popper.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/bootstrap/js/popper.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/bootstrap/js/tooltip.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/countdowntime/countdowntime.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/css-hamburgers/hamburgers.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/css-hamburgers/hamburgers.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/daterangepicker/daterangepicker.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/daterangepicker/daterangepicker.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/daterangepicker/moment.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/daterangepicker/moment.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/jquery/jquery-3.2.1.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/perfect-scrollbar/perfect-scrollbar.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/perfect-scrollbar/perfect-scrollbar.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/select2/select2.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/select2/select2.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/select2/select2.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/vendor/select2/select2.min.js" />
       <change beforePath="$PROJECT_DIR$/.idea/Alphabus.iml" afterPath="$PROJECT_DIR$/.idea/Alphabus.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+      <change beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
       <change beforePath="$PROJECT_DIR$/app/logs/dev.log" afterPath="$PROJECT_DIR$/app/logs/dev.log" />
-      <change beforePath="$PROJECT_DIR$/web/css/bootstrap-grid.css" afterPath="$PROJECT_DIR$/web/css/bootstrap-grid.css" />
-      <change beforePath="$PROJECT_DIR$/web/css/bootstrap-grid.css.map" afterPath="$PROJECT_DIR$/web/css/bootstrap-grid.css.map" />
-      <change beforePath="$PROJECT_DIR$/web/css/bootstrap-grid.min.css" afterPath="$PROJECT_DIR$/web/css/bootstrap-grid.min.css" />
-      <change beforePath="$PROJECT_DIR$/web/css/bootstrap-grid.min.css.map" afterPath="$PROJECT_DIR$/web/css/bootstrap-grid.min.css.map" />
-      <change beforePath="$PROJECT_DIR$/web/css/bootstrap-reboot.css" afterPath="$PROJECT_DIR$/web/css/bootstrap-reboot.css" />
-      <change beforePath="$PROJECT_DIR$/web/css/bootstrap-reboot.css.map" afterPath="$PROJECT_DIR$/web/css/bootstrap-reboot.css.map" />
-      <change beforePath="$PROJECT_DIR$/web/css/bootstrap-reboot.min.css" afterPath="$PROJECT_DIR$/web/css/bootstrap-reboot.min.css" />
-      <change beforePath="$PROJECT_DIR$/web/css/bootstrap-reboot.min.css.map" afterPath="$PROJECT_DIR$/web/css/bootstrap-reboot.min.css.map" />
+      <change beforePath="$PROJECT_DIR$/src/My/UserBundle/MyUserBundle.php" afterPath="$PROJECT_DIR$/src/My/UserBundle/MyUserBundle.php" />
+      <change beforePath="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Default/index.html.twig" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views/layout.html.twig" />
       <change beforePath="$PROJECT_DIR$/web/css/bootstrap.css" afterPath="$PROJECT_DIR$/web/css/bootstrap.css" />
       <change beforePath="$PROJECT_DIR$/web/css/bootstrap.css.map" afterPath="$PROJECT_DIR$/web/css/bootstrap.css.map" />
       <change beforePath="$PROJECT_DIR$/web/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/web/css/bootstrap.min.css" />
       <change beforePath="$PROJECT_DIR$/web/css/bootstrap.min.css.map" afterPath="$PROJECT_DIR$/web/css/bootstrap.min.css.map" />
-      <change beforePath="$PROJECT_DIR$/web/js/bootstrap.bundle.js" afterPath="$PROJECT_DIR$/web/js/bootstrap.bundle.js" />
-      <change beforePath="$PROJECT_DIR$/web/js/bootstrap.bundle.js.map" afterPath="$PROJECT_DIR$/web/js/bootstrap.bundle.js.map" />
-      <change beforePath="$PROJECT_DIR$/web/js/bootstrap.bundle.min.js" afterPath="$PROJECT_DIR$/web/js/bootstrap.bundle.min.js" />
-      <change beforePath="$PROJECT_DIR$/web/js/bootstrap.bundle.min.js.map" afterPath="$PROJECT_DIR$/web/js/bootstrap.bundle.min.js.map" />
       <change beforePath="$PROJECT_DIR$/web/js/bootstrap.js" afterPath="$PROJECT_DIR$/web/js/bootstrap.js" />
-      <change beforePath="$PROJECT_DIR$/web/js/bootstrap.js.map" afterPath="$PROJECT_DIR$/web/js/bootstrap.js.map" />
       <change beforePath="$PROJECT_DIR$/web/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/web/js/bootstrap.min.js" />
-      <change beforePath="$PROJECT_DIR$/web/js/bootstrap.min.js.map" afterPath="$PROJECT_DIR$/web/js/bootstrap.min.js.map" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,18 +188,7 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="composer.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/composer.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="24" column="18" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -62,6 +201,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>login</find>
+      <find>email</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -74,16 +214,24 @@
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
-        <option value="$PROJECT_DIR$/app/config/security.yml" />
-        <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views/layout.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views/Security/login.html.twig" />
         <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views/Registration/register_content.html.twig" />
         <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Form/Type/RegistrationFormType.php" />
         <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views/Profile/show_content.html.twig" />
-        <option value="$USER_HOME$/NetBeansProjects/test_bootstrap/index.html" />
         <option value="$USER_HOME$/NetBeansProjects/test_bootstrap/bootstrap/css/tuto.css" />
         <option value="$USER_HOME$/NetBeansProjects/test_bootstrap/grid.html" />
+        <option value="$PROJECT_DIR$/app/config/security.yml" />
+        <option value="$PROJECT_DIR$/src/My/UserBundle/MyUserBundle.php" />
+        <option value="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Default/index.html.twig" />
+        <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/My/UserBundle/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/../Login_v16/index.html" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$USER_HOME$/NetBeansProjects/test_bootstrap/index.html" />
+        <option value="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Security/login.html.twig" />
+        <option value="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Registration/register_content.html.twig" />
+        <option value="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Registration/register.html.twig" />
+        <option value="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Profile/show_content.html.twig" />
       </list>
     </option>
   </component>
@@ -138,9 +286,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-4" />
-    <option name="width" value="1374" />
-    <option name="height" value="736" />
+    <option name="x" value="428" />
+    <option name="y" value="194" />
+    <option name="width" value="902" />
+    <option name="height" value="484" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -169,6 +318,111 @@
               <item name="Alphabus" type="b2602c69:ProjectViewProjectNode" />
               <item name="Alphabus" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="Alphabus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Alphabus" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Alphabus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Alphabus" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="My" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Alphabus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Alphabus" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="My" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="UserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Alphabus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Alphabus" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="My" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="UserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Alphabus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Alphabus" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="My" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="UserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Alphabus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Alphabus" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="My" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="UserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Profile" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Alphabus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Alphabus" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="My" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="UserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Registration" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Alphabus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Alphabus" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="My" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="UserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resetting" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Alphabus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Alphabus" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="My" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="UserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Security" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Alphabus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Alphabus" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Alphabus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Login_v16" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Alphabus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test_bootstrap" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Alphabus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test_bootstrap" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bootstrap" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Alphabus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test_bootstrap" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bootstrap" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Alphabus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test_bootstrap" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bootstrap" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -177,13 +431,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/NetBeansProjects/test_bootstrap" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Login_v16" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/images/icons" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/js" />
       <recent name="$PROJECT_DIR$/web" />
+      <recent name="$PROJECT_DIR$/src/My/UserBundle/Resources/views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -214,18 +473,19 @@
       <workItem from="1518619646719" duration="918000" />
       <workItem from="1518620581621" duration="4339000" />
       <workItem from="1518889977260" duration="1557000" />
-      <workItem from="1519299203063" duration="4909000" />
+      <workItem from="1519299203063" duration="18795000" />
+      <workItem from="1519343343881" duration="48000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11723000" />
+    <option name="totallyTimeSpent" value="25657000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="0" width="1366" height="732" extended-state="6" />
+    <frame x="428" y="194" width="1366" height="732" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24450952" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23133236" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -241,7 +501,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -256,171 +516,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="68" column="16" lean-forward="false" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/My/UserBundle/Entity/User.php" />
-    <entry file="file://$PROJECT_DIR$/src/My/UserBundle/MyUserBundle.php" />
-    <entry file="file://$PROJECT_DIR$/src/My/UserBundle/Resources/views/Default/index.html.twig" />
-    <entry file="file://$PROJECT_DIR$/src/My/UserBundle/Resources/config/services.yml" />
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="68" column="16" lean-forward="false" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="39" lean-forward="false" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views/Security/login.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="65" lean-forward="false" selection-start-line="24" selection-start-column="65" selection-end-line="24" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views/Registration/confirmed.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views/Registration/checkEmail.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -446,34 +541,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="2" lean-forward="false" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Form/Handler/ResettingFormHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-107">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Form/Handler/GroupFormHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-328">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Form/Handler/ProfileFormHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-345">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Form/Handler/RegistrationFormHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-784">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -509,7 +576,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -517,23 +583,284 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="41" lean-forward="true" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/NetBeansProjects/test_bootstrap/index.html">
+    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="26" lean-forward="false" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-          <folding />
+        <state relative-caret-position="233">
+          <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="24" column="18" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="34" />
+          <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/My/UserBundle/Resources/views/Default/index.html.twig" />
+    <entry file="file://$PROJECT_DIR$/src/My/UserBundle/Resources/views/ChangePassword/changePassword.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/My/UserBundle/MyUserBundle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="13" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Login_v16/vendor/bootstrap/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1377">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/jquery-3.2.1.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1632">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/util.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/images/icons/favicon.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/images/bg-01.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Login_v16/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="78" column="44" lean-forward="false" selection-start-line="78" selection-start-column="44" selection-end-line="78" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/share/applications/jetbrains-phpstorm.desktop">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/NetBeansProjects/test_bootstrap/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/My/UserBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Form/Model/ChangePassword.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Form/Handler/ChangePasswordFormHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-306">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Form/Handler/GroupFormHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Form/Handler/ProfileFormHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/My/UserBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="26" column="1" lean-forward="false" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Entity/UserManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Form/Handler/ResettingFormHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="48" column="40" lean-forward="false" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Entity/UserListener.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-787">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/My/UserBundle/Resources/views/Security/login.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="10" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="8" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/My/UserBundle/Resources/views/Registration/checkEmail.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Form/Handler/RegistrationFormHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-430">
+          <caret line="26" column="26" lean-forward="false" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/My/UserBundle/Resources/views/Registration/email.txt.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/My/UserBundle/Resources/views/Registration/confirmed.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/My/UserBundle/Resources/views/Resetting/request_content.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/My/UserBundle/Resources/views/Registration/register.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/My/UserBundle/Resources/views/Profile/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/My/UserBundle/Resources/views/Profile/edit_content.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/My/UserBundle/Resources/views/Profile/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/My/UserBundle/Resources/views/Profile/show_content.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/My/UserBundle/Resources/views/Registration/register_content.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
