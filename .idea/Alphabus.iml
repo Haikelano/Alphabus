@@ -134,5 +134,6 @@
         </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="module" module-name="test_bootstrap" />
   </component>
 </module>
