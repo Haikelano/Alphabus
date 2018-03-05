@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Alphabus.iml" filepath="$PROJECT_DIR$/.idea/Alphabus.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Login_v16/.idea/Login_v16.iml" filepath="$PROJECT_DIR$/../Login_v16/.idea/Login_v16.iml" />
-      <module fileurl="file://$USER_HOME$/NetBeansProjects/test_bootstrap/.idea/test_bootstrap.iml" filepath="$USER_HOME$/NetBeansProjects/test_bootstrap/.idea/test_bootstrap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../test_bootstrap/.idea/test_bootstrap.iml" filepath="$PROJECT_DIR$/../test_bootstrap/.idea/test_bootstrap.iml" />
     </modules>
   </component>
 </project>
