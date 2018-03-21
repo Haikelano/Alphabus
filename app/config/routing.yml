@@ -8,10 +8,6 @@ my_alphabus:
     type:     annotation
     prefix:   /
 
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
-
 console:
     path:  /_console
 
