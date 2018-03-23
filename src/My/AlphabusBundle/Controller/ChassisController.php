@@ -14,7 +14,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 class ChassisController extends Controller
 {
     /**
-     * @Route("/addchassis")
+     * @Route("/addchassis", name="new_chassis")
      */
     public function addchassisAction(Request $request)
     {
@@ -39,12 +39,46 @@ class ChassisController extends Controller
     }
 
     /**
-     * @Route("/editchassis")
+     * @Route("/editchassis/{id}",name = "edit_chassis")
+     * @Route("/addchassis",name = "new_chassis")
      */
-    public function editchassisAction()
-    {
+
+    public function editenseignantAction(Request $request, $id = null)
+    {        $message='';
+        $em = $this->getDoctrine()->getManager();
+        if (isset($id))
+        {
+            // modification d'un acteur existant : on recherche ses données
+            $chassis = $em->find('MyAlphabusBundle:Chassis', $id);
+            if (!$chassis)
+            {
+                $message='Aucune chassis trouvé';
+            }
+        }
+        else
+        {
+            // ajout d'un nouvel chassus
+            $chassis = new Chassis();
+        }
+        $form = $this->container->get('form.factory')->create(new ChassisType(), $chassis);
+        $form ->handleRequest($request);
+        if ($form->isValid())
+        {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($chassis);
+            $em->flush();
+            if (isset($id))
+            {
+                $message='CHassis modifié avec succès !';
+            }
+            else
+            {
+                $message='Chassis ajouté avec succès !';
+            }
+        }
         return $this->render('MyAlphabusBundle:Chassis:editchassis.html.twig', array(
-            // ...
+            'f' => $form->createView(),
+            'message' => $message
         ));
     }
 
@@ -53,13 +87,17 @@ class ChassisController extends Controller
      */
     public function listchassisAction()
     {
-        return $this->render('MyAlphabusBundle:Chassis:listchassis.html.twig', array(
+        $em = $this->getDoctrine()->getManager();
+        $chassis = $em->getRepository('MyAlphabusBundle:Chassis')->findAll();
+
+        return $this->render('MyAlphabusBundle:Chassis:listchassis.html.twig',
+            array('enss' => $chassis));
             // ...
-        ));
+
     }
 
     /**
-     * @Route("/delchassis")
+     * @Route("/delchassis", name="del_chassis")
      */
     public function delchassisAction()
     {
@@ -68,14 +106,20 @@ class ChassisController extends Controller
         ));
     }
 
+
     /**
-     * @Route("/cherchassis")
+     * @Route("/cherchassis",name = "cherchassis")
+     * @Method({"GET", "POST"})
      */
-    public function cherchassisAction()
+    public function cherchassisAction(Request $request)
     {
+        $nchassis = $request->query->get('nchassis');
+        $em = $this->getDoctrine()->getManager();
+        $nchassis = $em->getRepository('MyAlphabusBundle:Chassis')->findBy(array("nchassis" => $nchassis));
         return $this->render('MyAlphabusBundle:Chassis:cherchassis.html.twig', array(
-            // ...
+            'enss' => $nchassis
         ));
     }
+
 
 }
