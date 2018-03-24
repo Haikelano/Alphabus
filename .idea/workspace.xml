@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf407208-2f58-4e5a-adf5-5ca0666b368d" name="Default" comment="" />
+    <list default="true" id="bf407208-2f58-4e5a-adf5-5ca0666b368d" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
+      <change beforePath="$PROJECT_DIR$/app/logs/dev.log" afterPath="$PROJECT_DIR$/app/logs/dev.log" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" afterPath="$PROJECT_DIR$/nbproject/private/private.xml" />
+      <change beforePath="$PROJECT_DIR$/src/My/AlphabusBundle/Entity/Chassis.php" afterPath="$PROJECT_DIR$/src/My/AlphabusBundle/Entity/Chassis.php" />
+      <change beforePath="$PROJECT_DIR$/src/My/AlphabusBundle/Entity/Receptionchassis.php" afterPath="$PROJECT_DIR$/src/My/AlphabusBundle/Entity/Receptionchassis.php" />
+      <change beforePath="$PROJECT_DIR$/src/My/AlphabusBundle/Repository/ReceptionchassisRepository.php" afterPath="$PROJECT_DIR$/src/My/AlphabusBundle/Repository/ReceptionchassisRepository.php" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,34 +21,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="addchassis.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Resources/views/Chassis/addchassis.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="38" column="22" lean-forward="false" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="listchassis.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Resources/views/Chassis/listchassis.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="952">
-              <caret line="56" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ChassisController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Controller/ChassisController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1870">
+            <state relative-caret-position="335">
               <caret line="117" column="56" lean-forward="false" selection-start-line="117" selection-start-column="56" selection-end-line="117" selection-end-column="56" />
               <folding>
                 <element signature="e#48#105#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReceptionchassisController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Controller/ReceptionchassisController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -79,22 +76,38 @@
       <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
+            <state relative-caret-position="340">
               <caret line="20" column="10" lean-forward="false" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
-              <folding>
-                <element signature="e#4336#4342#1#HTML" expanded="true" />
-                <element signature="e#4461#4467#0#HTML" expanded="true" />
-                <element signature="e#4467#4473#0#HTML" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/login.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
               <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Receptionchassis.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Entity/Receptionchassis.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="353">
+              <caret line="336" column="40" lean-forward="false" selection-start-line="336" selection-start-column="40" selection-end-line="336" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Chassis.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Entity/Chassis.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="25" column="6" lean-forward="false" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -170,7 +183,6 @@
         <option value="$PROJECT_DIR$/src/My/UserBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/web/css/custom.css" />
         <option value="$PROJECT_DIR$/src/My/AlphabusBundle/Form/ChassisType.php" />
-        <option value="$PROJECT_DIR$/src/My/AlphabusBundle/Entity/Chassis.php" />
         <option value="$PROJECT_DIR$/src/My/AlphabusBundle/Resources/views/Chassis/addchassis.html.twig" />
         <option value="$PROJECT_DIR$/src/My/AlphabusBundle/Resources/views/Chassis/editchassis.html.twig" />
         <option value="$PROJECT_DIR$/src/My/AlphabusBundle/Resources/views/Chassis/listchassis.html.twig" />
@@ -179,6 +191,8 @@
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/default/login.html.twig" />
         <option value="$PROJECT_DIR$/src/My/UserBundle/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/My/AlphabusBundle/Entity/Chassis.php" />
+        <option value="$PROJECT_DIR$/src/My/AlphabusBundle/Entity/Receptionchassis.php" />
       </list>
     </option>
   </component>
@@ -256,6 +270,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -424,7 +439,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -500,14 +514,15 @@
       <workItem from="1521826272084" duration="1784000" />
       <workItem from="1521828078962" duration="936000" />
       <workItem from="1521853536986" duration="1207000" />
+      <workItem from="1521929042748" duration="1730000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61234000" />
+    <option name="totallyTimeSpent" value="62964000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="428" y="194" width="1366" height="732" extended-state="6" />
+    <frame x="0" y="80" width="1366" height="732" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22913617" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -560,8 +575,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../test_bootstrap/tuto.css" />
-    <entry file="file://$PROJECT_DIR$/../test_bootstrap/css/tuto.css" />
     <entry file="file://$PROJECT_DIR$/../test_bootstrap/css/bootstrap-grid.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -779,7 +792,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="7" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="68" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -804,15 +816,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
           <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding>
-            <element signature="e#44#101#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Resources/views/Chassis/addchassis.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="646">
           <caret line="38" column="22" lean-forward="false" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
           <folding />
         </state>
@@ -825,29 +834,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Entity/Chassis.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="40" column="52" lean-forward="false" selection-start-line="40" selection-start-column="52" selection-end-line="40" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Resources/views/Chassis/listchassis.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="952">
           <caret line="56" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Controller/ChassisController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1870">
-          <caret line="117" column="56" lean-forward="false" selection-start-line="117" selection-start-column="56" selection-end-line="117" selection-end-column="56" />
-          <folding>
-            <element signature="e#48#105#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -869,13 +860,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state relative-caret-position="340">
           <caret line="20" column="10" lean-forward="false" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
-          <folding>
-            <element signature="e#4336#4342#1#HTML" expanded="true" />
-            <element signature="e#4461#4467#0#HTML" expanded="true" />
-            <element signature="e#4467#4473#0#HTML" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -899,7 +886,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -907,6 +893,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Controller/ChassisController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="117" column="56" lean-forward="false" selection-start-line="117" selection-start-column="56" selection-end-line="117" selection-end-column="56" />
+          <folding>
+            <element signature="e#48#105#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Controller/ReceptionchassisController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Entity/Chassis.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="25" column="6" lean-forward="false" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Entity/Receptionchassis.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="336" column="40" lean-forward="false" selection-start-line="336" selection-start-column="40" selection-end-line="336" selection-end-column="40" />
           <folding />
         </state>
       </provider>

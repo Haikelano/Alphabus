@@ -18,7 +18,7 @@
             <table class="table">
                 <thead>
                 <tr>
-                    <th>Id</th>
+                   
                     <th>N° Chassis</th>
                     <th>Type chassis</th>
                     <th>Date Reception</th>
@@ -31,14 +31,14 @@
                 <tbody>
                 {% for st in enss %}
                     <tr>
-                        <td>{{ st.id }}</td>
+                      
                         <td>{{ st.nchassis }}</td>
                         <td>{{ st.typechassis }}</td>
                         <td>{{ st.datereception|date('d-m-Y')  }}</td>
                         <td>{{ st.controler }}</td>
 
-                        <td><a class="btn btn-success" href="{{ path('edit_chassis', { 'id': st.id }) }}">Modifier</a></td>
-                        <td><a class="btn btn-danger" href="{{ path('del_chassis', { 'id': st.id }) }}"><i class="glyphicon glyphicon-trash"></i> Supprimer</a></td>
+                        <td><a class="btn btn-success" href="{{ path('edit_chassis', { 'id': st.nchassis}) }}">Modifier</a></td>
+                        <td><a class="btn btn-danger" href="{{ path('del_chassis', { 'id': st.nchassis }) }}"><i class="glyphicon glyphicon-trash"></i> Supprimer</a></td>
                     </tr>
                 {% else %}
                     <tr><td>Aucun Enseignnat n''a été trouvé.</td></tr>

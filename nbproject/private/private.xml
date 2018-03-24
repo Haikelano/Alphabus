@@ -2,6 +2,17 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/var/www/html/Alphabus/src/My/AlphabusBundle/Resources/views/Chassis/listchassis.html.twig</file>
+            <file>file:/var/www/html/Alphabus/src/My/AlphabusBundle/Entity/Receptionchassis.php</file>
+            <file>file:/var/www/html/Alphabus/src/My/AlphabusBundle/Controller/ChassisController.php</file>
+            <file>file:/var/www/html/Alphabus/app/Resources/views/receptionchassis/show.html.twig</file>
+            <file>file:/var/www/html/Alphabus/app/Resources/views/receptionchassis/index.html.twig</file>
+            <file>file:/var/www/html/Alphabus/src/My/AlphabusBundle/Form/ChassisType.php</file>
+            <file>file:/var/www/html/Alphabus/src/My/AlphabusBundle/Resources/views/Chassis/cherchassis.html.twig</file>
+            <file>file:/var/www/html/Alphabus/src/My/AlphabusBundle/Entity/Chassis.php</file>
+            <file>file:/var/www/html/Alphabus/app/Resources/views/receptionchassis/edit.html.twig</file>
+            <file>file:/var/www/html/Alphabus/src/My/AlphabusBundle/Controller/ReceptionchassisController.php</file>
+        </group>
     </open-files>
 </project-private>

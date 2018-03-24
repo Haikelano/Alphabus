@@ -12,21 +12,17 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Chassis
 {
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
-     */
-    private $id;
 
     /**
      * @var string
-     *
+     * @ORM\Id
      * @ORM\Column(name="nchassis", type="string", length=17, unique=true)
      */
     private $nchassis;
+    
+    public function __toString() {
+    return $this->nchassis;  }
+                            
 
     /**
      * @var string

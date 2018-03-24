@@ -330,6 +330,16 @@ class Receptionchassis
      */
     private $responsablequalite;
 
+
+    /**
+     * 
+     * @ORM\OneToOne(targetEntity="My\AlphabusBundle\Entity\Chassis")
+     * @ORM\JoinColumn(name="nchassis_id", referencedColumnName="nchassis")
+     *
+     */
+
+    private $nchassis;
+
     function getRmqgeneralchassis() {
         return $this->rmqgeneralchassis;
     }
@@ -1051,19 +1061,7 @@ class Receptionchassis
     {
         return $this->responsablequalite;
     }
-    
-      /**
 
-
-     * @ORM\ManyToOne(targetEntity="Chassis")
-
-
-     * @ORM\JoinColumn(name="nchassis", referencedColumnName="nchassis")
-
-
-     */
-    
-    private $nchassis;
     function getNchassis() {
         return $this->nchassis;
     }

@@ -1,3 +1,7 @@
+my_alphabus_receptionchassis:
+    resource: "@MyAlphabusBundle/Controller/ReceptionchassisController.php"
+    type:     annotation
+
 my_user:
     resource: "@MyUserBundle/Controller/"
     type:     annotation
