@@ -1,125 +1,56 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Receptionchasses list</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Generalchassis</th>
-                <th>Huilemoreur</th>
-                <th>Boitevitesse</th>
-                <th>Huiledirection</th>
-                <th>Liquiderefroidisement</th>
-                <th>Ventilateur</th>
-                <th>Embrayage</th>
-                <th>Huilefuitechassis</th>
-                <th>Fuitedaire</th>
-                <th>Rouesecours</th>
-                <th>Filtresecondaire</th>
-                <th>Centraleelectrique</th>
-                <th>Tableaubord</th>
-                <th>Exthuiledirection</th>
-                <th>Cledouble</th>
-                <th>Docchassis</th>
-                <th>Codeereur</th>
-                <th>Kitaccesoires</th>
-                <th>Remorquage</th>
-                <th>Protectionchassis</th>
-                <th>Remarques</th>
-                <th>Rmqgeneralchassis</th>
-                <th>Rmqhuilemoreur</th>
-                <th>Rmqboitevitesse</th>
-                <th>Rmqhuiledirection</th>
-                <th>Rmqliquiderefroidisement</th>
-                <th>Rmqventilateur</th>
-                <th>Rmqembrayage</th>
-                <th>Rmqhuilefuitechassis</th>
-                <th>Rmqfuitedaire</th>
-                <th>Rmqrouesecours</th>
-                <th>Rmqfiltresecondaire</th>
-                <th>Rmqcentraleelectrique</th>
-                <th>Rmqtableaubord</th>
-                <th>Rmqexthuiledirection</th>
-                <th>Rmqcledouble</th>
-                <th>Rmqdocchassis</th>
-                <th>Rmqcodeereur</th>
-                <th>Rmqkitaccesoires</th>
-                <th>Rmqremorquage</th>
-                <th>Rmqprotectionchassis</th>
-                <th>Mecanicien</th>
-                <th>Contqualite</th>
-                <th>Responsablequalite</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for receptionchassi in receptionchasses %}
-            <tr>
-                <td><a href="{{ path('receptionchassis_show', { 'id': receptionchassi.id }) }}">{{ receptionchassi.id }}</a></td>
-                <td>{{ receptionchassi.generalchassis }}</td>
-                <td>{{ receptionchassi.huilemoreur }}</td>
-                <td>{{ receptionchassi.boitevitesse }}</td>
-                <td>{{ receptionchassi.huiledirection }}</td>
-                <td>{{ receptionchassi.liquiderefroidisement }}</td>
-                <td>{{ receptionchassi.ventilateur }}</td>
-                <td>{{ receptionchassi.embrayage }}</td>
-                <td>{{ receptionchassi.huilefuitechassis }}</td>
-                <td>{{ receptionchassi.fuitedaire }}</td>
-                <td>{{ receptionchassi.rouesecours }}</td>
-                <td>{{ receptionchassi.filtresecondaire }}</td>
-                <td>{{ receptionchassi.centraleelectrique }}</td>
-                <td>{{ receptionchassi.tableaubord }}</td>
-                <td>{{ receptionchassi.exthuiledirection }}</td>
-                <td>{{ receptionchassi.cledouble }}</td>
-                <td>{{ receptionchassi.docchassis }}</td>
-                <td>{{ receptionchassi.codeereur }}</td>
-                <td>{{ receptionchassi.kitaccesoires }}</td>
-                <td>{{ receptionchassi.remorquage }}</td>
-                <td>{{ receptionchassi.protectionchassis }}</td>
-                <td>{{ receptionchassi.remarques }}</td>
-                <td>{{ receptionchassi.rmqgeneralchassis }}</td>
-                <td>{{ receptionchassi.rmqhuilemoreur }}</td>
-                <td>{{ receptionchassi.rmqboitevitesse }}</td>
-                <td>{{ receptionchassi.rmqhuiledirection }}</td>
-                <td>{{ receptionchassi.rmqliquiderefroidisement }}</td>
-                <td>{{ receptionchassi.rmqventilateur }}</td>
-                <td>{{ receptionchassi.rmqembrayage }}</td>
-                <td>{{ receptionchassi.rmqhuilefuitechassis }}</td>
-                <td>{{ receptionchassi.rmqfuitedaire }}</td>
-                <td>{{ receptionchassi.rmqrouesecours }}</td>
-                <td>{{ receptionchassi.rmqfiltresecondaire }}</td>
-                <td>{{ receptionchassi.rmqcentraleelectrique }}</td>
-                <td>{{ receptionchassi.rmqtableaubord }}</td>
-                <td>{{ receptionchassi.rmqexthuiledirection }}</td>
-                <td>{{ receptionchassi.rmqcledouble }}</td>
-                <td>{{ receptionchassi.rmqdocchassis }}</td>
-                <td>{{ receptionchassi.rmqcodeereur }}</td>
-                <td>{{ receptionchassi.rmqkitaccesoires }}</td>
-                <td>{{ receptionchassi.rmqremorquage }}</td>
-                <td>{{ receptionchassi.rmqprotectionchassis }}</td>
-                <td>{{ receptionchassi.mecanicien }}</td>
-                <td>{{ receptionchassi.contqualite }}</td>
-                <td>{{ receptionchassi.responsablequalite }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('receptionchassis_show', { 'id': receptionchassi.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('receptionchassis_edit', { 'id': receptionchassi.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10">
+                    <h1>Receptionchasses list</h1>
+
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>N° Chassis</th>
+                        <th>Generalchassis</th>
+                        <th>Mecanicien</th>
+                        <th>Contqualite</th>
+                        <th>Responsablequalite</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for receptionchassi in receptionchasses %}
+                        <tr>
+                            <td><a href="{{ path('receptionchassis_show', { 'id': receptionchassi.id }) }}">{{ receptionchassi.id }}</a></td>
+                            <td>{{ receptionchassi.nchassis }}</td>
+                            <td>{{ receptionchassi.generalchassis }}</td>
+                            <td>{{ receptionchassi.mecanicien }}</td>
+                            <td>{{ receptionchassi.contqualite }}</td>
+                            <td>{{ receptionchassi.responsablequalite }}</td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <a href="{{ path('receptionchassis_show', { 'id': receptionchassi.id }) }}">show</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('receptionchassis_edit', { 'id': receptionchassi.id }) }}">edit</a>
+                                    </li>
+                                   
+                                </ul>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
 
     <ul>
         <li>
             <a href="{{ path('receptionchassis_new') }}">Create a new receptionchassi</a>
         </li>
     </ul>
+    </div>
 {% endblock %}

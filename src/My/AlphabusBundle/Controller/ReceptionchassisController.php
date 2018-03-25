@@ -34,7 +34,7 @@ class ReceptionchassisController extends Controller
             'receptionchasses' => $receptionchasses,
         ));
     }
-
+ 
     /**
      * Creates a new receptionchassi entity.
      *
