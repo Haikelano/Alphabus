@@ -339,7 +339,7 @@ class Receptionchassis
      */
 
     private $nchassis;
-
+        
     function getRmqgeneralchassis() {
         return $this->rmqgeneralchassis;
     }

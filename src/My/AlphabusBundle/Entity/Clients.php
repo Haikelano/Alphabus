@@ -76,8 +76,27 @@ class Clients
      * @ORM\Column(name="email", type="string", length=255)
      */
     private $email;
+        
+    /**
+     * @ORM\ManyToMany(targetEntity="My\AlphabusBundle\Entity\Chassis")
+     * 
+     * @ORM\JoinTable(name="Afectations", 
+     * inverseJoinColumns={@ORM\JoinColumn(name="nchassis", referencedColumnName="nchassis")})
+     * 
+     */
+  
+      
+    private $nchassis;
+    
+    function getNchassis() {
+        return $this->nchassis;
+    }
 
+    function setNchassis($nchassis) {
+        $this->nchassis = $nchassis;
+    }
 
+    
     /**
      * Get id
      *

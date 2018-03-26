@@ -45,6 +45,7 @@ class Chassis
      */
     private $controler;
 
+    
 
     /**
      * Get id
