@@ -334,11 +334,12 @@ class Receptionchassis
     /**
      * 
      * @ORM\OneToOne(targetEntity="My\AlphabusBundle\Entity\Chassis")
-     * @ORM\JoinColumn(name="nchassis_id", referencedColumnName="nchassis")
+     * @ORM\JoinColumn(name="nchassis_id", onDelete="SET NULL", referencedColumnName="nchassis")
      *
      */
 
     private $nchassis;
+    
         
     function getRmqgeneralchassis() {
         return $this->rmqgeneralchassis;

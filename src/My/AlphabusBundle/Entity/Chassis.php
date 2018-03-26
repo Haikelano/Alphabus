@@ -43,11 +43,12 @@ class Chassis
      *
      * @ORM\Column(name="controler", type="string", length=255)
      */
-    private $controler;
+    private $controler;  
+  
+       
 
-    
 
-    /**
+       /**
      * Get id
      *
      * @return integer 
