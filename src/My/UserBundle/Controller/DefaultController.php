@@ -28,7 +28,7 @@ class DefaultController extends Controller
     /**
      * return \Symfony\Component\HttpFoundation\Response
      *
-     * @Route("/admin/", name="admin_page")
+     * @Route("/admi/", name="admin_page")
      */
     public function adminPageAction()
     {

@@ -8,11 +8,12 @@ imports:
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
-    locale: en
+    locale: fr
 
 framework:
     #esi:             ~
-    #translator:      { fallbacks: ["%locale%"] }
+    translator:      { fallbacks: ["%locale%"] }
+    #translator: { fallbacks: [ "en" ] }
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -71,3 +72,23 @@ fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
     user_class: My\UserBundle\Entity\User
+# FOS Easy Bundle 
+easy_admin:
+    site_name: 'AlphaBus'
+    design:
+        brand_color: 'rgb(176,33,26)'
+    list:
+        max_results: 30
+    formats:
+        date:     'd-m-Y'
+    entities:
+            Chassis:
+               class: My\AlphabusBundle\Entity\Chassis
+               list: 
+                  fields: ['nchassis','typechassis','datereception','controler']
+               form: 
+                  fields: ['nchassis','typechassis','datereception','controler']
+                 
+          
+            
+            
