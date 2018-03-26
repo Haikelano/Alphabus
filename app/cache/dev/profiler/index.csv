@@ -1,2 +1,0 @@
-cdbf4f,127.0.0.1,GET,http://127.0.0.1/Alphabus/web/app_dev.php/admin/?action=list&entity=Chassis&menuIndex=0&page=1&sortDirection=DESC&sortField=nchassis&submenuIndex=-1,1522027420,,200
-77be29,127.0.0.1,GET,http://127.0.0.1/Alphabus/web/app_dev.php/admin/?action=list&entity=Chassis&menuIndex=0&page=1&sortDirection=DESC&sortField=nchassis&submenuIndex=-1,1522027422,,200

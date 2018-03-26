@@ -88,7 +88,9 @@ easy_admin:
                   fields: ['nchassis','typechassis','datereception','controler']
                form: 
                   fields: ['nchassis','typechassis','datereception','controler']
-                 
+             
+            Clients:
+               class: My\AlphabusBundle\Entity\Clients    
           
             
             
