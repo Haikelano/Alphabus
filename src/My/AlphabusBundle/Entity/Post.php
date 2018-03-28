@@ -3,6 +3,8 @@
 namespace My\AlphabusBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 /**
  * Post
@@ -164,4 +166,97 @@ class Post
     {
         return $this->proprietaire;
     }
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    public $path;
+
+
+    public function getAbsolutePath()
+    {
+        return null === $this->path
+            ? null
+            : $this->getUploadRootDir().'/'.$this->path;
+    }
+
+    public function getWebPath()
+    {
+        return null === $this->path
+            ? null
+            : $this->getUploadDir().'/'.$this->path;
+    }
+
+    protected function getUploadRootDir()
+    {
+        // the absolute directory path where uploaded documents should be saved
+        return __DIR__.'/../../../../web/'.$this->getUploadDir();
+    }
+
+    protected function getUploadDir()
+    {
+        // get rid of the __DIR__ so it doesn't screw when displaying uploaded doc/image in the view.
+        return 'images';
+    }
+
+    /**
+     * Set path
+     *
+     * @param string $path
+     * @return Produit
+     */
+    public function setI($path)
+    {
+        $this->path = $path;
+
+        return $this;
+    }
+
+    /**
+     * Get path
+     *
+     * @return string
+     */
+    public function getPath()
+    {
+        return $this->path;
+    }
+
+    public function upload()
+    {
+        if (null==$this->getFile())
+        {
+            return null;
+        }
+
+        $this->getFile()->move($this->getUploadRootDir(),
+            $this->getFile()->getClientOriginalName());
+        $this->path =$this->getFile()->getClientOriginalName();
+        $this->file=null;
+
+    }
+
+
+    /**
+     * @Assert\File (maxSize="600000")
+     */
+    private $file;
+    /**
+     * Get file
+     * @return UploadedFile
+     */
+    function getFile() {
+        return $this->file;
+    }
+    /**
+     * Sets file
+     * @param UploadedFile $file
+     */
+    function setFile(UploadedFile $file=null) {
+        $this->file = $file;
+    }
 }
+
+

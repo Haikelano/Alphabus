@@ -102,3 +102,6 @@ easy_admin:
                class:  My\AlphabusBundle\Entity\Affectation
                list:
                   fields: ['seriealpha','dateaffectation','nclients','chassis']
+             
+            Post:
+               class: My\AlphabusBundle\Entity\Post
