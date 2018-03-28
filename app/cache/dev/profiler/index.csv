@@ -1,0 +1,17 @@
+e6fa53,127.0.0.1,GET,http://127.0.0.1/Alphabus/web/app_dev.php/,1522248454,,200
+e6617d,127.0.0.1,GET,http://127.0.0.1/Alphabus/web/app_dev.php/images/nav_logout.gif,1522248455,d96e21,200
+d96e21,127.0.0.1,GET,http://127.0.0.1/Alphabus/web/app_dev.php/images/nav_logout.gif,1522248455,,404
+680662,127.0.0.1,GET,http://127.0.0.1/Alphabus/web/app_dev.php/listchassis,1522248464,,200
+6f16dc,127.0.0.1,GET,http://127.0.0.1/Alphabus/web/app_dev.php/images/nav_logout.gif,1522248465,cc3c81,200
+cc3c81,127.0.0.1,GET,http://127.0.0.1/Alphabus/web/app_dev.php/images/nav_logout.gif,1522248465,,404
+eb6830,127.0.0.1,GET,http://127.0.0.1/Alphabus/web/app_dev.php/affectation/,1522248466,,200
+f29eb9,127.0.0.1,GET,http://127.0.0.1/Alphabus/web/app_dev.php/affectation/images/nav_logout.gif,1522248467,160818,200
+160818,127.0.0.1,GET,http://127.0.0.1/Alphabus/web/app_dev.php/affectation/images/nav_logout.gif,1522248467,,404
+fa670a,127.0.0.1,GET,http://127.0.0.1/Alphabus/web/app_dev.php/affectation/index.php,1522248468,338696,200
+338696,127.0.0.1,GET,http://127.0.0.1/Alphabus/web/app_dev.php/affectation/index.php,1522248468,,404
+2e37dc,127.0.0.1,GET,http://127.0.0.1/Alphabus/web/app_dev.php/affectation/index.php,1522248479,cc7a51,200
+cc7a51,127.0.0.1,GET,http://127.0.0.1/Alphabus/web/app_dev.php/affectation/index.php,1522248479,,404
+7730fa,127.0.0.1,GET,http://127.0.0.1/Alphabus/web/app_dev.php/affectation/images/nav_logout.gif,1522248481,6235f5,200
+6235f5,127.0.0.1,GET,http://127.0.0.1/Alphabus/web/app_dev.php/affectation/images/nav_logout.gif,1522248481,,404
+834a14,127.0.0.1,GET,http://127.0.0.1/Alphabus/web/app_dev.php/affectation/index.php,1522248481,d7ad58,200
+d7ad58,127.0.0.1,GET,http://127.0.0.1/Alphabus/web/app_dev.php/affectation/index.php,1522248481,,404
