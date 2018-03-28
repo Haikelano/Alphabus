@@ -1,13 +1,19 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+
+    <div class="container">
     <h1>Posts list</h1>
 
 
+    <ul>
+        <li>
+            <a href="{{ path('post_new') }}">Create a new post</a>
+        </li>
+    </ul>
 
+    {% for post in posts |reverse %}
 
-    {% for post in posts %}
-    <div class="container">
         <div class="row">
 
             <h4>{{ post.titre }}</h4>
@@ -23,27 +29,30 @@
             </div>
 
            <div class="col-md-2">
-                <div class="alert alert-success">
+               {% if post.etat == true %}
+               <div class="alert alert-success">
 
                     il a bien traiteer
                 </div>
+               {% else %}
+               <div class="alert alert-danger">
+
+                   fauut
+               </div>
+               {% endif %}
 
            </div>
 
 
 
         </div>
-            cree le {% if post.date %}{{ post.date|date('Y-m-d') }}{% endif %} par {{ post.proprietaire }} <a href="{{ path('post_edit', { 'id': post.id }) }}">edit</a>
+            cree le {% if post.date %}{{ post.date|date('Y-m-d') }} à {{ post.date|date('H:i:s') }}{% endif %} par {{ post.proprietaire }} <a href="{{ path('post_edit', { 'id': post.id }) }}">edit</a>
 
-            </div>
+
 
 
             {% endfor %}
 
+    </div>
 
-    <ul>
-        <li>
-            <a href="{{ path('post_new') }}">Create a new post</a>
-        </li>
-    </ul>
 {% endblock %}

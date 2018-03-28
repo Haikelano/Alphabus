@@ -105,3 +105,10 @@ easy_admin:
              
             Post:
                class: My\AlphabusBundle\Entity\Post
+               list: 
+                  fields: ['etat','titre','proprietaire','remarques','date']
+               form:
+                   fields: ['etat','titre','proprietaire','remarques','date']
+                
+                 
+                              

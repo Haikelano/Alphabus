@@ -23,20 +23,28 @@ class Post
      */
     private $id;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="images", type="string", length=255)
-     */
-    private $images;
+
     /**
      * @var string
      *
      * @ORM\Column(name="titre", type="string", length=255)
      */
     private $titre;
+   /**
+     * @var string
+     *
+     * @ORM\Column(name="images", type="string", length=255, nullable=true)
+     */
+    private $images;
+    function getImages() {
+        return $this->images;
+    }
 
-    /**
+    function setImages($images) {
+        $this->images = $images;
+    }
+
+        /**
      * @var string
      *
      * @ORM\Column(name="remarques", type="string", length=255)
@@ -46,7 +54,7 @@ class Post
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="date", type="date")
+     * @ORM\Column(name="date", type="datetime")
      */
     private $date;
 
@@ -57,6 +65,28 @@ class Post
      */
     private $proprietaire;
 
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="etat", type="boolean", options={"default"=false}, nullable=true)
+     */
+    private $etat;
+
+    /**
+     * @return bool
+     */
+    public function isEtat()
+    {
+        return $this->etat;
+    }
+
+    /**
+     * @param bool $etat
+     */
+    public function setEtat($etat)
+    {
+        $this->etat = $etat;
+    }
 
     /**
      * Get id
@@ -68,18 +98,7 @@ class Post
         return $this->id;
     }
 
-    /**
-     * Set images
-     *
-     * @param string $images
-     * @return Post
-     */
-    public function setImages($images)
-    {
-        $this->images = $images;
 
-        return $this;
-    }
     function getTitre() {
         return $this->titre;
     }
@@ -88,15 +107,6 @@ class Post
         $this->titre = $titre;
     }
 
-        /**
-     * Get images
-     *
-     * @return string 
-     */
-    public function getImages()
-    {
-        return $this->images;
-    }
 
     /**
      * Set remarques
@@ -133,6 +143,11 @@ class Post
 
         return $this;
     }
+    public function __construct()
+    {
+        $this->date = new \DateTime();
+    }
+
 
     /**
      * Get date

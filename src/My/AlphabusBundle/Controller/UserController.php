@@ -14,12 +14,13 @@ class UserController extends Controller
     public function indexAction()
     { $userManager = $this->get('fos_user.user_manager');
     $user=$this->getUser();
-    $id =$this->getUser(id);
+
         $users = $userManager->findUsers();
         return $this->render('MyAlphabusBundle:User:index.html.twig', array(
             'users' => $users,
             'user' => $user,
-            'id'=>$id ,
+            'data' => new \DateTime("now")
+
         ));
 
     }
