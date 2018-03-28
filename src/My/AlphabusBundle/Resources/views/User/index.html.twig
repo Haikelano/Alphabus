@@ -1,0 +1,14 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}MyAlphabusBundle:User:index{% endblock %}
+
+{% block body %}
+<h1>Welcome to the User:index page</h1>
+{% for user in users %}
+
+    {{ user.username }}
+    {% endfor %}
+    {{ user }}
+    {{ id }}
+
+{% endblock %}

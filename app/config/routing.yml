@@ -1,3 +1,7 @@
+my_alphabus_post:
+    resource: "@MyAlphabusBundle/Controller/PostController.php"
+    type:     annotation
+
 my_alphabus_structure:
     resource: "@MyAlphabusBundle/Controller/StructureController.php"
     type:     annotation
