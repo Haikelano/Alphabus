@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Affectations list</h1>
+      <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Seriealpha</th>
+                <th>Dateaffectation</th>
+                <th>Controleacier</th>
+                <th>Dateacier</th>
+                <th>Controlepeinture</th>
+                <th>Datepeinture</th>
+                <th>Controlcontroler</th>
+                <th>Datecontrole</th>
+                <th>Controleessai</th>
+                <th>Dateessai</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for affectation in affectations %}
+            <tr>
+                <td><a href="{{ path('affectation_show', { 'id': affectation.id }) }}">{{ affectation.id }}</a></td>
+                <td>{{ affectation.seriealpha }}</td>
+                <td>{% if affectation.dateaffectation %}{{ affectation.dateaffectation|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ affectation.controleacier }}</td>
+                <td>{% if affectation.dateacier %}{{ affectation.dateacier|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ affectation.controlepeinture }}</td>
+                <td>{% if affectation.datepeinture %}{{ affectation.datepeinture|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ affectation.controlcontroler }}</td>
+                <td>{% if affectation.datecontrole %}{{ affectation.datecontrole|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ affectation.controleessai }}</td>
+                <td>{% if affectation.dateessai %}{{ affectation.dateessai|date('Y-m-d') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('affectation_show', { 'id': affectation.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('affectation_edit', { 'id': affectation.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}

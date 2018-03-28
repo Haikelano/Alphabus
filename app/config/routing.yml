@@ -1,3 +1,11 @@
+my_alphabus_structure:
+    resource: "@MyAlphabusBundle/Controller/StructureController.php"
+    type:     annotation
+
+my_alphabus_affectation:
+    resource: "@MyAlphabusBundle/Controller/AffectationController.php"
+    type:     annotation
+
 my_alphabus_receptionchassis:
     resource: "@MyAlphabusBundle/Controller/ReceptionchassisController.php"
     type:     annotation
@@ -30,11 +38,9 @@ fos_user_resetting:
     resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
     prefix: /resetting
 
-easy_admin_bundle: 
+easy_admin_bundle:
     resource: "@EasyAdminBundle/Controller/AdminController.php"
     type:     annotation
     prefix:   /admin
 fos_user_change_password:
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
-
-        

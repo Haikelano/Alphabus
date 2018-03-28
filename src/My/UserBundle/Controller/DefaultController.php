@@ -8,13 +8,13 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/")
+     * @Route("/",name="homepage")
      */
     public function indexAction()
     {
         if($this->get('security.authorization_checker')->isGranted('ROLE_ADMIN')){
 
-            return $this->render('MyAlphabusBundle:Default:admin.html.twig');
+             //$redirection = new RedirectResponse($this->router->generate('admin'));
         }
         if($this->get('security.authorization_checker')->isGranted('ROLE_USER')){
 

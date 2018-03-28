@@ -1,0 +1,164 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Structure</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ structure.id }}</td>
+            </tr>
+            <tr>
+                <th>Protectionchassis</th>
+                <td>{{ structure.protectionchassis }}</td>
+            </tr>
+            <tr>
+                <th>Niveauchassis</th>
+                <td>{{ structure.niveauchassis }}</td>
+            </tr>
+            <tr>
+                <th>Geometriechassis</th>
+                <td>{{ structure.geometriechassis }}</td>
+            </tr>
+            <tr>
+                <th>Geometriecarrosserie</th>
+                <td>{{ structure.geometriecarrosserie }}</td>
+            </tr>
+            <tr>
+                <th>Renfort</th>
+                <td>{{ structure.renfort }}</td>
+            </tr>
+            <tr>
+                <th>Soudureconection</th>
+                <td>{{ structure.soudureconection }}</td>
+            </tr>
+            <tr>
+                <th>Soudurecarroserie</th>
+                <td>{{ structure.soudurecarroserie }}</td>
+            </tr>
+            <tr>
+                <th>Fixationtolehabillage</th>
+                <td>{{ structure.fixationtolehabillage }}</td>
+            </tr>
+            <tr>
+                <th>Cadreparebrise</th>
+                <td>{{ structure.cadreparebrise }}</td>
+            </tr>
+            <tr>
+                <th>Cadreporte</th>
+                <td>{{ structure.cadreporte }}</td>
+            </tr>
+            <tr>
+                <th>Cadrevitre</th>
+                <td>{{ structure.cadrevitre }}</td>
+            </tr>
+            <tr>
+                <th>Jointbutyl</th>
+                <td>{{ structure.jointbutyl }}</td>
+            </tr>
+            <tr>
+                <th>Masitcportecofre</th>
+                <td>{{ structure.masitcportecofre }}</td>
+            </tr>
+            <tr>
+                <th>Poitssoudure</th>
+                <td>{{ structure.poitssoudure }}</td>
+            </tr>
+            <tr>
+                <th>Abspiecepolyester</th>
+                <td>{{ structure.abspiecepolyester }}</td>
+            </tr>
+            <tr>
+                <th>Surfacetoles</th>
+                <td>{{ structure.surfacetoles }}</td>
+            </tr>
+            <tr>
+                <th>Remarques</th>
+                <td>{{ structure.remarques }}</td>
+            </tr>
+            <tr>
+                <th>Repprotectionchassis</th>
+                <td>{{ structure.repprotectionchassis }}</td>
+            </tr>
+            <tr>
+                <th>Repniveauchassis</th>
+                <td>{{ structure.repniveauchassis }}</td>
+            </tr>
+            <tr>
+                <th>Repgeometriechassis</th>
+                <td>{{ structure.repgeometriechassis }}</td>
+            </tr>
+            <tr>
+                <th>Repgeometriecarrosserie</th>
+                <td>{{ structure.repgeometriecarrosserie }}</td>
+            </tr>
+            <tr>
+                <th>Reprenfort</th>
+                <td>{{ structure.reprenfort }}</td>
+            </tr>
+            <tr>
+                <th>Repsoudureconection</th>
+                <td>{{ structure.repsoudureconection }}</td>
+            </tr>
+            <tr>
+                <th>Repsoudurecarroserie</th>
+                <td>{{ structure.repsoudurecarroserie }}</td>
+            </tr>
+            <tr>
+                <th>Repfixationtolehabillage</th>
+                <td>{{ structure.repfixationtolehabillage }}</td>
+            </tr>
+            <tr>
+                <th>Repcadreparebrise</th>
+                <td>{{ structure.repcadreparebrise }}</td>
+            </tr>
+            <tr>
+                <th>Repcadreporte</th>
+                <td>{{ structure.repcadreporte }}</td>
+            </tr>
+            <tr>
+                <th>Repcadrevitre</th>
+                <td>{{ structure.repcadrevitre }}</td>
+            </tr>
+            <tr>
+                <th>Repjointbutyl</th>
+                <td>{{ structure.repjointbutyl }}</td>
+            </tr>
+            <tr>
+                <th>Repmasitcportecofre</th>
+                <td>{{ structure.repmasitcportecofre }}</td>
+            </tr>
+            <tr>
+                <th>Reppoitssoudure</th>
+                <td>{{ structure.reppoitssoudure }}</td>
+            </tr>
+            <tr>
+                <th>Repabspiecepolyester</th>
+                <td>{{ structure.repabspiecepolyester }}</td>
+            </tr>
+            <tr>
+                <th>Repsurfacetoles</th>
+                <td>{{ structure.repsurfacetoles }}</td>
+            </tr>
+            <tr>
+                <th>Repremarques</th>
+                <td>{{ structure.repremarques }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('structure_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('structure_edit', { 'id': structure.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

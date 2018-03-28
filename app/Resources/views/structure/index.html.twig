@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+    <h1>Structures list</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>protectionchassis</th>
+                <th>Etat</th>
+                <th>Repremarques</th>
+                <th>N° Chassis</th>
+                <th>Actions</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+        {% for structure in structures %}
+            <tr>
+                <td><a href="{{ path('structure_show', { 'id': structure.id }) }}">{{ structure.id }}</a></td>
+                <td>{{ structure.protectionchassis }}</td>
+                
+                 <td>{% if structure.repremarques == null %} 
+                    <span class="label label-success">fonctionnement</span> 
+                    {% else %}
+                   <span class="label label-danger">Etat critique</span>
+                     {% endif %} </td>
+                <td>{{ structure.repremarques }}</td>
+                <td>{{ structure.chassis }}</td>
+                <td>
+                 <a href="{{ path('structure_show', { 'id': structure.id }) }}">show</a>
+                </td>
+                <td>
+                 <a href="{{ path('structure_edit', { 'id': structure.id }) }}">edit</a>
+                 </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('structure_new') }}">Create a new structure</a>
+        </li>
+    </ul>
+        </div>           
+{% endblock %}

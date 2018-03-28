@@ -72,9 +72,9 @@ fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
     user_class: My\UserBundle\Entity\User
-# FOS Easy Bundle 
+# FOS Easy Bundle
 easy_admin:
-    site_name: 'AlphaBus'
+    site_name: 'AlphaBus Tunisie'
     design:
         brand_color: 'rgb(176,33,26)'
     list:
@@ -84,17 +84,21 @@ easy_admin:
     entities:
             Chassis:
                class: My\AlphabusBundle\Entity\Chassis
-               list: 
+               list:
                   fields: ['nchassis','typechassis','datereception','controler']
-               form: 
+               form:
                   fields: ['nchassis','typechassis','datereception','controler']
-             
+
             Clients:
                class: My\AlphabusBundle\Entity\Clients
-               
+               list:
+                  fields: ['nclients','nom','prenom','societe','telephone','email']
+               form:
+                   fields: ['nclients','nom','prenom','societe','adresse','codepostal','ville','telephone','email']
             User:
                class: My\UserBundle\Entity\User
-           
-          
-            
-            
+
+            Affectation:
+               class:  My\AlphabusBundle\Entity\Affectation
+               list:
+                  fields: ['seriealpha','dateaffectation','nclients','chassis']

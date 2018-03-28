@@ -19,6 +19,7 @@ class ChassisType extends AbstractType
             ->add('typechassis','choice',array('choices'=>array('RR8'=>'RR8','RR2'=>'RR2','RRA'=>'RRA')),array('label'=>'Type chassis : '))
             ->add('datereception', 'date',array('label' => 'Date Reception :  '))
             ->add('controler','text',array('label' => 'Controler et enregistrer par  :  '))
+            
 
 
 

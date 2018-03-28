@@ -10,6 +10,10 @@ use My\AlphabusBundle\Entity\Chassis;
 use My\AlphabusBundle\Form\ChassisType;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use My\AlphabusBundle\Form\AffectationType;
+use My\AlphabusBundle\Repository\AffectationRepository;
+use My\AlphabusBundle\Entity\Affectation;
+
 
 class ChassisController extends Controller
 {
@@ -120,6 +124,10 @@ class ChassisController extends Controller
             'enss' => $nchassis
         ));
     }
+
+
+
+
 
 
 }

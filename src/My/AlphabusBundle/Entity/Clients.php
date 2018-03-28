@@ -12,16 +12,26 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Clients
 {
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="id", type="integer")
+ /**
+     * @var string
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\Column(name="nclients", type="string", length=17, unique=true)
      */
-    private $id;
+    private $nclients;
 
-    /**
+    public function __toString() {
+    return $this->nclients;  }
+
+  function getNclients() {
+      return $this->nclients;
+  }
+  function setNclients($nclients) {
+      $this->nclients = $nclients;
+  }
+
+
+
+        /**
      * @var string
      *
      * @ORM\Column(name="nom", type="string", length=255)
@@ -45,7 +55,7 @@ class Clients
     /**
      * @var string
      *
-     * @ORM\Column(name="Adresse", type="string", length=255)
+     * @ORM\Column(name="adresse", type="string", length=255)
      */
     private $adresse;
 
@@ -76,16 +86,7 @@ class Clients
      * @ORM\Column(name="email", type="string", length=255)
      */
     private $email;
-          
-    /**
-     * Get id
-     *
-     * @return integer 
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
+
 
     /**
      * Set nom
@@ -103,7 +104,7 @@ class Clients
     /**
      * Get nom
      *
-     * @return string 
+     * @return string
      */
     public function getNom()
     {
@@ -126,7 +127,7 @@ class Clients
     /**
      * Get prenom
      *
-     * @return string 
+     * @return string
      */
     public function getPrenom()
     {
@@ -149,7 +150,7 @@ class Clients
     /**
      * Get societe
      *
-     * @return string 
+     * @return string
      */
     public function getSociete()
     {
@@ -172,7 +173,7 @@ class Clients
     /**
      * Get adresse
      *
-     * @return string 
+     * @return string
      */
     public function getAdresse()
     {
@@ -195,7 +196,7 @@ class Clients
     /**
      * Get codepostal
      *
-     * @return string 
+     * @return string
      */
     public function getCodepostal()
     {
@@ -218,7 +219,7 @@ class Clients
     /**
      * Get ville
      *
-     * @return string 
+     * @return string
      */
     public function getVille()
     {
@@ -241,7 +242,7 @@ class Clients
     /**
      * Get telephone
      *
-     * @return string 
+     * @return string
      */
     public function getTelephone()
     {
@@ -264,7 +265,7 @@ class Clients
     /**
      * Get email
      *
-     * @return string 
+     * @return string
      */
     public function getEmail()
     {

@@ -19,10 +19,10 @@ class Chassis
      * @ORM\Column(name="nchassis", type="string", length=17, unique=true)
      */
     private $nchassis;
-    
+
     public function __toString() {
     return $this->nchassis;  }
-                            
+                  
 
     /**
      * @var string
@@ -30,6 +30,7 @@ class Chassis
      * @ORM\Column(name="typechassis", type="string", length=10)
      */
     private $typechassis;
+
 
     /**
      * @var \DateTime
@@ -43,15 +44,16 @@ class Chassis
      *
      * @ORM\Column(name="controler", type="string", length=255)
      */
-    private $controler;  
-  
-       
+    private $controler;
+
+
+
 
 
        /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -74,7 +76,7 @@ class Chassis
     /**
      * Get nchassis
      *
-     * @return string 
+     * @return string
      */
     public function getNchassis()
     {
@@ -97,7 +99,7 @@ class Chassis
     /**
      * Get typechassis
      *
-     * @return string 
+     * @return string
      */
     public function getTypechassis()
     {
@@ -120,7 +122,7 @@ class Chassis
     /**
      * Get datereception
      *
-     * @return string 
+     * @return string
      */
     public function getDatereception()
     {
@@ -143,7 +145,7 @@ class Chassis
     /**
      * Get controler
      *
-     * @return string 
+     * @return string
      */
     public function getControler()
     {
