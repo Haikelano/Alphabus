@@ -1,3 +1,7 @@
+my_alphabus_peinture:
+    resource: "@MyAlphabusBundle/Controller/PeintureController.php"
+    type:     annotation
+
 my_alphabus_post:
     resource: "@MyAlphabusBundle/Controller/PostController.php"
     type:     annotation

@@ -13,7 +13,10 @@ class AffectationType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('seriealpha')->add('dateaffectation')->add('controleacier')->add('dateacier')->add('controlepeinture')->add('datepeinture')->add('controlcontroler')->add('datecontrole')->add('controleessai')->add('dateessai')->add('nclients')->add('chassis');
+        $builder->add('seriealpha')->add('dateaffectation')->add('controleacier')->add('dateacier')
+                ->add('controlepeinture')->add('datepeinture')->add('controlcontroler')
+                ->add('datecontrole')->add('controleessai')->add('dateessai')
+                ->add('nclients')->add('chassis');
     }/**
      * {@inheritdoc}
      */

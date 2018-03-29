@@ -1,0 +1,120 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Peinture</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ peinture.id }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{% if peinture.date %}{{ peinture.date|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Protectionrouille</th>
+                <td>{{ peinture.protectionrouille }}</td>
+            </tr>
+            <tr>
+                <th>Couchepeinture</th>
+                <td>{{ peinture.couchepeinture }}</td>
+            </tr>
+            <tr>
+                <th>Peinturefaceav</th>
+                <td>{{ peinture.peinturefaceav }}</td>
+            </tr>
+            <tr>
+                <th>Peinturefacear</th>
+                <td>{{ peinture.peinturefacear }}</td>
+            </tr>
+            <tr>
+                <th>Peinturefacedr</th>
+                <td>{{ peinture.peinturefacedr }}</td>
+            </tr>
+            <tr>
+                <th>Peinturefaceg</th>
+                <td>{{ peinture.peinturefaceg }}</td>
+            </tr>
+            <tr>
+                <th>Etanchete</th>
+                <td>{{ peinture.etanchete }}</td>
+            </tr>
+            <tr>
+                <th>Interrieur</th>
+                <td>{{ peinture.interrieur }}</td>
+            </tr>
+            <tr>
+                <th>Bascaisse</th>
+                <td>{{ peinture.bascaisse }}</td>
+            </tr>
+            <tr>
+                <th>Decorationclient</th>
+                <td>{{ peinture.decorationclient }}</td>
+            </tr>
+            <tr>
+                <th>Remarques</th>
+                <td>{{ peinture.remarques }}</td>
+            </tr>
+            <tr>
+                <th>Repprotectionrouille</th>
+                <td>{{ peinture.repprotectionrouille }}</td>
+            </tr>
+            <tr>
+                <th>Repcouchepeinture</th>
+                <td>{{ peinture.repcouchepeinture }}</td>
+            </tr>
+            <tr>
+                <th>Reppeinturefaceav</th>
+                <td>{{ peinture.reppeinturefaceav }}</td>
+            </tr>
+            <tr>
+                <th>Reppeinturefacear</th>
+                <td>{{ peinture.reppeinturefacear }}</td>
+            </tr>
+            <tr>
+                <th>Reppeinturefacedr</th>
+                <td>{{ peinture.reppeinturefacedr }}</td>
+            </tr>
+            <tr>
+                <th>Reppeinturefaceg</th>
+                <td>{{ peinture.reppeinturefaceg }}</td>
+            </tr>
+            <tr>
+                <th>Repetanchete</th>
+                <td>{{ peinture.repetanchete }}</td>
+            </tr>
+            <tr>
+                <th>Repinterrieur</th>
+                <td>{{ peinture.repinterrieur }}</td>
+            </tr>
+            <tr>
+                <th>Repbascaisse</th>
+                <td>{{ peinture.repbascaisse }}</td>
+            </tr>
+            <tr>
+                <th>Repdecorationclient</th>
+                <td>{{ peinture.repdecorationclient }}</td>
+            </tr>
+            <tr>
+                <th>Repremarques</th>
+                <td>{{ peinture.repremarques }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('peinture_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('peinture_edit', { 'id': peinture.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

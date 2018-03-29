@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10">
+    <h1>Peintures list</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>N° Chassis</th>
+                <th>Date</th>
+               
+                <th>Repremarques</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for peinture in peintures %}
+            <tr>
+                <td>{{ peinture.chassis }}</td>
+                <td><a href="{{ path('peinture_show', { 'id': peinture.id }) }}">{{ peinture.id }}</a></td>
+                <td>{% if peinture.date %}{{ peinture.date|date('Y-m-d') }}{% endif %}</td>
+               
+                <td>{{ peinture.repremarques }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('peinture_show', { 'id': peinture.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('peinture_edit', { 'id': peinture.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('peinture_new') }}">Create a new peinture</a>
+        </li>
+    </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
