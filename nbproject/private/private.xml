@@ -3,22 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/var/www/html/Alphabus/app/config/config.yml</file>
-            <file>file:/var/www/html/Alphabus/src/My/AlphabusBundle/Form/AffectationType.php</file>
-            <file>file:/var/www/html/Alphabus/src/My/AlphabusBundle/Entity/Affectation.php</file>
-            <file>file:/var/www/html/Alphabus/src/My/AlphabusBundle/Entity/Post.php</file>
-            <file>file:/var/www/html/Alphabus/src/My/AlphabusBundle/Form/PostType.php</file>
-            <file>file:/var/www/html/Alphabus/src/My/AlphabusBundle/Resources/views/Chassis/cherchassis.html.twig</file>
-            <file>file:/var/www/html/Alphabus/src/My/UserBundle/Controller/DefaultController.php</file>
-            <file>file:/var/www/html/Alphabus/src/My/AlphabusBundle/Entity/Structure.php</file>
-            <file>file:/var/www/html/Alphabus/app/Resources/views/post/edit.html.twig</file>
-            <file>file:/var/www/html/Alphabus/src/My/AlphabusBundle/Controller/PostController.php</file>
-            <file>file:/var/www/html/Alphabus/src/My/AlphabusBundle/Controller/ChassisController.php</file>
-            <file>file:/var/www/html/Alphabus/src/My/UserBundle/Entity/User.php</file>
-            <file>file:/var/www/html/Alphabus/app/Resources/views/structure/index.html.twig</file>
-            <file>file:/var/www/html/Alphabus/src/My/AlphabusBundle/Controller/StructureController.php</file>
-            <file>file:/var/www/html/Alphabus/src/My/AlphabusBundle/Controller/AffectationController.php</file>
-            <file>file:/var/www/html/Alphabus/app/Resources/views/post/index.html.twig</file>
+            <file>file:/var/www/html/Alphabus/app/Resources/views/base.html.twig</file>
+            <file>file:/var/www/html/Alphabus/src/My/AlphabusBundle/Controller/PeintureController.php</file>
+            <file>file:/var/www/html/Alphabus/src/My/AlphabusBundle/Resources/views/Default/index.html.twig</file>
+            <file>file:/var/www/html/Alphabus/app/Resources/views/peinture/index.html.twig</file>
+            <file>file:/var/www/html/Alphabus/src/My/AlphabusBundle/Entity/Peinture.php</file>
+            <file>file:/var/www/html/Alphabus/src/My/AlphabusBundle/Form/PeintureType.php</file>
+            <file>file:/var/www/html/Alphabus/web/js/holder.min.js</file>
         </group>
     </open-files>
 </project-private>
