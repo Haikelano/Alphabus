@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new My\AlphabusBundle\MyAlphabusBundle(),
             new My\UserBundle\MyUserBundle(),
             new EasyCorp\Bundle\EasyAdminBundle\EasyAdminBundle(),
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

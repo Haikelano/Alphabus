@@ -3,7 +3,6 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/var/www/html/Alphabus/app/Resources/views/post/new.html.twig</file>
             <file>file:/var/www/html/Alphabus/app/config/config.yml</file>
             <file>file:/var/www/html/Alphabus/src/My/AlphabusBundle/Form/AffectationType.php</file>
             <file>file:/var/www/html/Alphabus/src/My/AlphabusBundle/Entity/Affectation.php</file>
@@ -19,6 +18,7 @@
             <file>file:/var/www/html/Alphabus/app/Resources/views/structure/index.html.twig</file>
             <file>file:/var/www/html/Alphabus/src/My/AlphabusBundle/Controller/StructureController.php</file>
             <file>file:/var/www/html/Alphabus/src/My/AlphabusBundle/Controller/AffectationController.php</file>
+            <file>file:/var/www/html/Alphabus/app/Resources/views/post/index.html.twig</file>
         </group>
     </open-files>
 </project-private>

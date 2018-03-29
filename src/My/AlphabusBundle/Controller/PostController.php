@@ -23,16 +23,23 @@ class PostController extends Controller
      * @Route("/", name="post_index")
      * @Method("GET")
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
         $user=$this->getUser();
 
-        $posts = $em->getRepository('MyAlphabusBundle:Post')->findAll();
+
+        $reclamation = $em->getRepository('MyAlphabusBundle:Post')->findAll();
+
+            $posts = $this->get('knp_paginator')->paginate(
+            $reclamation, /* query NOT result */
+            $request->query->getInt('page', 1)/*page number*/,6 );/*limit per page*/
+
 
         return $this->render('post/index.html.twig', array(
             'posts' => $posts,
             'user' => $user,
+
         ));
     }
 

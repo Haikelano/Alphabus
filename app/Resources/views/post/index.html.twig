@@ -4,6 +4,9 @@
 
     <title>{% block title %}Réclamation{% endblock %}</title>
 
+
+
+
     <div class="container" xmlns="http://www.w3.org/1999/html">
     <h1>Posts list</h1>
 
@@ -39,12 +42,12 @@
                         {% if post.etat == true %}
                             <div class="alert alert-success">
 
-                                Votre reclamation a bien été traitée et tout fo
+                                Votre Réclamation a bien été traitée et tout fonctionne
                             </div>
                         {% else %}
                             <div class="alert alert-danger">
 
-                                fauut
+                                Votre Réclamation a bien été prise en compte
                             </div>
                         {% endif %}
 
@@ -54,17 +57,33 @@
            </div>
 
         </div>
-            cree le {% if post.date %}{{ post.date|date('Y-m-d') }}
-        à {{ post.date|date('H:i:s') }}{% endif %} par
-        <label for="exampleFormControlTextarea1">Remarque de
-        <span class="label label-info"> {{ post.proprietaire }}
-        </span></label> <a href="{{ path('post_edit', { 'id': post.id }) }}">edit</a>
+             <label for="exampleFormControlTextarea1">
+
+                     <span class="label label-info"> {{ post.proprietaire }} </span>
+                 </label>
+
+            Crée le {% if post.date %}{{ post.date|date('Y-m-d') }}
+        à {{ post.date|date('H:i:s') }}{% endif %}
+                 
+
+        <a href="{{ path('post_edit', { 'id': post.id }) }}">edit</a>
 
 
 
 
             {% endfor %}
+        <br/>
+        <br/>
+        <br/>
+        <footer class="row">
+        <div class="container">
+            <div class="row">
 
+                <div class="col-lg- col-lg-offset-5">   {{ knp_pagination_render(posts) }}</div>
+            </div>
+        </div>
+        </footer>
+        </div>
     </div>
 
 {% endblock %}
