@@ -26,6 +26,7 @@ class PeintureController extends Controller
 
         $peintures = $em->getRepository('MyAlphabusBundle:Peinture')->findAll();
 
+
         return $this->render('peinture/index.html.twig', array(
             'peintures' => $peintures,
         ));

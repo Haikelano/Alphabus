@@ -11,17 +11,23 @@
         <thead>
             <tr>
                 <th>N° Chassis</th>
-                <th>Date</th>
+                <th>Etat</th>
+                <th>Date Entré en Usine</th>
                
                 <th>Repremarques</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
+
         {% for peinture in peintures %}
             <tr>
                 <td>{{ peinture.chassis }}</td>
-                <td><a href="{{ path('peinture_show', { 'id': peinture.id }) }}">{{ peinture.id }}</a></td>
+                <td>{% if peinture.repremarques == null %}
+                        <span class="label label-success">fonctionnement</span>
+                    {% else %}
+                        <span class="label label-danger">Etat critique</span>
+                    {% endif %} </td>
                 <td>{% if peinture.date %}{{ peinture.date|date('Y-m-d') }}{% endif %}</td>
                
                 <td>{{ peinture.repremarques }}</td>
