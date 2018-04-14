@@ -2,18 +2,23 @@
 
 {% block fos_user_content %}
     <div class="row">
-    <div class="alert-danger">
-        <div class="col-sm-8">
-    {% if error %}
-        <div>{{ 'vous devez entre votre login et mot de passe  '|trans({}, 'FOSUserBundle') }}</div>
-    {% endif %}
-    </div>
-    </div>
+         <div class="alert-danger">
+             <div class="col-sm-8">
+                    {% if error %}
+                        <div>{{ 'vous devez entre votre login et mot de passe  '|trans({}, 'FOSUserBundle') }}</div>
+                    {% endif %}
+              </div>
+         </div>
     </div>
 
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-lg-5 col-lg-offset-4">
+                <div class="align-content-lg-center">
+                    <img src="{{ asset('images/log2.png') }}">
+                    
+                    
+                </div>
                <form action="{{ path("fos_user_security_check") }}" method="post">
                    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
                    <br/><br/>

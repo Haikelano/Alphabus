@@ -1,0 +1,57 @@
+.headerTop p span,
+.singMiddInfo i,
+.mainnav ul li:hover > a, 
+.mainnav ul li.active a,
+.searchForm button:hover,
+.mainnav ul ul.sub-menu li a:hover,
+.revCont h2,
+a:hover,
+.fillterNav li:hover,
+.fillterNav li.active,
+.projectHover a:hover,
+.newsletter input.reqError,
+.navigation > li a:hover,
+.newsletter button:hover,
+.singleAdds i,
+.copyright a:hover,
+.singleWedo i,
+.servicesNav li a:hover, 
+.servicesNav li.active a,
+.servicesNav li.active::after,
+.downloadpdflink a:hover,
+.blogMeta a:hover,
+.widgetList li::after,
+.widgetList li a:hover,
+.shareSocial a:hover,
+.fwaSocial a:hover,
+.breadCumpNav a:hover,
+.singleContadds i,
+.singleContadds a:hover,
+.singleAdds a:hover,
+.singleProCaro .carousel-control:hover i{
+    color: #e07094;
+}
+.headMiddBtn a,
+.switchTittle,
+.pithreeBtn,
+.sbrm::after,
+.commonHeadding h2::after,
+.testDeg h2::after,
+.testCaro.owl-theme .owl-dots .owl-dot.active span, 
+.testCaro.owl-theme .owl-dots .owl-dot:hover span,
+.tparrows.default.round:hover,
+.teambg::after,
+.commonSectionTitle h2::after,
+.servicRead::before,
+.blogReadmore,
+.search button{
+    background: #e07094;
+}
+.projectHover a:hover,
+.testCaro.owl-theme .owl-dots .owl-dot span,
+.singleProCaro .carousel-indicators li.active{
+    border-color: #e07094;
+}
+.footerSocial a:hover{
+    color: #fff;
+}

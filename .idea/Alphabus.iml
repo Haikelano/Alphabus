@@ -63,5 +63,6 @@
     <orderEntry type="module" module-name="test_bootstrap" />
     <orderEntry type="module" module-name="Login_v16" />
     <orderEntry type="module" module-name="test_bootstrap" />
+    <orderEntry type="module" module-name="inscrit" />
   </component>
 </module>

@@ -1,0 +1,69 @@
+body{
+    width: 1230px;
+    margin: 0 auto;
+    background: #cecece;
+}
+body.pat1{
+    background: url(../../images/pattern/p1.png) repeat fixed center center #fff;
+}
+body.pat2{
+    background: url(../../images/pattern/p2.png) repeat fixed center center #fff;
+}
+body.pat3{
+    background: url(../../images/pattern/p3.png) repeat fixed center center #fff;
+}
+body.pat4{
+    background: url(../../images/pattern/p4.png) repeat fixed center center #fff;
+}
+
+.header.fixedHeader {
+    left: auto;
+    right: auto;
+    width: 64.6%;
+}
+.headerMiddle,
+.fillterProject,
+.bgwhite,
+.clientSec,
+.aboutCont,
+.teamSec,
+.servicesContent,
+.servicesDetails,
+.projectSingleSec,
+.blogSection,
+.errorPage,
+.contactMap,
+.teammatesSec{
+    background: #fff;
+}
+.teammatesSec.bggray{
+    background: #F0F0F0;
+}
+.tp-leftarrow.tparrows.default.round {
+    left: 15px !important;
+}
+.tp-rightarrow.tparrows.default.round {
+    right: 15px !important;
+}
+.revCont,
+.revBtn{
+    margin-left: 50px;
+}
+.mainnav ul ul.sub-menu{
+    margin-left: -80px;
+}
+@media(min-width:1200px) and (max-width:1600px){
+    body{
+        width: 1192px;
+    } 
+    .revCont,
+    .revBtn{
+        margin-left: 50px;
+    }
+    .mainnav ul ul.sub-menu{
+        margin-left: -70px;
+    }
+}
+.showit{
+    right: 400px
+}

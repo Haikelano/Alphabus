@@ -6,6 +6,7 @@
         {% block stylesheets %}
 
             <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
             <link rel="stylesheet" href="{{ asset('css/main.css') }}">
             <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
             <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -29,7 +30,7 @@
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
                         <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
+                        <span class="icon-ba"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
@@ -58,7 +59,7 @@
                                     <a href="{{ path('structure_index') }}">Controle Structure</a>
                                 </li>
                                 <li >
-                                    <a href="peinture.html">Controle Peinture</a>
+                                    <a href="{{ path('peinture_index') }}">Controle Peinture</a>
                                 </li>
 
                             </ul>
@@ -85,8 +86,10 @@
                         <!-- start nav-right -->
                         <div class="form-group">
 
-                            <div class="form-group">&nbsp;</div>
-                            <div class="form-group"><a href="{{ path('fos_user_security_logout') }}">logout </a>&nbsp;&nbsp;
+                            <div class="nav navbar-nav navbar-right">
+                                <span class="glyphicon glyphicon-user"></span>
+                                <a href="{{ path('fos_user_security_logout') }}">logout </a>
+
                                 <a href=""><img src="images/nav_logout.gif" width="93" height="16" alt="" /></a>
                             </div>
 
