@@ -1,37 +1,46 @@
 
-<form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-5 col-lg-offset-4">
+                        <div class="align-content-lg-center">
+                            <img src="{{ asset('images/log2.png') }}" style="width: 300px; height: 57px;">
+                            <h1> Alpha Bus Tunisie</h1>
+                        </div>
+                <form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register">
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <label for="email">Adresse mail </label><div class="input-group"><span class="input-group-addon" >
-                        <i class="fa fa-mail-forward "></i> mail</span>{{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder' : 'Adresse Mail'}} ) }}</div>
-
-
-                <label for="username">Username </label>
-                <div class="input-group">
-                    <span class="input-group-addon" ><i class="fa fa-user "></i> user</span>
-                    {{ form_widget(form.username, {'attr': {'class': 'form-control', 'placeholder' : 'username'}} ) }}
-                </div>
+                                <label for="email">Adresse mail </label><div class="input-group"><span class="input-group-addon" >
+                                        <i class="fa fa-mail-forward "></i> mail</span>{{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder' : 'Adresse Mail'}} ) }}</div>
 
 
-                <label for="form.plainPassword.first">Votre mot de passe  </label>
-                <div class="input-group">
-                    <span class="input-group-addon" ><i class="fa fa-key "></i> pass</span>
-                    {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control', 'placeholder' : 'votre mot de passe '}} ) }}
-                </div>
+                                <label for="username">Username </label>
+                                <div class="input-group">
+                                    <span class="input-group-addon" ><i class="fa fa-user "></i> user</span>
+                                    {{ form_widget(form.username, {'attr': {'class': 'form-control', 'placeholder' : 'username'}} ) }}
+                                </div>
 
 
-                <label for="email"> Confirmer Votre mot de passe  </label>
-                <div class="input-group">
-                    <span class="input-group-addon" ><i class="fa fa-key "></i> conf</span>
-                    {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control', 'placeholder' : 'Confirmer votre mot de passe '}} ) }}
-                </div>
+                                <label for="form.plainPassword.first">Votre mot de passe  </label>
+                                <div class="input-group">
+                                    <span class="input-group-addon" ><i class="fa fa-key "></i> pass</span>
+                                    {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control', 'placeholder' : 'votre mot de passe '}} ) }}
+                                </div>
 
 
-                {{ form_widget(form) }}<br/><input type="submit" value="{{ 'Submit'|trans({}, 'FOSUserBundle') }}" class="btn btn-success" />
+                                <label for="email"> Confirmer Votre mot de passe  </label>
+                                <div class="input-group">
+                                    <span class="input-group-addon" ><i class="fa fa-key "></i> conf</span>
+                                    {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control', 'placeholder' : 'Confirmer votre mot de passe '}} ) }}
+                                </div>
 
-            </div>
-         </div>
+
+                                {{ form_widget(form) }}<br/>
+
+
+                    <button class="btn btn-primary"id="_submit"  name="_submit" type="submit" value="{{ 'Submit'|trans({}, 'FOSUserBundle') }}">
+                        <span class="glyphicon glyphicon-ok-sign"></span> Envoyer</button>
+                </form>
+            <div class="alert alert-link" > Vous avez un compte <a href="{{ path('fos_user_security_login') }}">  Connecter</a></div>
+        </div>
     </div>
-</form>
+</div>
+

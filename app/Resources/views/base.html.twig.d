@@ -5,14 +5,16 @@
     <title>{% block title %}Welcome!{% endblock %}</title>
     {% block stylesheets %}
 
-        <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{asset('css/font-awesome.min.css')}}"/>
-        <link rel="stylesheet" href="{{ asset('css/main.css') }}">
         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+
+        <link rel="stylesheet" type="text/css" href="{{asset('css/font-awesome.min.css')}}"/>
+
+
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
 
-        <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/modern-business.css') }}">
 
 
 

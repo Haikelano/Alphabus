@@ -22,10 +22,11 @@
                 <td><a href="{{ path('structure_show', { 'id': structure.id }) }}">{{ structure.id }}</a></td>
                 <td>{{ structure.protectionchassis }}</td>
                 
-                 <td>{% if structure.repremarques == null %} 
-                    <span class="label label-success">fonctionnement</span> 
+                 <td>{% if structure.repremarques == null %}
+                         <div class="alert-success" role="alert">fonctionnement</div>
                     {% else %}
-                   <span class="label label-danger">Etat critique</span>
+                        <div class="alert-danger" role="alert">Etat critique</div>
+
                      {% endif %} </td>
                 <td>{{ structure.repremarques }}</td>
                 <td>{{ structure.chassis }}</td>

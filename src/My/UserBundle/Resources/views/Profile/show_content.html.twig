@@ -1,4 +1,15 @@
-<div class="fos_user_user_show">
-    <p>{{ 'Votre Username '|trans({}, 'FOSUserBundle') }}: {{ user.username }}</p>
-    <p>{{ 'Votre email'|trans({}, 'FOSUserBundle') }}: {{ user.email }}</p>
+
+
+<div class="container">
+    <div class="row">
+
+        <div class="fos_user_user_show">
+            <p>    Last login in : {{ app.user.lastLogin|date("m/d/Y")}}  à {{ app.user.lastLogin|date('H:i:s') }} </p>
+            <p>{{ 'Votre Username :'|trans({}, 'FOSUserBundle') }}: {{ user.username }}</p>
+            <p>{{ 'Votre email :'|trans({}, 'FOSUserBundle') }}: {{ user.email }}</p>
+        </div>
+
+
+    </div>
 </div>
+

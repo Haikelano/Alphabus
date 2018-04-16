@@ -1,34 +1,28 @@
 {% extends "FOSUserBundle::layout.html.twig" %}
 
 {% block fos_user_content %}
-    <div class="row">
-         <div class="alert-danger">
-             <div class="col-sm-8">
-                    {% if error %}
-                        <div>{{ 'vous devez entre votre login et mot de passe  '|trans({}, 'FOSUserBundle') }}</div>
-                    {% endif %}
-              </div>
-         </div>
-    </div>
+
 
     <div class="container">
         <div class="row">
             <div class="col-lg-5 col-lg-offset-4">
-                <div class="align-content-lg-center">
-                    <img src="{{ asset('images/log2.png') }}">
-                    
-                    
-                </div>
+                  <div class="align-content-lg-center">
+                      <img src="{{ asset('images/log2.png') }}" style="width: 300px; height: 57px;">
+                      <h1> Alpha Bus Tunisie</h1>
+                  </div>
+
+
+
                <form action="{{ path("fos_user_security_check") }}" method="post">
-                   <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
-                   <br/><br/>
-                   <label for="username">{{ 'Nom d\'utilisateur'|trans({}, 'FOSUserBundle') }}</label>
+                    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                     <br/><br/>
+                     <label for="username">{{ 'Nom d\'utilisateur'|trans({}, 'FOSUserBundle') }}</label>
                    <div class="input-group">
                        <span class="input-group-addon" ><i class="fa fa-user "></i> User</span>
 
                        <input type="text" class="form-control" aria-describedby="basic-addon1" id="username" name="_username" value="{{ last_username }}" required="required" />
-                   </div>
-                   <br/>
+                       </div>
+                      <br/>
                    <label for="password">{{ 'Password'|trans({}, 'FOSUserBundle') }}</label>
 
                    <div class="input-group">
@@ -38,12 +32,21 @@
                        <input type="password" class="form-control" id="password" name="_password" required="required" />
                    </div>
                    <br/>
-                   <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
-                   <label for="remember_me">{{ 'Remember_me'|trans({}, 'FOSUserBundle') }}</label>
+                     <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+                     <label for="remember_me">{{ 'Remember_me'|trans({}, 'FOSUserBundle') }}</label>
                    <br/>
 
                    <button class="btn btn-primary"id="_submit"  name="_submit" type="submit" value="{{ 'Submit'|trans({}, 'FOSUserBundle') }}"><span class="glyphicon glyphicon-ok-sign"></span> Envoyer</button>
                </form>
+            <div class="alert alert-link" > Not signed in yet? <a href="{{ path('fos_user_registration_register') }}">New Employer</a></div>
+
+                <div class="alert-danger">
+
+                        {% if error %}
+                            <div>{{ 'vous devez entre votre login et mot de passe  '|trans({}, 'FOSUserBundle') }}</div>
+                        {% endif %}
+
+                </div>
             </div>
         </div>
     </div>

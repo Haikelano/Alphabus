@@ -7,6 +7,7 @@
 
     </head>
     <body>
+
         <div class="container">
             {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                 {{ 'Connection '|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
@@ -14,7 +15,7 @@
                     {{ 'Logout'|trans({}, 'FOSUserBundle') }}
                 </a>
             {% else %}
-                <a href="{{ path('fos_user_security_login') }}">{{ 'Connection'|trans({}, 'FOSUserBundle') }}</a>
+                <a href="{{ path('fos_user_security_login') }}">{{ ''|trans({}, 'FOSUserBundle') }}</a>
             {% endif %}
         </div>
 
