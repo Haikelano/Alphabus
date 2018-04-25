@@ -15,11 +15,13 @@ class PostType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-           
-            ->add('titre')
-            ->add('remarques')
 
-             ->add('file');
+            ->add('titre','text',array('label' => 'Titre de votre Problème :  '))
+            ->add('remarques','textarea',array('label' => 'Crée votre Remarques:  ',
+                'attr' => array('cols' => 80, 'rows' => 5) ))
+
+
+             ->add('file','file',array('label' => 'Inseré une image:  '));
     }
     
     /**

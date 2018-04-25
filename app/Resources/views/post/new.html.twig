@@ -1,16 +1,45 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Post creation</h1>
-
     {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="Create" />
-    {{ form_end(form) }}
+    <br/>
+     <div class="container">
+            <h1>Ajouter votre Problème</h1>
+         <br/>
+            <div class="row">
+                        <div class="col-lg-10">
+                        <table class="table" >
+                      <tr>
+                          <td>{{form_label(form.titre)}}</td>
 
-    <ul>
-        <li>
-            <a href="{{ path('post_index') }}">Back to the list</a>
-        </li>
-    </ul>
+                          <td>{{form_widget(form.titre)}}</td>
+                      </tr>
+                      <tr>
+                          <td>{{form_label(form.remarques)}}</td>
+
+                          <td>{{form_widget(form.remarques)}}</td>
+                      </tr>
+                      <tr>
+                          <td class="revicon-down-open">{{form_label(form.file)}}</td>
+
+                          <td>{{form_widget(form.file)}}</td>
+                      </tr>
+                      </table>
+                          <input type="submit" value="Ajouter " class="btn btn-primary" />
+                                {{ form_end(form) }}
+            </div>
+
+              <ul>
+                  <li>
+                      <a class="linked" href="{{ path('post_index') }}">Retournée </a>
+                  </li>
+              </ul>
+
+         </div>
+     </div>
+
+
+
+
+
 {% endblock %}
