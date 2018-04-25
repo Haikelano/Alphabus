@@ -1,0 +1,76 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}MyAlphabusBundle:Servicetest:index{% endblock %}
+
+{% block body %}
+<h1>Welcome to the Servicetest:index page</h1>
+
+
+    <form method="get" action="service_test" >
+
+       N°Chassis <input type="text" name="nchassis">
+        <input type="submit" value="submit">
+
+
+    </form>
+
+    <label >table de chassis</label>
+{% if chassis == null %}
+    vide
+    {% else %}
+    {% for chassi in chassis %}
+        <tr>
+
+            <td>{{ chassi.nchassis }}</td>
+            <td>{{ chassi.typechassis }}</td>
+            <td>{{ chassi.datereception|date('d-m-Y')  }}</td>
+            <td>{{ chassi.controler }}</td>
+        </tr>
+    {% endfor %}
+ {% endif %}
+
+    <p>
+        <label >table de peinture</label>
+    {% for p in peinture %}
+        <tr>
+
+
+            <td>{{ p.chassis }}</td>
+            <td>{{ p.date| date('Y-m-d') }}</td>
+            {% if p.etat == false %}
+         False
+            {% endif %}
+        </tr>
+    {% endfor %}
+</p >
+
+    <p>
+        <label >table de structure</label>
+    {% for s in structure %}
+        <tr>
+
+
+            <td>{{ s.chassis }}</td>
+            <td>{{ s.date| date('Y-m-d') }}  à  {{ s.date|date('H:i:s')}}</td>
+            {% if s.etat == false %}
+         False
+            {% endif %}
+        </tr>
+    {% endfor %}
+</p>
+    <p>
+        <label >table de reception chassis</label>
+    {% for r in reception %}
+        <tr>
+
+
+            <td>{{ r.nchassis }}</td>
+            <td>{{ r.date| date('Y-m-d') }}  à  {{ r.date|date('H:i:s')}}</td>
+            {% if r.etat == false %}
+         False
+            {% endif %}
+        </tr>
+    {% endfor %}
+</p>
+
+{% endblock %}

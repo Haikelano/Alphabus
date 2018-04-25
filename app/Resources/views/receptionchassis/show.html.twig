@@ -1,13 +1,12 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    <br/>
+    <br/>
+    <br/>
     <div class="container">
         <div class="row">
-            <div class="col-lg-9">
-
-
-
-
+            <div class="col-lg-8">
 
     <h1>Receptionchassi</h1>
 
@@ -16,10 +15,10 @@
         <thead class="table-dark">
         <tr>
 
-            <th scope="col">N°</th>
-            <th scope="col"> Contole</th>
-            <th scope="col">Valide</th>
-            <th scope="col">Remarque</th>
+            <th scope="col" class="col-md-1">N°</th>
+            <th scope="col" class="col-md-1"> Contole</th>
+            <th scope="col" class="col-md-1">Valide</th>
+            <th scope="col" class="col-md-5">Remarque</th>
         </tr>
         </thead>
         <tr>
@@ -145,6 +144,12 @@
             <td>{{ receptionchassi.protectionchassis }}</td>
             <td>{{ receptionchassi.rmqprotectionchassis }}</td>
         </tr>
+        <tr>
+            <th>***</th>
+            <th>Terminer le travail Atelier</th>
+            <td>{% if receptionchassi.etat == false  %} False {% endif %}</td>
+            <td></td>
+        </tr>
         </tbody>
     </table>
                 <br/>
@@ -178,7 +183,7 @@
     </ul>
             </div>
 
-            <div class="col-lg-3">
+            <div class="col-lg-4">
                 <h1>Validation</h1>
                 <table class="table">
                     <tr>
@@ -193,8 +198,15 @@
                         <td>{{ receptionchassi.responsablequalite }}</td>
                     </tr>
                 </table>
+                <p>
 
+                    Crée le {% if receptionchassi.date %}{{ receptionchassi.date|date('Y-m-d') }}
+                        à {{ receptionchassi.date|date('H:i:s') }}{% endif %}
+                </p>
             </div>
+
+
+
         </div>
     </div>
 {% endblock %}

@@ -20,7 +20,64 @@ class Receptionchassis
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="etat", type="boolean", options={"default"=false}, nullable=true)
+     */
+    private $etat;
 
+    /**
+     * @return bool
+     */
+    public function isEtat()
+    {
+        return $this->etat;
+    }
+
+    /**
+     * @param bool $etat
+     */
+    public function setEtat($etat)
+    {
+        $this->etat = $etat;
+    }
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date", type="datetime", nullable=true)
+     */
+    private $date;
+
+
+    public function __construct()
+    {
+        $this->date = new \DateTime();
+    }
+    /**
+     * Set date
+     *
+     * @param \DateTime $date
+     * @return Post
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+
+
+    /**
+     * Get date
+     *
+     * @return \DateTime
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
     /**
      * @var string
      *
@@ -339,6 +396,7 @@ class Receptionchassis
      */
 
     private $nchassis;
+
     
         
     function getRmqgeneralchassis() {

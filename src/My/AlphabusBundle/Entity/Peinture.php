@@ -49,6 +49,31 @@ class Peinture
        function setChassis($chassis) {
            $this->chassis = $chassis;
        }
+
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="etat", type="boolean", options={"default"=false}, nullable=true)
+     */
+    private $etat;
+
+    /**
+     * @return bool
+     */
+    public function isEtat()
+    {
+        return $this->etat;
+    }
+
+    /**
+     * @param bool $etat
+     */
+    public function setEtat($etat)
+    {
+        $this->etat = $etat;
+    }
+
+
     /**
      * @var string
      *
