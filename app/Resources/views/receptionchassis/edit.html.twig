@@ -1,32 +1,230 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Receptionchassi edit</h1>
-
-    {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
-    {{ form_end(edit_form) }}
 
 
 
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10">
 
+                <p> <h2>Le N° Chassis à modifier est :<strong>{{ receptionchassi.nchassis }}</strong> </h2></p>
 
 
 
 
 
+            </div>
+        </div>
+    </div>
+
+    <form action="" method="post" {{ form_enctype(f) }} >
+        <div class ="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                                <table class="table  table-striped">
+                                    <tbody>
+                                    <thead class="table-dark">
+                                    <tr>
+
+                                        <th scope="col" class="col-md-1">N°</th>
+                                        <th scope="col" class="col-md-1"> Contole</th>
+                                        <th scope="col" class="col-sm-1">Valide</th>
+                                        <th scope="col" class="col-md-5">Remarque</th>
+                                    </tr>
+                                    </thead>
+                                    <tr>
+                                        <th>***</th>
+                                        <th>Generalchassis</th>
+                                        <td>{{ form_widget(f.generalchassis )}}</td>
+                                        <td>{{ form_widget(f.rmqgeneralchassis )}}</td>
+
+
+                                    </tr>
+                                    <tr>
+                                        <th>***</th>
+                                        <th>Huilemoreur</th>
+                                        <td>{{ form_widget(f.huilemoreur )}}</td>
+                                        <td>{{ form_widget(f.rmqhuilemoreur )}}</td>
+
+                                    </tr>
+                                    <tr>
+                                        <th>***</th>
+                                        <th>Boitevitesse</th>
+                                        <td>{{ form_widget(f.boitevitesse )}}</td>
+                                        <td>{{ form_widget(f.rmqboitevitesse )}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>***</th>
+                                        <th>Huiledirection</th>
+                                        <td>{{ form_widget(f.huiledirection )}}</td>
+                                        <td>{{ form_widget(f.rmqhuiledirection )}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>***</th>
+                                        <th>Liquiderefroidisement</th>
+                                        <td>{{ form_widget(f.liquiderefroidisement )}}</td>
+                                        <td>{{ form_widget(f.rmqliquiderefroidisement )}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>***</th>
+                                        <th>Ventilateur</th>
+                                        <td>{{ form_widget(f.ventilateur )}}</td>
+                                        <td>{{ form_widget(f.rmqventilateur )}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>***</th>
+                                        <th>Embrayage</th>
+                                        <td>{{ form_widget(f.embrayage )}}</td>
+                                        <td>{{ form_widget(f.rmqembrayage )}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>***</th>
+                                        <th>Huilefuitechassis</th>
+                                        <td>{{ form_widget(f.huilefuitechassis )}}</td>
+                                        <td>{{ form_widget(f.rmqhuilefuitechassis )}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>***</th>
+                                        <th>Fuitedaire</th>
+                                        <td>{{ form_widget(f.fuitedaire )}}</td>
+                                        <td>{{ form_widget(f.rmqfuitedaire )}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>***</th>
+                                        <th>Rouesecours</th>
+                                        <td>{{ form_widget(f.rouesecours )}}</td>
+                                        <td>{{ form_widget(f.rmqrouesecours )}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>***</th>
+                                        <th>Filtresecondaire</th>
+                                        <td>{{ form_widget(f.filtresecondaire )}}</td>
+                                        <td>{{ form_widget(f.rmqfiltresecondaire )}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>***</th>
+                                        <th>Centraleelectrique</th>
+                                        <td>{{ form_widget(f.centraleelectrique )}}</td>
+                                        <td>{{ form_widget(f.rmqcentraleelectrique )}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>***</th>
+                                        <th>Tableaubord</th>
+                                        <td>{{ form_widget(f.tableaubord )}}</td>
+                                        <td>{{ form_widget(f.rmqtableaubord )}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>***</th>
+                                        <th>Exthuiledirection</th>
+                                        <td>{{ form_widget(f.exthuiledirection )}}</td>
+                                        <td>{{ form_widget(f.rmqexthuiledirection )}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>***</th>
+                                        <th>Cledouble</th>
+                                        <td>{{ form_widget(f.cledouble )}}</td>
+                                        <td>{{ form_widget(f.rmqcledouble )}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>***</th>
+                                        <th>Docchassis</th>
+                                        <td>{{ form_widget(f.docchassis )}}</td>
+                                        <td>{{ form_widget(f.rmqdocchassis )}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>***</th>
+                                        <th>Codeereur</th>
+                                        <td>{{ form_widget(f.codeereur )}}</td>
+                                        <td>{{ form_widget(f.rmqcodeereur )}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>***</th>
+                                        <th>Kitaccesoires</th>
+                                        <td>{{ form_widget(f.kitaccesoires )}}</td>
+                                        <td>{{ form_widget(f.rmqkitaccesoires )}}</td>
+                                    </tr>
+                                    <tr class="hide">
+                                        <th>***</th>
+                                        <th class="hide">Remorquage</th>
+                                        <td>{{ form_widget(f.remorquage,{attr:{'class':'hidden'}}) }}</td>
+                                        <td>{{ form_widget(f.rmqremorquage )}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>***</th>
+                                        <th>Protectionchassis</th>
+                                        <td>{{ form_widget(f.protectionchassis )}}</td>
+                                        <td>{{ form_widget(f.rmqprotectionchassis )}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>***</th>
+                                        <th>l'etat terminer ou non</th>
+                                        <td>{{ form_widget(f.etat )}}</td>
+                                        <td></td>
+                                    </tr>
+
+                                    </tbody>
+
+                                </table>
 
 
 
+
+                    <div class ="form-group">
+                              <button type="submit" Class ="btn btn-primary">
+                                <span class ="glyphicon-plus"/>Valider
+                            </button>
+
+                    </div>
+                </div>
+
+                   <!--     a guache en va initialiser le petit affiche -->
+                    <div class="col-lg-3">
+
+                        <h1>Validation</h1>
+                        <table class="table">
+                            <tr>
+                                <th>Mecanicien</th>
+                                <th>Contqualite</th>
+                                <th>Responsablequalite</th>
+                            </tr>
+
+                            <tr>
+                                <td>{{ receptionchassi.mecanicien }}</td>
+                                <td>{{ receptionchassi.contqualite }}</td>
+                                <td>{{ receptionchassi.responsablequalite }}</td>
+                            </tr>
+                        </table>
+
+                        <h4 style="padding-top: 50px">
+                            <a href="{{ path('receptionchassis_index') }}">Back to the list</a>
+
+                        </h4>
+                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="hidden">
+            {{ form_widget(f.nchassis, { 'attr' : { 'style':'display:none'} }) }}
+            {{ form_widget(f.mecanicien, { 'attr' : { 'style':'display:none'} }) }}
+            {{ form_widget(f.remarques, { 'attr' : { 'style':'display:none'} }) }}
+            {{ form_widget(f.contqualite, { 'attr' : { 'style':'display:none'} }) }}
+            {{ form_widget(f.responsablequalite, { 'attr' : { 'style':'display:none'} }) }}
+        </div>
+    {{ form_end(f) }}
+    </form>
     <ul>
         <li>
-            <a href="{{ path('receptionchassis_index') }}">Back to the list</a>
+
         </li>
-        <li>
+    </ul>
+        <!--
+            <li>
             {{ form_start(delete_form) }}
                 <input type="submit" value="Delete">
             {{ form_end(delete_form) }}
-        </li>
-    </ul>
+            </li>
+
+
+        -->
 {% endblock %}

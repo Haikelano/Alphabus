@@ -97,8 +97,9 @@ class ReceptionchassisController extends Controller
 
         return $this->render('receptionchassis/edit.html.twig', array(
             'receptionchassi' => $receptionchassi,
-            'edit_form' => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
+            'delete_form'=>$deleteForm->createView(),
+            'f' => $editForm->createView(),
+
         ));
     }
 

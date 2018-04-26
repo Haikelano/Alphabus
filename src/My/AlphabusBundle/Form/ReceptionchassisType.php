@@ -29,6 +29,10 @@ class ReceptionchassisType extends AbstractType
                 ->add('exthuiledirection')
                 ->add('cledouble')
                 ->add('docchassis')
+                ->add('etat')
+            ->add('etat','choice',array('choices'=>array(true=>'Terminer leur Travail',false
+                =>'Ne pas terminer le travail'))
+                 ,array('label'=>'l\'etat terminer ou non : '))
                 ->add('codeereur')
                 ->add('kitaccesoires')
                 ->add('remorquage')

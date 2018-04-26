@@ -3,7 +3,7 @@
 {% block body %}
     <h1>Post</h1>
 
-    <table>
+    <table class="table">
         <tbody>
             <tr>
                 <th>Id</th>
@@ -11,7 +11,7 @@
             </tr>
             <tr>
                 <th>Images</th>
-                <td>{{ post.images }}</td>
+                <td><img class="img-fluid rounded" src="{{ asset('images/'~post.path)}}" style="width:750px ; height: 300px;" alt=""></td>
             </tr>
             <tr>
                 <th>Remarques</th>

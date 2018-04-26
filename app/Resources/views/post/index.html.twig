@@ -51,7 +51,7 @@
                     à {{ post.date|date('H:i:s') }}{% endif %} by
                 {{ post.proprietaire }}
                 <a href="#">Start Bootstrap</a>
-                <a href="{{ path('post_edit', { 'id': post.id }) }}">edit</a>
+                <a href="{{ path('post_show', { 'id': post.id }) }}">Voir</a>
                 {% if post.etat == true %}
                 <div class="alert alert-success">
 

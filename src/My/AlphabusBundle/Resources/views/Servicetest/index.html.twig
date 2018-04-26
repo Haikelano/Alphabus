@@ -3,16 +3,84 @@
 {% block title %}MyAlphabusBundle:Servicetest:index{% endblock %}
 
 {% block body %}
-<h1>Welcome to the Servicetest:index page</h1>
+
+
+<!-- Portfolio Section -->
+<div class="container" style="padding-top: 20px; padding-bottom: 10px" >
+
+
+
+    <h2>Service de TEST</h2>
 
 
     <form method="get" action="service_test" >
 
-       N°Chassis <input type="text" name="nchassis">
-        <input type="submit" value="submit">
+        N°Chassis <input type="text" name="nchassis" class="search">
+        <input type="submit" value="submit" class="btn btn-primary">
 
 
     </form>
+    {% if chassis != null %}
+        {% for chassi in chassis %}
+<h1> Vous consulter le chassis {{ chassi.nchassis }}</h1>
+        {% endfor %}
+        {% endif %}
+
+
+<div class="row" style="padding-top: 30px">
+    <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="{{ asset('images/atelier/acier.jpg') }}" alt=""></a>
+            <div class="card-body">
+                <h4 class="card-title">
+                    <a href="#">Atelier Acier</a>
+                    {% if chassis == null %}
+                     <img src="{{ asset('images/atelier/info.png') }}" style="width: 50px;height: 50px ; padding-left: 10px">
+                    {% else %}
+                    {% for r in reception %}
+
+                    {% if r.etat == false %}
+                        <img src="{{ asset('images/atelier/a.png') }}" style="width: 50px;height: 50px ">
+                    {% else  %}
+                        <img src="{{ asset('images/atelier/succus.png') }}" style="width: 50px;height: 50px ">
+                    {% endif %}
+                    {% endfor %}
+                    {% endif %}
+                </h4>
+                </h4>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card-body">
+                <h4 class="card-title">
+                    <a href="#">Atelier Peinture</a> <img src="{{ asset('images/atelier/info.png') }}" style="width: 50px;height: 50px ; padding-left: 10px">
+                </h4>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card-body">
+                <h4 class="card-title">
+                    <a href="#">Atelier Finition</a> <img src="{{ asset('images/atelier/info.png') }}" style="width: 50px;height: 50px ; padding-left: 10px">
+                </h4>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
 
     <label >table de chassis</label>
 {% if chassis == null %}
@@ -68,6 +136,10 @@
             <td>{{ r.date| date('Y-m-d') }}  à  {{ r.date|date('H:i:s')}}</td>
             {% if r.etat == false %}
          False
+
+                {% else%}
+
+                true
             {% endif %}
         </tr>
     {% endfor %}

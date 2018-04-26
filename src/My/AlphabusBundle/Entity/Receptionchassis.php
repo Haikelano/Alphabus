@@ -67,8 +67,6 @@ class Receptionchassis
         return $this;
     }
 
-
-
     /**
      * Get date
      *
@@ -78,6 +76,9 @@ class Receptionchassis
     {
         return $this->date;
     }
+
+
+
     /**
      * @var string
      *

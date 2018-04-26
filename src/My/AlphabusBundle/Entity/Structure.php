@@ -82,8 +82,6 @@ class Structure
         return $this;
     }
 
-
-
     /**
      * Get date
      *
@@ -93,6 +91,8 @@ class Structure
     {
         return $this->date;
     }
+
+
     /**
      * @var string
      *

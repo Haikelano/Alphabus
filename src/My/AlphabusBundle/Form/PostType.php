@@ -18,7 +18,7 @@ class PostType extends AbstractType
 
             ->add('titre','text',array('label' => 'Titre de votre Problème :  '))
             ->add('remarques','textarea',array('label' => 'Crée votre Remarques:  ',
-                'attr' => array('cols' => 80, 'rows' => 5) ))
+                'attr' => array('cols' => 70, 'rows' => 5) ))
 
 
              ->add('file','file',array('label' => 'Inseré une image:  '));
