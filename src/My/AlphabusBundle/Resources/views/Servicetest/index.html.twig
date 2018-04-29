@@ -7,7 +7,7 @@
 
 <!-- Portfolio Section -->
 <div class="container" style="padding-top: 20px; padding-bottom: 10px" >
-
+    <div style="width: 85%">
 
 
     <h2>Service de TEST</h2>
@@ -22,7 +22,7 @@
     </form>
     {% if chassis != null %}
         {% for chassi in chassis %}
-<h1> Vous consulter le chassis {{ chassi.nchassis }}</h1>
+<h4> Vous consulter le chassis {{ chassi.nchassis }}</h4>
         {% endfor %}
         {% endif %}
 
@@ -33,9 +33,23 @@
             <a href="#"><img class="card-img-top" src="{{ asset('images/atelier/acier.jpg') }}" alt=""></a>
             <div class="card-body">
                 <h4 class="card-title">
-                    <a href="#">Atelier Acier</a>
+                    {% if chassis != null %}
+                      {% for r in reception %}
+
+                            <a href="{{ path('receptionchassis_show', { 'id': r.id }) }}">Atelier Acier</a>
+                            {% endfor %}
+                         {% else %}
+                        <a href="">Atelier Acier</a>
+                    {% endif %}
+
                     {% if chassis == null %}
                      <img src="{{ asset('images/atelier/info.png') }}" style="width: 50px;height: 50px ; padding-left: 10px">
+                    <h6>  <p class="card-text"><span style="text-decoration: underline"> Etat Generale chassis :</span> ****** </p></h6>
+                    <h6>  <p class="card-text"><span style="text-decoration: underline"> Valider par  :</span> ****** </p></h6>
+                    <h6>  <p class="card-text"><span style="text-decoration: underline"> Les Remarques  :</span>
+                            ****** </p></h6>
+
+                    <h6>  <p class="card-text"><span style="text-decoration: underline"> Data Modification :</span> ****** à ****** </p></h6>
                     {% else %}
                     {% for r in reception %}
 
@@ -44,36 +58,113 @@
                     {% else  %}
                         <img src="{{ asset('images/atelier/succus.png') }}" style="width: 50px;height: 50px ">
                     {% endif %}
-                    {% endfor %}
+
+                </h4>
+                <h7>  <p class="card-text"><span style="text-decoration: underline"> Etat Generale chassis :</span> {{ r.generalchassis }} </p></h7>
+                <h7>  <p class="card-text"><span style="text-decoration: underline"> Valider par  :</span> {{ r.mecanicien  }} </p></h7>
+                <h7>  <p class="card-text"><span style="text-decoration: underline"> Les Remarques  :</span>
+                        {% if r.remarques == null %}
+                        *** Rien *** {% else %}
+                        {{ r.remarques }} </p></h7> {% endif %}
+                <h7>  <p class="card-text"><span style="text-decoration: underline"> Data Modification :</span> {{ r.date |date('Y-m-d') }} à {{ r.date|date('H:i:s') }} </p></h7>
+                {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="{{ asset('images/atelier/acier.jpg') }}" alt=""></a>
+            <div class="card-body">
+                <h4 class="card-title">
+                    {% if chassis != null %}
+                        {% for p in peinture %}
+
+                            <a href="{{ path('receptionchassis_show', { 'id': p.id }) }}">Atelier Peinture</a>
+                        {% endfor %}
+                    {% else %}
+                        <a href="">Atelier Peinture</a>
                     {% endif %}
+
+                    {% if chassis == null %}
+                    <img src="{{ asset('images/atelier/info.png') }}" style="width: 50px;height: 50px ; padding-left: 10px">
+                    <h6>  <p class="card-text"><span style="text-decoration: underline"> Etat Generale chassis :</span> ****** </p></h6>
+                    <h6>  <p class="card-text"><span style="text-decoration: underline"> Valider par  :</span> ****** </p></h6>
+                    <h6>  <p class="card-text"><span style="text-decoration: underline"> Les Remarques  :</span>
+                            ****** </p></h6>
+
+                    <h6>  <p class="card-text"><span style="text-decoration: underline"> Data Modification :</span> ****** à ****** </p></h6>
+                    {% else %}
+                    {% for p in peinture %}
+
+                    {% if p.etat == false %}
+                        <img src="{{ asset('images/atelier/a.png') }}" style="width: 50px;height: 50px ">
+                    {% else  %}
+                        <img src="{{ asset('images/atelier/succus.png') }}" style="width: 50px;height: 50px ">
+                    {% endif %}
+
                 </h4>
-                </h4>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
+
+                <h7>  <p class="card-text"><span style="text-decoration: underline"> Valider par  :</span> {{ p.interrieur   }} </p></h7>
+                <h7>  <p class="card-text"><span style="text-decoration: underline"> Les Remarques  :</span>
+                        {% if p.remarques == null %}
+                        *** Rien *** {% else %}
+                        {{ p.remarques }} </p></h7> {% endif %}
+                <h7>  <p class="card-text"><span style="text-decoration: underline"> Data Modification :</span> {{ p.date |date('Y-m-d') }} à {{ p.date|date('H:i:s') }} </p></h7>
+                {% endfor %}
+                {% endif %}
             </div>
         </div>
     </div>
+
+
+
+
     <div class="col-lg-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <a href="#"><img class="card-img-top" src="{{ asset('images/atelier/acier.jpg') }}" alt=""></a>
             <div class="card-body">
                 <h4 class="card-title">
-                    <a href="#">Atelier Peinture</a> <img src="{{ asset('images/atelier/info.png') }}" style="width: 50px;height: 50px ; padding-left: 10px">
+                    {% if chassis != null %}
+                        {% for p in peinture %}
+
+                            <a href="{{ path('receptionchassis_show', { 'id': p.id }) }}">Atelier Peinture</a>
+                        {% endfor %}
+                    {% else %}
+                        <a href="">Atelier Finition</a>
+                    {% endif %}
+
+                    {% if chassis == null %}
+                    <img src="{{ asset('images/atelier/info.png') }}" style="width: 50px;height: 50px ; padding-left: 10px">
+                    <h6>  <p class="card-text"><span style="text-decoration: underline"> Etat Generale chassis :</span> ****** </p></h6>
+                    <h6>  <p class="card-text"><span style="text-decoration: underline"> Valider par  :</span> ****** </p></h6>
+                    <h6>  <p class="card-text"><span style="text-decoration: underline"> Les Remarques  :</span>
+                            ****** </p></h6>
+
+                    <h6>  <p class="card-text"><span style="text-decoration: underline"> Data Modification :</span> ****** à ****** </p></h6>
+                    {% else %}
+                    {% for p in peinture %}
+
+                    {% if p.etat == false %}
+                        <img src="{{ asset('images/atelier/a.png') }}" style="width: 50px;height: 50px ">
+                    {% else  %}
+                        <img src="{{ asset('images/atelier/succus.png') }}" style="width: 50px;height: 50px ">
+                    {% endif %}
+
                 </h4>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+
+                <h7>  <p class="card-text"><span style="text-decoration: underline"> Valider par  :</span> {{ p.interrieur   }} </p></h7>
+                <h7>  <p class="card-text"><span style="text-decoration: underline"> Les Remarques  :</span>
+                        {% if p.remarques == null %}
+                        *** Rien *** {% else %}
+                        {{ p.remarques }} </p></h7> {% endif %}
+                <h7>  <p class="card-text"><span style="text-decoration: underline"> Data Modification :</span> {{ p.date |date('Y-m-d') }} à {{ p.date|date('H:i:s') }} </p></h7>
+                {% endfor %}
+                {% endif %}
             </div>
         </div>
     </div>
-    <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-            <div class="card-body">
-                <h4 class="card-title">
-                    <a href="#">Atelier Finition</a> <img src="{{ asset('images/atelier/info.png') }}" style="width: 50px;height: 50px ; padding-left: 10px">
-                </h4>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
-            </div>
-        </div>
-    </div>
+
 </div>
 </div>
 
@@ -144,5 +235,5 @@
         </tr>
     {% endfor %}
 </p>
-
+</div>
 {% endblock %}

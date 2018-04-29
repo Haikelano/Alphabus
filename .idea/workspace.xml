@@ -2,26 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf407208-2f58-4e5a-adf5-5ca0666b368d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/web/images/atelier/a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/atelier/acier.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/atelier/info.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/atelier/succus.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/post/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/post/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/post/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/post/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/post/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/post/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/post/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/post/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/receptionchassis/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/receptionchassis/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/receptionchassis/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/receptionchassis/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/structure/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/structure/edit.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/logs/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/app/logs/dev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/My/AlphabusBundle/Controller/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/My/AlphabusBundle/Controller/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/My/AlphabusBundle/Controller/ReceptionchassisController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/My/AlphabusBundle/Controller/ReceptionchassisController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/My/AlphabusBundle/Entity/Receptionchassis.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/My/AlphabusBundle/Entity/Receptionchassis.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/My/AlphabusBundle/Entity/Structure.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/My/AlphabusBundle/Entity/Structure.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/My/AlphabusBundle/Form/PostType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/My/AlphabusBundle/Form/PostType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/My/AlphabusBundle/Form/ReceptionchassisType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/My/AlphabusBundle/Form/ReceptionchassisType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/My/AlphabusBundle/Controller/ServicetestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/My/AlphabusBundle/Controller/ServicetestController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/My/AlphabusBundle/Resources/views/Servicetest/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/My/AlphabusBundle/Resources/views/Servicetest/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Security/login.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,56 +20,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ReceptionchassisType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Form/ReceptionchassisType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="32" column="92" selection-start-line="32" selection-start-column="92" selection-end-line="32" selection-end-column="92" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/receptionchassis/edit.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="162" column="49" selection-start-line="162" selection-start-column="49" selection-end-line="162" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addchassis.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Resources/views/Chassis/addchassis.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="32" selection-start-column="32" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChassisType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Form/ChassisType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="18" column="139" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="139" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Resources/views/Servicetest/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
+            <state relative-caret-position="234">
+              <caret line="225" column="28" lean-forward="true" selection-start-line="225" selection-start-column="28" selection-end-line="225" selection-end-column="28" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#1;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#0;n#h6#1;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#0;n#h7#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#h4#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#0;n#h6#1;n#h4#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#0;n#h7#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#h4#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#0;n#h6#1;n#h4#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#0;n#h7#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/post/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="49" column="55" selection-start-line="49" selection-start-column="55" selection-end-line="50" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -92,32 +53,21 @@
       <file leaf-file-name="ServicetestController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Controller/ServicetestController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+            <state relative-caret-position="300">
+              <caret line="30" column="117" selection-start-line="30" selection-start-column="117" selection-end-line="30" selection-end-column="117" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Structure.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Entity/Structure.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="57" column="28" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/structure/show.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1834" />
-          </provider>
+      <file leaf-file-name="AffectationRepository.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Repository/AffectationRepository.php">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/receptionchassis/show.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
+            <state relative-caret-position="543">
               <caret line="134" column="12" selection-start-line="134" selection-start-column="12" selection-end-line="134" selection-end-column="12" />
             </state>
           </provider>
@@ -153,6 +103,8 @@
       <find>date</find>
       <find>data</find>
       <find>ETAT</find>
+      <find>findB</find>
+      <find>show</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -161,7 +113,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Resources/views/affectation/index.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/affectation/edit.html.twig" />
         <option value="$PROJECT_DIR$/src/My/AlphabusBundle/Controller/AffectationController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/affectation/show.html.twig" />
@@ -171,7 +122,6 @@
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/src/My/AlphabusBundle/Controller/UserController.php" />
         <option value="$PROJECT_DIR$/web/css/custom.css" />
-        <option value="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Security/login.html.twig" />
         <option value="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Registration/register_content.html.twig" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
@@ -210,7 +160,9 @@
         <option value="$PROJECT_DIR$/src/My/AlphabusBundle/Form/ReceptionchassisType.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/receptionchassis/show.html.twig" />
         <option value="$PROJECT_DIR$/src/My/AlphabusBundle/Controller/ReceptionchassisController.php" />
+        <option value="$PROJECT_DIR$/src/My/UserBundle/Resources/views/Security/login.html.twig" />
         <option value="$PROJECT_DIR$/src/My/AlphabusBundle/Controller/ServicetestController.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/receptionchassis/index.html.twig" />
         <option value="$PROJECT_DIR$/src/My/AlphabusBundle/Resources/views/Servicetest/index.html.twig" />
       </list>
     </option>
@@ -280,10 +232,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1762" />
-    <option name="y" value="171" />
-    <option name="width" value="902" />
-    <option name="height" value="484" />
+    <option name="width" value="1366" />
+    <option name="height" value="732" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -293,7 +243,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -318,6 +267,14 @@
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Alphabus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Alphabus" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="post" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Alphabus" type="b2602c69:ProjectViewProjectNode" />
@@ -375,14 +332,6 @@
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="My" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="AlphabusBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Form" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Alphabus" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Alphabus" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="My" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="AlphabusBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -393,16 +342,6 @@
               <item name="AlphabusBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Alphabus" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Alphabus" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="My" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="AlphabusBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Chassis" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Alphabus" type="b2602c69:ProjectViewProjectNode" />
@@ -414,34 +353,11 @@
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Servicetest" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="Alphabus" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Alphabus" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Alphabus" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Alphabus" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="images" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Alphabus" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Alphabus" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="images" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="atelier" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Alphabus" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Alphabus" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -451,19 +367,19 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/web/images/atelier" />
-      <recent name="$PROJECT_DIR$/web/images/slide" />
-      <recent name="$PROJECT_DIR$/web/js" />
-      <recent name="$PROJECT_DIR$/web" />
-      <recent name="$PROJECT_DIR$/web/images" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web/images/atelier" />
       <recent name="$PROJECT_DIR$/web/login" />
       <recent name="$PROJECT_DIR$/src/My/AlphabusBundle/Controller" />
       <recent name="$PROJECT_DIR$/web/images" />
       <recent name="$PROJECT_DIR$/app/Resources/views" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/images/atelier" />
+      <recent name="$PROJECT_DIR$/web/images/slide" />
+      <recent name="$PROJECT_DIR$/web/js" />
+      <recent name="$PROJECT_DIR$/web" />
+      <recent name="$PROJECT_DIR$/web/images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -550,27 +466,28 @@
       <workItem from="1524593014534" duration="3119000" />
       <workItem from="1524649087104" duration="12990000" />
       <workItem from="1524738850536" duration="19923000" />
+      <workItem from="1524813132621" duration="3587000" />
+      <workItem from="1525021564059" duration="3798000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184325000" />
+    <option name="totallyTimeSpent" value="191835000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1552" y="0" width="1440" height="900" extended-state="6" />
+    <frame x="0" y="0" width="1366" height="732" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2189394" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.3296" />
-      <window_info anchor="right" x="0" y="0" width="310" height="700" id="Documentation" order="0" side_tool="true" weight="0.32998565" />
+      <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.2513021" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26542324" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="4" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
@@ -578,10 +495,31 @@
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Command Line Tools Console" order="11" />
+      <window_info anchor="right" x="0" y="0" width="310" height="700" id="Documentation" order="0" side_tool="true" weight="0.32998565" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32912987" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2408492" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32912987" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3296" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -601,6 +539,20 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Form/ReceptionchassisType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="43" column="41" lean-forward="true" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/structure/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Form/Type/UsernameFormType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-405" />
@@ -739,14 +691,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/receptionchassis/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-261" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Controller/StructureController.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/structure/edit.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -772,16 +716,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Controller/ChassisController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="83" column="12" selection-start-line="83" selection-start-column="12" selection-end-line="83" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -827,13 +761,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/post/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="48" column="48" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Entity/Receptionchassis.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
@@ -857,8 +784,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/receptionchassis/edit.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="162" column="49" selection-start-line="162" selection-start-column="49" selection-end-line="162" selection-end-column="49" />
+        <state relative-caret-position="2460">
+          <caret line="164" selection-start-line="164" selection-end-line="164" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Entity/Structure.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="57" column="28" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/My/UserBundle/Resources/views/Security/login.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Controller/ChassisController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="120" column="49" selection-start-line="120" selection-start-column="49" selection-end-line="120" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Controller/ReceptionchassisController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="66" column="50" selection-start-line="66" selection-start-column="46" selection-end-line="66" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Repository/ClientsRepository.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Repository/ChassisRepository.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/receptionchassis/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="543">
+          <caret line="134" column="12" selection-start-line="134" selection-start-column="12" selection-end-line="134" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Form/ReceptionchassisType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -869,58 +844,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Form/ReceptionchassisType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="32" column="92" selection-start-line="32" selection-start-column="92" selection-end-line="32" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/receptionchassis/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="134" column="12" selection-start-line="134" selection-start-column="12" selection-end-line="134" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/images/atelier/a.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/images/atelier/acier.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/images/atelier/succus.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Form/StructureType.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Controller/ReceptionchassisController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="98" column="12" selection-start-line="98" selection-start-column="12" selection-end-line="98" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Entity/Structure.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="57" column="28" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/structure/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1834" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Controller/ServicetestController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Form/ChassisType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -928,18 +851,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/post/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="49" column="55" selection-start-line="49" selection-start-column="55" selection-end-line="50" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/receptionchassis/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="33" column="106" selection-start-line="33" selection-start-column="106" selection-end-line="33" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Controller/ServicetestController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="30" column="117" selection-start-line="30" selection-start-column="117" selection-end-line="30" selection-end-column="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Repository/AffectationRepository.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/My/AlphabusBundle/Resources/views/Servicetest/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
+        <state relative-caret-position="234">
+          <caret line="225" column="28" lean-forward="true" selection-start-line="225" selection-start-column="28" selection-end-line="225" selection-end-column="28" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#1;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#h6#1;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#h7#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#h4#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#h6#1;n#h4#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#h7#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#h4#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#h6#1;n#h4#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#h7#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

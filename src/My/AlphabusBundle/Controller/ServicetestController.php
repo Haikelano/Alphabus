@@ -26,10 +26,11 @@ class ServicetestController extends Controller
         $nchassis = $request->query->get('nchassis');
         $em = $this->getDoctrine()->getManager();
         $nchassis = $em->getRepository('MyAlphabusBundle:Chassis')->findBy(array("nchassis" => $nchassis));
-        $peinture = $em->getRepository('MyAlphabusBundle:Peinture')->findBy(array("chassis" => $nchassis));
+         $peinture = $em->getRepository('MyAlphabusBundle:Peinture')->findBy(array("chassis" => $nchassis));
         $structure = $em->getRepository('MyAlphabusBundle:Structure')->findBy(array("chassis" => $nchassis));
         $reception = $em->getRepository('MyAlphabusBundle:Receptionchassis')->findBy(array("nchassis" => $nchassis));
         return $this->render('MyAlphabusBundle:Servicetest:index.html.twig', array(
+
             'chassis' => $nchassis,
             'peinture' =>$peinture,
             'reception' =>$reception,

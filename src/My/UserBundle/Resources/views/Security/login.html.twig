@@ -11,8 +11,6 @@
                       <h1> Alpha Bus Tunisie</h1>
                   </div>
 
-
-
                <form action="{{ path("fos_user_security_check") }}" method="post">
                     <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
                      <br/><br/>
@@ -43,7 +41,7 @@
                 <div class="alert-danger">
 
                         {% if error %}
-                            <div>{{ 'vous devez entre votre login et mot de passe  '|trans({}, 'FOSUserBundle') }}</div>
+                            <div class="alert alert-danger">{{ 'vous devez entre votre login et mot de passe  '|trans({}, 'FOSUserBundle') }}</div>
                         {% endif %}
 
                 </div>
