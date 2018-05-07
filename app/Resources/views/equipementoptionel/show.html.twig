@@ -1,0 +1,100 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Equipementoptionel</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ equipementoptionel.id }}</td>
+            </tr>
+            <tr>
+                <th>Tachygraphe</th>
+                <td>{{ equipementoptionel.tachygraphe }}</td>
+            </tr>
+            <tr>
+                <th>Plombagetachygraphe</th>
+                <td>{{ equipementoptionel.plombagetachygraphe }}</td>
+            </tr>
+            <tr>
+                <th>Fonctrefegirateur</th>
+                <td>{{ equipementoptionel.fonctrefegirateur }}</td>
+            </tr>
+            <tr>
+                <th>Camerasurvaillence</th>
+                <td>{{ equipementoptionel.camerasurvaillence }}</td>
+            </tr>
+            <tr>
+                <th>Afficheursdestination</th>
+                <td>{{ equipementoptionel.afficheursdestination }}</td>
+            </tr>
+            <tr>
+                <th>Fonctradio</th>
+                <td>{{ equipementoptionel.fonctradio }}</td>
+            </tr>
+            <tr>
+                <th>Fontlecteur</th>
+                <td>{{ equipementoptionel.fontlecteur }}</td>
+            </tr>
+            <tr>
+                <th>Fonctecrans</th>
+                <td>{{ equipementoptionel.fonctecrans }}</td>
+            </tr>
+            <tr>
+                <th>Fonctmicrophone</th>
+                <td>{{ equipementoptionel.fonctmicrophone }}</td>
+            </tr>
+            <tr>
+                <th>Rmqtachygraphe</th>
+                <td>{{ equipementoptionel.rmqtachygraphe }}</td>
+            </tr>
+            <tr>
+                <th>Rmqplombagetachygraphe</th>
+                <td>{{ equipementoptionel.rmqplombagetachygraphe }}</td>
+            </tr>
+            <tr>
+                <th>Rmqfonctrefegirateur</th>
+                <td>{{ equipementoptionel.rmqfonctrefegirateur }}</td>
+            </tr>
+            <tr>
+                <th>Rmqcamerasurvaillence</th>
+                <td>{{ equipementoptionel.rmqcamerasurvaillence }}</td>
+            </tr>
+            <tr>
+                <th>Rmqafficheursdestination</th>
+                <td>{{ equipementoptionel.rmqafficheursdestination }}</td>
+            </tr>
+            <tr>
+                <th>Rmqfonctradio</th>
+                <td>{{ equipementoptionel.rmqfonctradio }}</td>
+            </tr>
+            <tr>
+                <th>Rmqfontlecteur</th>
+                <td>{{ equipementoptionel.rmqfontlecteur }}</td>
+            </tr>
+            <tr>
+                <th>Rmqfonctecrans</th>
+                <td>{{ equipementoptionel.rmqfonctecrans }}</td>
+            </tr>
+            <tr>
+                <th>Rmqfonctmicrophone</th>
+                <td>{{ equipementoptionel.rmqfonctmicrophone }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('equipementoptionel_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('equipementoptionel_edit', { 'id': equipementoptionel.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

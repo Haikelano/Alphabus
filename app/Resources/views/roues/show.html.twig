@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Roue</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ roue.id }}</td>
+            </tr>
+            <tr>
+                <th>Serrage</th>
+                <td>{{ roue.serrage }}</td>
+            </tr>
+            <tr>
+                <th>Fixation</th>
+                <td>{{ roue.fixation }}</td>
+            </tr>
+            <tr>
+                <th>Pression</th>
+                <td>{{ roue.pression }}</td>
+            </tr>
+            <tr>
+                <th>Fixationroue</th>
+                <td>{{ roue.fixationroue }}</td>
+            </tr>
+            <tr>
+                <th>Rmqserrage</th>
+                <td>{{ roue.rmqserrage }}</td>
+            </tr>
+            <tr>
+                <th>Rmqfixation</th>
+                <td>{{ roue.rmqfixation }}</td>
+            </tr>
+            <tr>
+                <th>Rmqpression</th>
+                <td>{{ roue.rmqpression }}</td>
+            </tr>
+            <tr>
+                <th>Rmqfixationroue</th>
+                <td>{{ roue.rmqfixationroue }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('roues_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('roues_edit', { 'id': roue.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

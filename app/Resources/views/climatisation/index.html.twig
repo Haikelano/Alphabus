@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Climatisations list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Fonctionnementclima</th>
+                <th>Absencedruit</th>
+                <th>Fonctcommande</th>
+                <th>Fixationfocture</th>
+                <th>Controlemontage</th>
+                <th>Rmqfonctionnementclima</th>
+                <th>Rmqabsencedruit</th>
+                <th>Rmqfonctcommande</th>
+                <th>Rmqfixationfocture</th>
+                <th>Rmqcontrolemontage</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for climatisation in climatisations %}
+            <tr>
+                <td><a href="{{ path('climatisation_show', { 'id': climatisation.id }) }}">{{ climatisation.id }}</a></td>
+                <td>{{ climatisation.fonctionnementclima }}</td>
+                <td>{{ climatisation.absencedruit }}</td>
+                <td>{{ climatisation.fonctcommande }}</td>
+                <td>{{ climatisation.fixationfocture }}</td>
+                <td>{{ climatisation.controlemontage }}</td>
+                <td>{{ climatisation.rmqfonctionnementclima }}</td>
+                <td>{{ climatisation.rmqabsencedruit }}</td>
+                <td>{{ climatisation.rmqfonctcommande }}</td>
+                <td>{{ climatisation.rmqfixationfocture }}</td>
+                <td>{{ climatisation.rmqcontrolemontage }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('climatisation_show', { 'id': climatisation.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('climatisation_edit', { 'id': climatisation.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('climatisation_new') }}">Create a new climatisation</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,148 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Essaideroute</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ essaideroute.id }}</td>
+            </tr>
+            <tr>
+                <th>Paralisme</th>
+                <td>{{ essaideroute.paralisme }}</td>
+            </tr>
+            <tr>
+                <th>Fonctionglace</th>
+                <td>{{ essaideroute.fonctionglace }}</td>
+            </tr>
+            <tr>
+                <th>Vibration</th>
+                <td>{{ essaideroute.vibration }}</td>
+            </tr>
+            <tr>
+                <th>Regimemoteur</th>
+                <td>{{ essaideroute.regimemoteur }}</td>
+            </tr>
+            <tr>
+                <th>Rapportvitesse</th>
+                <td>{{ essaideroute.rapportvitesse }}</td>
+            </tr>
+            <tr>
+                <th>Boitevitesse</th>
+                <td>{{ essaideroute.boitevitesse }}</td>
+            </tr>
+            <tr>
+                <th>Pressionhuile</th>
+                <td>{{ essaideroute.pressionhuile }}</td>
+            </tr>
+            <tr>
+                <th>Tempuraturecircuit</th>
+                <td>{{ essaideroute.tempuraturecircuit }}</td>
+            </tr>
+            <tr>
+                <th>Blocagedeblocage</th>
+                <td>{{ essaideroute.blocagedeblocage }}</td>
+            </tr>
+            <tr>
+                <th>Capteurarticulation</th>
+                <td>{{ essaideroute.capteurarticulation }}</td>
+            </tr>
+            <tr>
+                <th>Freinageralentisseur</th>
+                <td>{{ essaideroute.freinageralentisseur }}</td>
+            </tr>
+            <tr>
+                <th>Freinagedeservice</th>
+                <td>{{ essaideroute.freinagedeservice }}</td>
+            </tr>
+            <tr>
+                <th>Memoirededefautvide</th>
+                <td>{{ essaideroute.memoirededefautvide }}</td>
+            </tr>
+            <tr>
+                <th>Fonctrelevment</th>
+                <td>{{ essaideroute.fonctrelevment }}</td>
+            </tr>
+            <tr>
+                <th>Kilometrageparcoru</th>
+                <td>{{ essaideroute.kilometrageparcoru }}</td>
+            </tr>
+            <tr>
+                <th>Rmqparalisme</th>
+                <td>{{ essaideroute.rmqparalisme }}</td>
+            </tr>
+            <tr>
+                <th>Rmqfonctionglace</th>
+                <td>{{ essaideroute.rmqfonctionglace }}</td>
+            </tr>
+            <tr>
+                <th>Rmqvibration</th>
+                <td>{{ essaideroute.rmqvibration }}</td>
+            </tr>
+            <tr>
+                <th>Rmqregimemoteur</th>
+                <td>{{ essaideroute.rmqregimemoteur }}</td>
+            </tr>
+            <tr>
+                <th>Rmqrapportvitesse</th>
+                <td>{{ essaideroute.rmqrapportvitesse }}</td>
+            </tr>
+            <tr>
+                <th>Rmqboitevitesse</th>
+                <td>{{ essaideroute.rmqboitevitesse }}</td>
+            </tr>
+            <tr>
+                <th>Rmqpressionhuile</th>
+                <td>{{ essaideroute.rmqpressionhuile }}</td>
+            </tr>
+            <tr>
+                <th>Rmqtempuraturecircuit</th>
+                <td>{{ essaideroute.rmqtempuraturecircuit }}</td>
+            </tr>
+            <tr>
+                <th>Rmqblocagedeblocage</th>
+                <td>{{ essaideroute.rmqblocagedeblocage }}</td>
+            </tr>
+            <tr>
+                <th>Rmqcapteurarticulation</th>
+                <td>{{ essaideroute.rmqcapteurarticulation }}</td>
+            </tr>
+            <tr>
+                <th>Rmqfreinageralentisseur</th>
+                <td>{{ essaideroute.rmqfreinageralentisseur }}</td>
+            </tr>
+            <tr>
+                <th>Rmqfreinagedeservice</th>
+                <td>{{ essaideroute.rmqfreinagedeservice }}</td>
+            </tr>
+            <tr>
+                <th>Rmqmemoirededefautvide</th>
+                <td>{{ essaideroute.rmqmemoirededefautvide }}</td>
+            </tr>
+            <tr>
+                <th>Rmqfonctrelevment</th>
+                <td>{{ essaideroute.rmqfonctrelevment }}</td>
+            </tr>
+            <tr>
+                <th>Rmqkilometrageparcoru</th>
+                <td>{{ essaideroute.rmqkilometrageparcoru }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('essaideroute_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('essaideroute_edit', { 'id': essaideroute.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

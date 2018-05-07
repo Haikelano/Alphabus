@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Testetancheite</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ testetancheite.id }}</td>
+            </tr>
+            <tr>
+                <th>Vitres</th>
+                <td>{{ testetancheite.vitres }}</td>
+            </tr>
+            <tr>
+                <th>Articulation</th>
+                <td>{{ testetancheite.articulation }}</td>
+            </tr>
+            <tr>
+                <th>Toit</th>
+                <td>{{ testetancheite.toit }}</td>
+            </tr>
+            <tr>
+                <th>Coffers</th>
+                <td>{{ testetancheite.coffers }}</td>
+            </tr>
+            <tr>
+                <th>Portiere</th>
+                <td>{{ testetancheite.portiere }}</td>
+            </tr>
+            <tr>
+                <th>Rmqvitres</th>
+                <td>{{ testetancheite.rmqvitres }}</td>
+            </tr>
+            <tr>
+                <th>Rmqarticulation</th>
+                <td>{{ testetancheite.rmqarticulation }}</td>
+            </tr>
+            <tr>
+                <th>Rmqtoit</th>
+                <td>{{ testetancheite.rmqtoit }}</td>
+            </tr>
+            <tr>
+                <th>Rmqcoffers</th>
+                <td>{{ testetancheite.rmqcoffers }}</td>
+            </tr>
+            <tr>
+                <th>Rmqportiere</th>
+                <td>{{ testetancheite.rmqportiere }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('testetancheite_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('testetancheite_edit', { 'id': testetancheite.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

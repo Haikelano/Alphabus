@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Portires list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Etanchetie</th>
+                <th>Overclose</th>
+                <th>Habillagecommande</th>
+                <th>Jointbaguette</th>
+                <th>Rmqetanchetie</th>
+                <th>Rmqoverclose</th>
+                <th>Rmqhabillagecommande</th>
+                <th>Rmqjointbaguette</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for portire in portires %}
+            <tr>
+                <td><a href="{{ path('portire_show', { 'id': portire.id }) }}">{{ portire.id }}</a></td>
+                <td>{{ portire.etanchetie }}</td>
+                <td>{{ portire.overclose }}</td>
+                <td>{{ portire.habillagecommande }}</td>
+                <td>{{ portire.jointbaguette }}</td>
+                <td>{{ portire.rmqetanchetie }}</td>
+                <td>{{ portire.rmqoverclose }}</td>
+                <td>{{ portire.rmqhabillagecommande }}</td>
+                <td>{{ portire.rmqjointbaguette }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('portire_show', { 'id': portire.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('portire_edit', { 'id': portire.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('portire_new') }}">Create a new portire</a>
+        </li>
+    </ul>
+{% endblock %}

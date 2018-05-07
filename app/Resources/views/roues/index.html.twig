@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Roues list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Serrage</th>
+                <th>Fixation</th>
+                <th>Pression</th>
+                <th>Fixationroue</th>
+                <th>Rmqserrage</th>
+                <th>Rmqfixation</th>
+                <th>Rmqpression</th>
+                <th>Rmqfixationroue</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for roue in roues %}
+            <tr>
+                <td><a href="{{ path('roues_show', { 'id': roue.id }) }}">{{ roue.id }}</a></td>
+                <td>{{ roue.serrage }}</td>
+                <td>{{ roue.fixation }}</td>
+                <td>{{ roue.pression }}</td>
+                <td>{{ roue.fixationroue }}</td>
+                <td>{{ roue.rmqserrage }}</td>
+                <td>{{ roue.rmqfixation }}</td>
+                <td>{{ roue.rmqpression }}</td>
+                <td>{{ roue.rmqfixationroue }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('roues_show', { 'id': roue.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('roues_edit', { 'id': roue.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('roues_new') }}">Create a new roue</a>
+        </li>
+    </ul>
+{% endblock %}

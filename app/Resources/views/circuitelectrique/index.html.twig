@@ -1,0 +1,85 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Circuitelectriques list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Eclairage</th>
+                <th>Eclairageinter</th>
+                <th>Fonctbutton</th>
+                <th>Foncfreint</th>
+                <th>Buttonregl</th>
+                <th>Buttonposte</th>
+                <th>Controlecharge</th>
+                <th>Fonctavertiseur</th>
+                <th>Fonctcapteur</th>
+                <th>Sonneriemarche</th>
+                <th>Fontbuttonmoteur</th>
+                <th>Capteurportemoteur</th>
+                <th>Rmqeclairage</th>
+                <th>Rmqeclairageinter</th>
+                <th>Rmqfonctbutton</th>
+                <th>Rmqfoncfreint</th>
+                <th>Rmqbuttonregl</th>
+                <th>Rmqbuttonposte</th>
+                <th>Rmqcontrolecharge</th>
+                <th>Rmqfonctavertiseur</th>
+                <th>Rmqfonctcapteur</th>
+                <th>Rmqsonneriemarche</th>
+                <th>Rmqfontbuttonmoteur</th>
+                <th>Rmqcapteurportemoteur</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for circuitelectrique in circuitelectriques %}
+            <tr>
+                <td><a href="{{ path('circuitelectrique_show', { 'id': circuitelectrique.id }) }}">{{ circuitelectrique.id }}</a></td>
+                <td>{{ circuitelectrique.eclairage }}</td>
+                <td>{{ circuitelectrique.eclairageinter }}</td>
+                <td>{{ circuitelectrique.fonctbutton }}</td>
+                <td>{{ circuitelectrique.foncfreint }}</td>
+                <td>{{ circuitelectrique.buttonregl }}</td>
+                <td>{{ circuitelectrique.buttonposte }}</td>
+                <td>{{ circuitelectrique.controlecharge }}</td>
+                <td>{{ circuitelectrique.fonctavertiseur }}</td>
+                <td>{{ circuitelectrique.fonctcapteur }}</td>
+                <td>{{ circuitelectrique.sonneriemarche }}</td>
+                <td>{{ circuitelectrique.fontbuttonmoteur }}</td>
+                <td>{{ circuitelectrique.capteurportemoteur }}</td>
+                <td>{{ circuitelectrique.rmqeclairage }}</td>
+                <td>{{ circuitelectrique.rmqeclairageinter }}</td>
+                <td>{{ circuitelectrique.rmqfonctbutton }}</td>
+                <td>{{ circuitelectrique.rmqfoncfreint }}</td>
+                <td>{{ circuitelectrique.rmqbuttonregl }}</td>
+                <td>{{ circuitelectrique.rmqbuttonposte }}</td>
+                <td>{{ circuitelectrique.rmqcontrolecharge }}</td>
+                <td>{{ circuitelectrique.rmqfonctavertiseur }}</td>
+                <td>{{ circuitelectrique.rmqfonctcapteur }}</td>
+                <td>{{ circuitelectrique.rmqsonneriemarche }}</td>
+                <td>{{ circuitelectrique.rmqfontbuttonmoteur }}</td>
+                <td>{{ circuitelectrique.rmqcapteurportemoteur }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('circuitelectrique_show', { 'id': circuitelectrique.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('circuitelectrique_edit', { 'id': circuitelectrique.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('circuitelectrique_new') }}">Create a new circuitelectrique</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -34,9 +34,9 @@
             <div class="card-body">
                 <h4 class="card-title">
                     {% if chassis != null %}
-                      {% for r in reception %}
+                      {% for r in structure %}
 
-                            <a href="{{ path('receptionchassis_show', { 'id': r.id }) }}">Atelier Acier</a>
+                            <a href="{{ path('structure_show', { 'id': r.id }) }}">Atelier Acier</a>
                             {% endfor %}
                          {% else %}
                         <a href="">Atelier Acier</a>
@@ -80,7 +80,7 @@
                     {% if chassis != null %}
                         {% for p in peinture %}
 
-                            <a href="{{ path('receptionchassis_show', { 'id': p.id }) }}">Atelier Peinture</a>
+                            <a href="{{ path('peinture_show', { 'id': p.id }) }}">Atelier Peinture</a>
                         {% endfor %}
                     {% else %}
                         <a href="">Atelier Peinture</a>
@@ -98,7 +98,7 @@
                     {% for p in peinture %}
 
                     {% if p.etat == false %}
-                        <img src="{{ asset('images/atelier/a.png') }}" style="width: 50px;height: 50px ">
+                        <img src="{{ asset('images/atelier/a.png') }}" style="width: 50px;height: 50px ">peinture_show2
                     {% else  %}
                         <img src="{{ asset('images/atelier/succus.png') }}" style="width: 50px;height: 50px ">
                     {% endif %}
@@ -128,7 +128,7 @@
                     {% if chassis != null %}
                         {% for p in peinture %}
 
-                            <a href="{{ path('receptionchassis_show', { 'id': p.id }) }}">Atelier Peinture</a>
+                            <a href="{{ path('receptionchassis_show', { 'id': p.id }) }}">Atelier Finition </a>
                         {% endfor %}
                     {% else %}
                         <a href="">Atelier Finition</a>

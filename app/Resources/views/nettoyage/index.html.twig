@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Nettoyages list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Moteur</th>
+                <th>Exterieur</th>
+                <th>Vitrage</th>
+                <th>Interieur</th>
+                <th>Rmqmoteur</th>
+                <th>Rmqexterieur</th>
+                <th>Rmqvitrage</th>
+                <th>Rmqinterieur</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for nettoyage in nettoyages %}
+            <tr>
+                <td><a href="{{ path('nettoyage_show', { 'id': nettoyage.id }) }}">{{ nettoyage.id }}</a></td>
+                <td>{{ nettoyage.moteur }}</td>
+                <td>{{ nettoyage.exterieur }}</td>
+                <td>{{ nettoyage.vitrage }}</td>
+                <td>{{ nettoyage.interieur }}</td>
+                <td>{{ nettoyage.rmqmoteur }}</td>
+                <td>{{ nettoyage.rmqexterieur }}</td>
+                <td>{{ nettoyage.rmqvitrage }}</td>
+                <td>{{ nettoyage.rmqinterieur }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('nettoyage_show', { 'id': nettoyage.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('nettoyage_edit', { 'id': nettoyage.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('nettoyage_new') }}">Create a new nettoyage</a>
+        </li>
+    </ul>
+{% endblock %}

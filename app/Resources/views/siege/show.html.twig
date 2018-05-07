@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Siege</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ siege.id }}</td>
+            </tr>
+            <tr>
+                <th>Fixatino</th>
+                <td>{{ siege.fixatino }}</td>
+            </tr>
+            <tr>
+                <th>Balancement</th>
+                <td>{{ siege.balancement }}</td>
+            </tr>
+            <tr>
+                <th>Habillage</th>
+                <td>{{ siege.habillage }}</td>
+            </tr>
+            <tr>
+                <th>Ceinturesecurite</th>
+                <td>{{ siege.ceinturesecurite }}</td>
+            </tr>
+            <tr>
+                <th>Rmqfixatino</th>
+                <td>{{ siege.rmqfixatino }}</td>
+            </tr>
+            <tr>
+                <th>Rmqbalancement</th>
+                <td>{{ siege.rmqbalancement }}</td>
+            </tr>
+            <tr>
+                <th>Rmqhabillage</th>
+                <td>{{ siege.rmqhabillage }}</td>
+            </tr>
+            <tr>
+                <th>Rmqceinturesecurite</th>
+                <td>{{ siege.rmqceinturesecurite }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('siege_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('siege_edit', { 'id': siege.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

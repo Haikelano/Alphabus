@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Securite</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ securite.id }}</td>
+            </tr>
+            <tr>
+                <th>Plombage</th>
+                <td>{{ securite.plombage }}</td>
+            </tr>
+            <tr>
+                <th>Etancheite</th>
+                <td>{{ securite.etancheite }}</td>
+            </tr>
+            <tr>
+                <th>Etancheitetoit</th>
+                <td>{{ securite.etancheitetoit }}</td>
+            </tr>
+            <tr>
+                <th>Cooffres</th>
+                <td>{{ securite.cooffres }}</td>
+            </tr>
+            <tr>
+                <th>Portiere</th>
+                <td>{{ securite.portiere }}</td>
+            </tr>
+            <tr>
+                <th>Rmqplombage</th>
+                <td>{{ securite.rmqplombage }}</td>
+            </tr>
+            <tr>
+                <th>Rmqetancheite</th>
+                <td>{{ securite.rmqetancheite }}</td>
+            </tr>
+            <tr>
+                <th>Rmqetancheitetoit</th>
+                <td>{{ securite.rmqetancheitetoit }}</td>
+            </tr>
+            <tr>
+                <th>Rmqcooffres</th>
+                <td>{{ securite.rmqcooffres }}</td>
+            </tr>
+            <tr>
+                <th>Rmqportiere</th>
+                <td>{{ securite.rmqportiere }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('securite_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('securite_edit', { 'id': securite.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

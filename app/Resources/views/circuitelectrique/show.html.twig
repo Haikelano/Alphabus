@@ -1,0 +1,124 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Circuitelectrique</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ circuitelectrique.id }}</td>
+            </tr>
+            <tr>
+                <th>Eclairage</th>
+                <td>{{ circuitelectrique.eclairage }}</td>
+            </tr>
+            <tr>
+                <th>Eclairageinter</th>
+                <td>{{ circuitelectrique.eclairageinter }}</td>
+            </tr>
+            <tr>
+                <th>Fonctbutton</th>
+                <td>{{ circuitelectrique.fonctbutton }}</td>
+            </tr>
+            <tr>
+                <th>Foncfreint</th>
+                <td>{{ circuitelectrique.foncfreint }}</td>
+            </tr>
+            <tr>
+                <th>Buttonregl</th>
+                <td>{{ circuitelectrique.buttonregl }}</td>
+            </tr>
+            <tr>
+                <th>Buttonposte</th>
+                <td>{{ circuitelectrique.buttonposte }}</td>
+            </tr>
+            <tr>
+                <th>Controlecharge</th>
+                <td>{{ circuitelectrique.controlecharge }}</td>
+            </tr>
+            <tr>
+                <th>Fonctavertiseur</th>
+                <td>{{ circuitelectrique.fonctavertiseur }}</td>
+            </tr>
+            <tr>
+                <th>Fonctcapteur</th>
+                <td>{{ circuitelectrique.fonctcapteur }}</td>
+            </tr>
+            <tr>
+                <th>Sonneriemarche</th>
+                <td>{{ circuitelectrique.sonneriemarche }}</td>
+            </tr>
+            <tr>
+                <th>Fontbuttonmoteur</th>
+                <td>{{ circuitelectrique.fontbuttonmoteur }}</td>
+            </tr>
+            <tr>
+                <th>Capteurportemoteur</th>
+                <td>{{ circuitelectrique.capteurportemoteur }}</td>
+            </tr>
+            <tr>
+                <th>Rmqeclairage</th>
+                <td>{{ circuitelectrique.rmqeclairage }}</td>
+            </tr>
+            <tr>
+                <th>Rmqeclairageinter</th>
+                <td>{{ circuitelectrique.rmqeclairageinter }}</td>
+            </tr>
+            <tr>
+                <th>Rmqfonctbutton</th>
+                <td>{{ circuitelectrique.rmqfonctbutton }}</td>
+            </tr>
+            <tr>
+                <th>Rmqfoncfreint</th>
+                <td>{{ circuitelectrique.rmqfoncfreint }}</td>
+            </tr>
+            <tr>
+                <th>Rmqbuttonregl</th>
+                <td>{{ circuitelectrique.rmqbuttonregl }}</td>
+            </tr>
+            <tr>
+                <th>Rmqbuttonposte</th>
+                <td>{{ circuitelectrique.rmqbuttonposte }}</td>
+            </tr>
+            <tr>
+                <th>Rmqcontrolecharge</th>
+                <td>{{ circuitelectrique.rmqcontrolecharge }}</td>
+            </tr>
+            <tr>
+                <th>Rmqfonctavertiseur</th>
+                <td>{{ circuitelectrique.rmqfonctavertiseur }}</td>
+            </tr>
+            <tr>
+                <th>Rmqfonctcapteur</th>
+                <td>{{ circuitelectrique.rmqfonctcapteur }}</td>
+            </tr>
+            <tr>
+                <th>Rmqsonneriemarche</th>
+                <td>{{ circuitelectrique.rmqsonneriemarche }}</td>
+            </tr>
+            <tr>
+                <th>Rmqfontbuttonmoteur</th>
+                <td>{{ circuitelectrique.rmqfontbuttonmoteur }}</td>
+            </tr>
+            <tr>
+                <th>Rmqcapteurportemoteur</th>
+                <td>{{ circuitelectrique.rmqcapteurportemoteur }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('circuitelectrique_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('circuitelectrique_edit', { 'id': circuitelectrique.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

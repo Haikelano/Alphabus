@@ -1,3 +1,8 @@
+my_controler:
+    resource: "@MyControlerBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 my_alphabus_peinture:
     resource: "@MyAlphabusBundle/Controller/PeintureController.php"
     type:     annotation

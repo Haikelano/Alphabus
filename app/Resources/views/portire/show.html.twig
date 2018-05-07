@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Portire</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ portire.id }}</td>
+            </tr>
+            <tr>
+                <th>Etanchetie</th>
+                <td>{{ portire.etanchetie }}</td>
+            </tr>
+            <tr>
+                <th>Overclose</th>
+                <td>{{ portire.overclose }}</td>
+            </tr>
+            <tr>
+                <th>Habillagecommande</th>
+                <td>{{ portire.habillagecommande }}</td>
+            </tr>
+            <tr>
+                <th>Jointbaguette</th>
+                <td>{{ portire.jointbaguette }}</td>
+            </tr>
+            <tr>
+                <th>Rmqetanchetie</th>
+                <td>{{ portire.rmqetanchetie }}</td>
+            </tr>
+            <tr>
+                <th>Rmqoverclose</th>
+                <td>{{ portire.rmqoverclose }}</td>
+            </tr>
+            <tr>
+                <th>Rmqhabillagecommande</th>
+                <td>{{ portire.rmqhabillagecommande }}</td>
+            </tr>
+            <tr>
+                <th>Rmqjointbaguette</th>
+                <td>{{ portire.rmqjointbaguette }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('portire_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('portire_edit', { 'id': portire.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

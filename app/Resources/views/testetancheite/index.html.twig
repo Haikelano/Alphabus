@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Testetancheites list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Vitres</th>
+                <th>Articulation</th>
+                <th>Toit</th>
+                <th>Coffers</th>
+                <th>Portiere</th>
+                <th>Rmqvitres</th>
+                <th>Rmqarticulation</th>
+                <th>Rmqtoit</th>
+                <th>Rmqcoffers</th>
+                <th>Rmqportiere</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for testetancheite in testetancheites %}
+            <tr>
+                <td><a href="{{ path('testetancheite_show', { 'id': testetancheite.id }) }}">{{ testetancheite.id }}</a></td>
+                <td>{{ testetancheite.vitres }}</td>
+                <td>{{ testetancheite.articulation }}</td>
+                <td>{{ testetancheite.toit }}</td>
+                <td>{{ testetancheite.coffers }}</td>
+                <td>{{ testetancheite.portiere }}</td>
+                <td>{{ testetancheite.rmqvitres }}</td>
+                <td>{{ testetancheite.rmqarticulation }}</td>
+                <td>{{ testetancheite.rmqtoit }}</td>
+                <td>{{ testetancheite.rmqcoffers }}</td>
+                <td>{{ testetancheite.rmqportiere }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('testetancheite_show', { 'id': testetancheite.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('testetancheite_edit', { 'id': testetancheite.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('testetancheite_new') }}">Create a new testetancheite</a>
+        </li>
+    </ul>
+{% endblock %}

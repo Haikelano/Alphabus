@@ -1,0 +1,97 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Essaideroutes list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Paralisme</th>
+                <th>Fonctionglace</th>
+                <th>Vibration</th>
+                <th>Regimemoteur</th>
+                <th>Rapportvitesse</th>
+                <th>Boitevitesse</th>
+                <th>Pressionhuile</th>
+                <th>Tempuraturecircuit</th>
+                <th>Blocagedeblocage</th>
+                <th>Capteurarticulation</th>
+                <th>Freinageralentisseur</th>
+                <th>Freinagedeservice</th>
+                <th>Memoirededefautvide</th>
+                <th>Fonctrelevment</th>
+                <th>Kilometrageparcoru</th>
+                <th>Rmqparalisme</th>
+                <th>Rmqfonctionglace</th>
+                <th>Rmqvibration</th>
+                <th>Rmqregimemoteur</th>
+                <th>Rmqrapportvitesse</th>
+                <th>Rmqboitevitesse</th>
+                <th>Rmqpressionhuile</th>
+                <th>Rmqtempuraturecircuit</th>
+                <th>Rmqblocagedeblocage</th>
+                <th>Rmqcapteurarticulation</th>
+                <th>Rmqfreinageralentisseur</th>
+                <th>Rmqfreinagedeservice</th>
+                <th>Rmqmemoirededefautvide</th>
+                <th>Rmqfonctrelevment</th>
+                <th>Rmqkilometrageparcoru</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for essaideroute in essaideroutes %}
+            <tr>
+                <td><a href="{{ path('essaideroute_show', { 'id': essaideroute.id }) }}">{{ essaideroute.id }}</a></td>
+                <td>{{ essaideroute.paralisme }}</td>
+                <td>{{ essaideroute.fonctionglace }}</td>
+                <td>{{ essaideroute.vibration }}</td>
+                <td>{{ essaideroute.regimemoteur }}</td>
+                <td>{{ essaideroute.rapportvitesse }}</td>
+                <td>{{ essaideroute.boitevitesse }}</td>
+                <td>{{ essaideroute.pressionhuile }}</td>
+                <td>{{ essaideroute.tempuraturecircuit }}</td>
+                <td>{{ essaideroute.blocagedeblocage }}</td>
+                <td>{{ essaideroute.capteurarticulation }}</td>
+                <td>{{ essaideroute.freinageralentisseur }}</td>
+                <td>{{ essaideroute.freinagedeservice }}</td>
+                <td>{{ essaideroute.memoirededefautvide }}</td>
+                <td>{{ essaideroute.fonctrelevment }}</td>
+                <td>{{ essaideroute.kilometrageparcoru }}</td>
+                <td>{{ essaideroute.rmqparalisme }}</td>
+                <td>{{ essaideroute.rmqfonctionglace }}</td>
+                <td>{{ essaideroute.rmqvibration }}</td>
+                <td>{{ essaideroute.rmqregimemoteur }}</td>
+                <td>{{ essaideroute.rmqrapportvitesse }}</td>
+                <td>{{ essaideroute.rmqboitevitesse }}</td>
+                <td>{{ essaideroute.rmqpressionhuile }}</td>
+                <td>{{ essaideroute.rmqtempuraturecircuit }}</td>
+                <td>{{ essaideroute.rmqblocagedeblocage }}</td>
+                <td>{{ essaideroute.rmqcapteurarticulation }}</td>
+                <td>{{ essaideroute.rmqfreinageralentisseur }}</td>
+                <td>{{ essaideroute.rmqfreinagedeservice }}</td>
+                <td>{{ essaideroute.rmqmemoirededefautvide }}</td>
+                <td>{{ essaideroute.rmqfonctrelevment }}</td>
+                <td>{{ essaideroute.rmqkilometrageparcoru }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('essaideroute_show', { 'id': essaideroute.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('essaideroute_edit', { 'id': essaideroute.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('essaideroute_new') }}">Create a new essaideroute</a>
+        </li>
+    </ul>
+{% endblock %}

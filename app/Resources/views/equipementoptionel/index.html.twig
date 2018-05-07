@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Equipementoptionels list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Tachygraphe</th>
+                <th>Plombagetachygraphe</th>
+                <th>Fonctrefegirateur</th>
+                <th>Camerasurvaillence</th>
+                <th>Afficheursdestination</th>
+                <th>Fonctradio</th>
+                <th>Fontlecteur</th>
+                <th>Fonctecrans</th>
+                <th>Fonctmicrophone</th>
+                <th>Rmqtachygraphe</th>
+                <th>Rmqplombagetachygraphe</th>
+                <th>Rmqfonctrefegirateur</th>
+                <th>Rmqcamerasurvaillence</th>
+                <th>Rmqafficheursdestination</th>
+                <th>Rmqfonctradio</th>
+                <th>Rmqfontlecteur</th>
+                <th>Rmqfonctecrans</th>
+                <th>Rmqfonctmicrophone</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for equipementoptionel in equipementoptionels %}
+            <tr>
+                <td><a href="{{ path('equipementoptionel_show', { 'id': equipementoptionel.id }) }}">{{ equipementoptionel.id }}</a></td>
+                <td>{{ equipementoptionel.tachygraphe }}</td>
+                <td>{{ equipementoptionel.plombagetachygraphe }}</td>
+                <td>{{ equipementoptionel.fonctrefegirateur }}</td>
+                <td>{{ equipementoptionel.camerasurvaillence }}</td>
+                <td>{{ equipementoptionel.afficheursdestination }}</td>
+                <td>{{ equipementoptionel.fonctradio }}</td>
+                <td>{{ equipementoptionel.fontlecteur }}</td>
+                <td>{{ equipementoptionel.fonctecrans }}</td>
+                <td>{{ equipementoptionel.fonctmicrophone }}</td>
+                <td>{{ equipementoptionel.rmqtachygraphe }}</td>
+                <td>{{ equipementoptionel.rmqplombagetachygraphe }}</td>
+                <td>{{ equipementoptionel.rmqfonctrefegirateur }}</td>
+                <td>{{ equipementoptionel.rmqcamerasurvaillence }}</td>
+                <td>{{ equipementoptionel.rmqafficheursdestination }}</td>
+                <td>{{ equipementoptionel.rmqfonctradio }}</td>
+                <td>{{ equipementoptionel.rmqfontlecteur }}</td>
+                <td>{{ equipementoptionel.rmqfonctecrans }}</td>
+                <td>{{ equipementoptionel.rmqfonctmicrophone }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('equipementoptionel_show', { 'id': equipementoptionel.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('equipementoptionel_edit', { 'id': equipementoptionel.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('equipementoptionel_new') }}">Create a new equipementoptionel</a>
+        </li>
+    </ul>
+{% endblock %}

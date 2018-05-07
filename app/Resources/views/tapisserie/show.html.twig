@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Tapisserie</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ tapisserie.id }}</td>
+            </tr>
+            <tr>
+                <th>Collage</th>
+                <td>{{ tapisserie.collage }}</td>
+            </tr>
+            <tr>
+                <th>Coupure</th>
+                <td>{{ tapisserie.coupure }}</td>
+            </tr>
+            <tr>
+                <th>Etat</th>
+                <td>{{ tapisserie.etat }}</td>
+            </tr>
+            <tr>
+                <th>Jointure</th>
+                <td>{{ tapisserie.jointure }}</td>
+            </tr>
+            <tr>
+                <th>Rmqcollage</th>
+                <td>{{ tapisserie.rmqcollage }}</td>
+            </tr>
+            <tr>
+                <th>Rmqcoupure</th>
+                <td>{{ tapisserie.rmqcoupure }}</td>
+            </tr>
+            <tr>
+                <th>Rmqetat</th>
+                <td>{{ tapisserie.rmqetat }}</td>
+            </tr>
+            <tr>
+                <th>Rmqjointure</th>
+                <td>{{ tapisserie.rmqjointure }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('tapisserie_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('tapisserie_edit', { 'id': tapisserie.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

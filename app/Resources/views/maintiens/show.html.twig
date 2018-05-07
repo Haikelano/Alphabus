@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Maintien</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ maintien.id }}</td>
+            </tr>
+            <tr>
+                <th>Fixation</th>
+                <td>{{ maintien.fixation }}</td>
+            </tr>
+            <tr>
+                <th>Fixationmantiens</th>
+                <td>{{ maintien.fixationmantiens }}</td>
+            </tr>
+            <tr>
+                <th>Toleprotection</th>
+                <td>{{ maintien.toleprotection }}</td>
+            </tr>
+            <tr>
+                <th>Rmqfixation</th>
+                <td>{{ maintien.rmqfixation }}</td>
+            </tr>
+            <tr>
+                <th>Rmqfixationmantiens</th>
+                <td>{{ maintien.rmqfixationmantiens }}</td>
+            </tr>
+            <tr>
+                <th>Rmqtoleprotection</th>
+                <td>{{ maintien.rmqtoleprotection }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('maintiens_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('maintiens_edit', { 'id': maintien.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

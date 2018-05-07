@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Testpeinture</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ testpeinture.id }}</td>
+            </tr>
+            <tr>
+                <th>Peinturemaintien</th>
+                <td>{{ testpeinture.peinturemaintien }}</td>
+            </tr>
+            <tr>
+                <th>Abscvapeur</th>
+                <td>{{ testpeinture.abscvapeur }}</td>
+            </tr>
+            <tr>
+                <th>Abscimpureté</th>
+                <td>{{ testpeinture.abscimpureté }}</td>
+            </tr>
+            <tr>
+                <th>Peauorange</th>
+                <td>{{ testpeinture.peauorange }}</td>
+            </tr>
+            <tr>
+                <th>Abscgratinure</th>
+                <td>{{ testpeinture.abscgratinure }}</td>
+            </tr>
+            <tr>
+                <th>Brillance</th>
+                <td>{{ testpeinture.brillance }}</td>
+            </tr>
+            <tr>
+                <th>Rmqpeinturemaintien</th>
+                <td>{{ testpeinture.rmqpeinturemaintien }}</td>
+            </tr>
+            <tr>
+                <th>Rmqabscvapeur</th>
+                <td>{{ testpeinture.rmqabscvapeur }}</td>
+            </tr>
+            <tr>
+                <th>Rmqabscimpureté</th>
+                <td>{{ testpeinture.rmqabscimpureté }}</td>
+            </tr>
+            <tr>
+                <th>Rmqpeauorange</th>
+                <td>{{ testpeinture.rmqpeauorange }}</td>
+            </tr>
+            <tr>
+                <th>Rmqabscgratinure</th>
+                <td>{{ testpeinture.rmqabscgratinure }}</td>
+            </tr>
+            <tr>
+                <th>Rmqbrillance</th>
+                <td>{{ testpeinture.rmqbrillance }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('testpeinture_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('testpeinture_edit', { 'id': testpeinture.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

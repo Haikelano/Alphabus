@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Nettoyage</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ nettoyage.id }}</td>
+            </tr>
+            <tr>
+                <th>Moteur</th>
+                <td>{{ nettoyage.moteur }}</td>
+            </tr>
+            <tr>
+                <th>Exterieur</th>
+                <td>{{ nettoyage.exterieur }}</td>
+            </tr>
+            <tr>
+                <th>Vitrage</th>
+                <td>{{ nettoyage.vitrage }}</td>
+            </tr>
+            <tr>
+                <th>Interieur</th>
+                <td>{{ nettoyage.interieur }}</td>
+            </tr>
+            <tr>
+                <th>Rmqmoteur</th>
+                <td>{{ nettoyage.rmqmoteur }}</td>
+            </tr>
+            <tr>
+                <th>Rmqexterieur</th>
+                <td>{{ nettoyage.rmqexterieur }}</td>
+            </tr>
+            <tr>
+                <th>Rmqvitrage</th>
+                <td>{{ nettoyage.rmqvitrage }}</td>
+            </tr>
+            <tr>
+                <th>Rmqinterieur</th>
+                <td>{{ nettoyage.rmqinterieur }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('nettoyage_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('nettoyage_edit', { 'id': nettoyage.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

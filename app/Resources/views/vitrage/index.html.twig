@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Vitrages list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Etat</th>
+                <th>Overclose</th>
+                <th>Montagejoint</th>
+                <th>Montagecle</th>
+                <th>Rmqetat</th>
+                <th>Rmqoverclose</th>
+                <th>Rmqmontagejoint</th>
+                <th>Rmqmontagecle</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for vitrage in vitrages %}
+            <tr>
+                <td><a href="{{ path('vitrage_show', { 'id': vitrage.id }) }}">{{ vitrage.id }}</a></td>
+                <td>{{ vitrage.etat }}</td>
+                <td>{{ vitrage.overclose }}</td>
+                <td>{{ vitrage.montagejoint }}</td>
+                <td>{{ vitrage.montagecle }}</td>
+                <td>{{ vitrage.rmqetat }}</td>
+                <td>{{ vitrage.rmqoverclose }}</td>
+                <td>{{ vitrage.rmqmontagejoint }}</td>
+                <td>{{ vitrage.rmqmontagecle }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('vitrage_show', { 'id': vitrage.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('vitrage_edit', { 'id': vitrage.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('vitrage_new') }}">Create a new vitrage</a>
+        </li>
+    </ul>
+{% endblock %}

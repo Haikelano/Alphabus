@@ -1,0 +1,108 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Accesoirexterieur</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ accesoirexterieur.id }}</td>
+            </tr>
+            <tr>
+                <th>Isolation</th>
+                <td>{{ accesoirexterieur.isolation }}</td>
+            </tr>
+            <tr>
+                <th>Finition</th>
+                <td>{{ accesoirexterieur.finition }}</td>
+            </tr>
+            <tr>
+                <th>Retroviseur</th>
+                <td>{{ accesoirexterieur.retroviseur }}</td>
+            </tr>
+            <tr>
+                <th>Fixationpara</th>
+                <td>{{ accesoirexterieur.fixationpara }}</td>
+            </tr>
+            <tr>
+                <th>Etatparachoc</th>
+                <td>{{ accesoirexterieur.etatparachoc }}</td>
+            </tr>
+            <tr>
+                <th>Cachefeu</th>
+                <td>{{ accesoirexterieur.cachefeu }}</td>
+            </tr>
+            <tr>
+                <th>Grillebouches</th>
+                <td>{{ accesoirexterieur.grillebouches }}</td>
+            </tr>
+            <tr>
+                <th>Baguette</th>
+                <td>{{ accesoirexterieur.baguette }}</td>
+            </tr>
+            <tr>
+                <th>Porte</th>
+                <td>{{ accesoirexterieur.porte }}</td>
+            </tr>
+            <tr>
+                <th>Essui</th>
+                <td>{{ accesoirexterieur.essui }}</td>
+            </tr>
+            <tr>
+                <th>Rmqisolation</th>
+                <td>{{ accesoirexterieur.rmqisolation }}</td>
+            </tr>
+            <tr>
+                <th>Rmqfinition</th>
+                <td>{{ accesoirexterieur.rmqfinition }}</td>
+            </tr>
+            <tr>
+                <th>Rmqretroviseur</th>
+                <td>{{ accesoirexterieur.rmqretroviseur }}</td>
+            </tr>
+            <tr>
+                <th>Rmqfixationpara</th>
+                <td>{{ accesoirexterieur.rmqfixationpara }}</td>
+            </tr>
+            <tr>
+                <th>Rmqetatparachoc</th>
+                <td>{{ accesoirexterieur.rmqetatparachoc }}</td>
+            </tr>
+            <tr>
+                <th>Rmqcachefeu</th>
+                <td>{{ accesoirexterieur.rmqcachefeu }}</td>
+            </tr>
+            <tr>
+                <th>Rmqgrillebouches</th>
+                <td>{{ accesoirexterieur.rmqgrillebouches }}</td>
+            </tr>
+            <tr>
+                <th>Rmqbaguette</th>
+                <td>{{ accesoirexterieur.rmqbaguette }}</td>
+            </tr>
+            <tr>
+                <th>Rmqporte</th>
+                <td>{{ accesoirexterieur.rmqporte }}</td>
+            </tr>
+            <tr>
+                <th>Rmqessui</th>
+                <td>{{ accesoirexterieur.rmqessui }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('accesoirexterieur_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('accesoirexterieur_edit', { 'id': accesoirexterieur.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

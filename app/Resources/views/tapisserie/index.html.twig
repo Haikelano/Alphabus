@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Tapisseries list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Collage</th>
+                <th>Coupure</th>
+                <th>Etat</th>
+                <th>Jointure</th>
+                <th>Rmqcollage</th>
+                <th>Rmqcoupure</th>
+                <th>Rmqetat</th>
+                <th>Rmqjointure</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for tapisserie in tapisseries %}
+            <tr>
+                <td><a href="{{ path('tapisserie_show', { 'id': tapisserie.id }) }}">{{ tapisserie.id }}</a></td>
+                <td>{{ tapisserie.collage }}</td>
+                <td>{{ tapisserie.coupure }}</td>
+                <td>{{ tapisserie.etat }}</td>
+                <td>{{ tapisserie.jointure }}</td>
+                <td>{{ tapisserie.rmqcollage }}</td>
+                <td>{{ tapisserie.rmqcoupure }}</td>
+                <td>{{ tapisserie.rmqetat }}</td>
+                <td>{{ tapisserie.rmqjointure }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('tapisserie_show', { 'id': tapisserie.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('tapisserie_edit', { 'id': tapisserie.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('tapisserie_new') }}">Create a new tapisserie</a>
+        </li>
+    </ul>
+{% endblock %}

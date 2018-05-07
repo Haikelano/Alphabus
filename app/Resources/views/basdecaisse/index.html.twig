@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+
+<p>
+    <h3>Service Test : </h3><h2>Bas de caisse</h2>
+            </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Soudurecnx</th>
+                <th> chassis</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for basdecaisse in basdecaisses %}
+            <tr>
+                <td><a href="{{ path('basdecaisse_show', { 'id': basdecaisse.id }) }}">{{ basdecaisse.id }}</a></td>
+                <td>{{ basdecaisse.soudurecnx }}</td>
+
+                <td>{{ basdecaisse.chassis }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('basdecaisse_show', { 'id': basdecaisse.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('basdecaisse_edit', { 'id': basdecaisse.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('basdecaisse_new') }}">Create a new basdecaisse</a>
+        </li>
+    </ul>
+        </div>
+
+    </div>
+{% endblock %}

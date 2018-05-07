@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Centralebatteries list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Fixationelectrique</th>
+                <th>Fixationcable</th>
+                <th>Fixationbatteries</th>
+                <th>Chargebatterie</th>
+                <th>Niveauelectrolite</th>
+                <th>Rmqfixationelectrique</th>
+                <th>Rmqfixationcable</th>
+                <th>Rmqfixationbatteries</th>
+                <th>Rmqchargebatterie</th>
+                <th>Rmqniveauelectrolite</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for centralebattery in centralebatteries %}
+            <tr>
+                <td><a href="{{ path('centralebatteries_show', { 'id': centralebattery.id }) }}">{{ centralebattery.id }}</a></td>
+                <td>{{ centralebattery.fixationelectrique }}</td>
+                <td>{{ centralebattery.fixationcable }}</td>
+                <td>{{ centralebattery.fixationbatteries }}</td>
+                <td>{{ centralebattery.chargebatterie }}</td>
+                <td>{{ centralebattery.niveauelectrolite }}</td>
+                <td>{{ centralebattery.rmqfixationelectrique }}</td>
+                <td>{{ centralebattery.rmqfixationcable }}</td>
+                <td>{{ centralebattery.rmqfixationbatteries }}</td>
+                <td>{{ centralebattery.rmqchargebatterie }}</td>
+                <td>{{ centralebattery.rmqniveauelectrolite }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('centralebatteries_show', { 'id': centralebattery.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('centralebatteries_edit', { 'id': centralebattery.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('centralebatteries_new') }}">Create a new centralebattery</a>
+        </li>
+    </ul>
+{% endblock %}

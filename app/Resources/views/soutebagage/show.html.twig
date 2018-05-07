@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Soutebagage</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ soutebagage.id }}</td>
+            </tr>
+            <tr>
+                <th>Etancheite</th>
+                <td>{{ soutebagage.etancheite }}</td>
+            </tr>
+            <tr>
+                <th>Serrures</th>
+                <td>{{ soutebagage.serrures }}</td>
+            </tr>
+            <tr>
+                <th>Amortisseurs</th>
+                <td>{{ soutebagage.amortisseurs }}</td>
+            </tr>
+            <tr>
+                <th>Ouverfermer</th>
+                <td>{{ soutebagage.ouverfermer }}</td>
+            </tr>
+            <tr>
+                <th>Poignee</th>
+                <td>{{ soutebagage.poignee }}</td>
+            </tr>
+            <tr>
+                <th>Fixationverin</th>
+                <td>{{ soutebagage.fixationverin }}</td>
+            </tr>
+            <tr>
+                <th>Absencevisserie</th>
+                <td>{{ soutebagage.absencevisserie }}</td>
+            </tr>
+            <tr>
+                <th>Rmqetancheite</th>
+                <td>{{ soutebagage.rmqetancheite }}</td>
+            </tr>
+            <tr>
+                <th>Rmqserrures</th>
+                <td>{{ soutebagage.rmqserrures }}</td>
+            </tr>
+            <tr>
+                <th>Rmqamortisseurs</th>
+                <td>{{ soutebagage.rmqamortisseurs }}</td>
+            </tr>
+            <tr>
+                <th>Rmqouverfermer</th>
+                <td>{{ soutebagage.rmqouverfermer }}</td>
+            </tr>
+            <tr>
+                <th>Rmqpoignee</th>
+                <td>{{ soutebagage.rmqpoignee }}</td>
+            </tr>
+            <tr>
+                <th>Rmqfixationverin</th>
+                <td>{{ soutebagage.rmqfixationverin }}</td>
+            </tr>
+            <tr>
+                <th>Rmqabsencevisserie</th>
+                <td>{{ soutebagage.rmqabsencevisserie }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('soutebagage_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('soutebagage_edit', { 'id': soutebagage.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

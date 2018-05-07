@@ -1,0 +1,4 @@
+services:
+#    my_controler.example:
+#        class: My\ControlerBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

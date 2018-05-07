@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Chauffages list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Sensrotation</th>
+                <th>Presenceprotection</th>
+                <th>Fonctdegivrage</th>
+                <th>Fixationgaine</th>
+                <th>Fixationbouches</th>
+                <th>Rmqsensrotation</th>
+                <th>Rmqpresenceprotection</th>
+                <th>Rmqfonctdegivrage</th>
+                <th>Rmqfixationgaine</th>
+                <th>Rmqfixationbouches</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for chauffage in chauffages %}
+            <tr>
+                <td><a href="{{ path('chauffage_show', { 'id': chauffage.id }) }}">{{ chauffage.id }}</a></td>
+                <td>{{ chauffage.sensrotation }}</td>
+                <td>{{ chauffage.presenceprotection }}</td>
+                <td>{{ chauffage.fonctdegivrage }}</td>
+                <td>{{ chauffage.fixationgaine }}</td>
+                <td>{{ chauffage.fixationbouches }}</td>
+                <td>{{ chauffage.rmqsensrotation }}</td>
+                <td>{{ chauffage.rmqpresenceprotection }}</td>
+                <td>{{ chauffage.rmqfonctdegivrage }}</td>
+                <td>{{ chauffage.rmqfixationgaine }}</td>
+                <td>{{ chauffage.rmqfixationbouches }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('chauffage_show', { 'id': chauffage.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('chauffage_edit', { 'id': chauffage.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('chauffage_new') }}">Create a new chauffage</a>
+        </li>
+    </ul>
+{% endblock %}

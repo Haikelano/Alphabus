@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Climatisation</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ climatisation.id }}</td>
+            </tr>
+            <tr>
+                <th>Fonctionnementclima</th>
+                <td>{{ climatisation.fonctionnementclima }}</td>
+            </tr>
+            <tr>
+                <th>Absencedruit</th>
+                <td>{{ climatisation.absencedruit }}</td>
+            </tr>
+            <tr>
+                <th>Fonctcommande</th>
+                <td>{{ climatisation.fonctcommande }}</td>
+            </tr>
+            <tr>
+                <th>Fixationfocture</th>
+                <td>{{ climatisation.fixationfocture }}</td>
+            </tr>
+            <tr>
+                <th>Controlemontage</th>
+                <td>{{ climatisation.controlemontage }}</td>
+            </tr>
+            <tr>
+                <th>Rmqfonctionnementclima</th>
+                <td>{{ climatisation.rmqfonctionnementclima }}</td>
+            </tr>
+            <tr>
+                <th>Rmqabsencedruit</th>
+                <td>{{ climatisation.rmqabsencedruit }}</td>
+            </tr>
+            <tr>
+                <th>Rmqfonctcommande</th>
+                <td>{{ climatisation.rmqfonctcommande }}</td>
+            </tr>
+            <tr>
+                <th>Rmqfixationfocture</th>
+                <td>{{ climatisation.rmqfixationfocture }}</td>
+            </tr>
+            <tr>
+                <th>Rmqcontrolemontage</th>
+                <td>{{ climatisation.rmqcontrolemontage }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('climatisation_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('climatisation_edit', { 'id': climatisation.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Securites list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Plombage</th>
+                <th>Etancheite</th>
+                <th>Etancheitetoit</th>
+                <th>Cooffres</th>
+                <th>Portiere</th>
+                <th>Rmqplombage</th>
+                <th>Rmqetancheite</th>
+                <th>Rmqetancheitetoit</th>
+                <th>Rmqcooffres</th>
+                <th>Rmqportiere</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for securite in securites %}
+            <tr>
+                <td><a href="{{ path('securite_show', { 'id': securite.id }) }}">{{ securite.id }}</a></td>
+                <td>{{ securite.plombage }}</td>
+                <td>{{ securite.etancheite }}</td>
+                <td>{{ securite.etancheitetoit }}</td>
+                <td>{{ securite.cooffres }}</td>
+                <td>{{ securite.portiere }}</td>
+                <td>{{ securite.rmqplombage }}</td>
+                <td>{{ securite.rmqetancheite }}</td>
+                <td>{{ securite.rmqetancheitetoit }}</td>
+                <td>{{ securite.rmqcooffres }}</td>
+                <td>{{ securite.rmqportiere }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('securite_show', { 'id': securite.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('securite_edit', { 'id': securite.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('securite_new') }}">Create a new securite</a>
+        </li>
+    </ul>
+{% endblock %}

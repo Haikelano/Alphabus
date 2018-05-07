@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Accessoiresinteriers list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Rideau</th>
+                <th>Parasoleil</th>
+                <th>Cendries</th>
+                <th>Trappes</th>
+                <th>Finitionmastic</th>
+                <th>Baguettejoin</th>
+                <th>Fixationporte</th>
+                <th>Fixationtableau</th>
+                <th>Rmqrideau</th>
+                <th>Rmqparasoleil</th>
+                <th>Rmqcendries</th>
+                <th>Rmqtrappes</th>
+                <th>Rmqfinitionmastic</th>
+                <th>Rmqbaguettejoin</th>
+                <th>Rmqfixationporte</th>
+                <th>Rmqfixationtableau</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for accessoiresinterier in accessoiresinteriers %}
+            <tr>
+                <td><a href="{{ path('accessoiresinterier_show', { 'id': accessoiresinterier.id }) }}">{{ accessoiresinterier.id }}</a></td>
+                <td>{{ accessoiresinterier.rideau }}</td>
+                <td>{{ accessoiresinterier.parasoleil }}</td>
+                <td>{{ accessoiresinterier.cendries }}</td>
+                <td>{{ accessoiresinterier.trappes }}</td>
+                <td>{{ accessoiresinterier.finitionmastic }}</td>
+                <td>{{ accessoiresinterier.baguettejoin }}</td>
+                <td>{{ accessoiresinterier.fixationporte }}</td>
+                <td>{{ accessoiresinterier.fixationtableau }}</td>
+                <td>{{ accessoiresinterier.rmqrideau }}</td>
+                <td>{{ accessoiresinterier.rmqparasoleil }}</td>
+                <td>{{ accessoiresinterier.rmqcendries }}</td>
+                <td>{{ accessoiresinterier.rmqtrappes }}</td>
+                <td>{{ accessoiresinterier.rmqfinitionmastic }}</td>
+                <td>{{ accessoiresinterier.rmqbaguettejoin }}</td>
+                <td>{{ accessoiresinterier.rmqfixationporte }}</td>
+                <td>{{ accessoiresinterier.rmqfixationtableau }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('accessoiresinterier_show', { 'id': accessoiresinterier.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('accessoiresinterier_edit', { 'id': accessoiresinterier.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('accessoiresinterier_new') }}">Create a new accessoiresinterier</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Testpeintures list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Peinturemaintien</th>
+                <th>Abscvapeur</th>
+                <th>Abscimpureté</th>
+                <th>Peauorange</th>
+                <th>Abscgratinure</th>
+                <th>Brillance</th>
+                <th>Rmqpeinturemaintien</th>
+                <th>Rmqabscvapeur</th>
+                <th>Rmqabscimpureté</th>
+                <th>Rmqpeauorange</th>
+                <th>Rmqabscgratinure</th>
+                <th>Rmqbrillance</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for testpeinture in testpeintures %}
+            <tr>
+                <td><a href="{{ path('testpeinture_show', { 'id': testpeinture.id }) }}">{{ testpeinture.id }}</a></td>
+                <td>{{ testpeinture.peinturemaintien }}</td>
+                <td>{{ testpeinture.abscvapeur }}</td>
+                <td>{{ testpeinture.abscimpureté }}</td>
+                <td>{{ testpeinture.peauorange }}</td>
+                <td>{{ testpeinture.abscgratinure }}</td>
+                <td>{{ testpeinture.brillance }}</td>
+                <td>{{ testpeinture.rmqpeinturemaintien }}</td>
+                <td>{{ testpeinture.rmqabscvapeur }}</td>
+                <td>{{ testpeinture.rmqabscimpureté }}</td>
+                <td>{{ testpeinture.rmqpeauorange }}</td>
+                <td>{{ testpeinture.rmqabscgratinure }}</td>
+                <td>{{ testpeinture.rmqbrillance }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('testpeinture_show', { 'id': testpeinture.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('testpeinture_edit', { 'id': testpeinture.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('testpeinture_new') }}">Create a new testpeinture</a>
+        </li>
+    </ul>
+{% endblock %}

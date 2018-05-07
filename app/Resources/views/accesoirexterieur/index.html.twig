@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Accesoirexterieurs list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Isolation</th>
+                <th>Finition</th>
+                <th>Retroviseur</th>
+                <th>Fixationpara</th>
+                <th>Etatparachoc</th>
+                <th>Cachefeu</th>
+                <th>Grillebouches</th>
+                <th>Baguette</th>
+                <th>Porte</th>
+                <th>Essui</th>
+                <th>Rmqisolation</th>
+                <th>Rmqfinition</th>
+                <th>Rmqretroviseur</th>
+                <th>Rmqfixationpara</th>
+                <th>Rmqetatparachoc</th>
+                <th>Rmqcachefeu</th>
+                <th>Rmqgrillebouches</th>
+                <th>Rmqbaguette</th>
+                <th>Rmqporte</th>
+                <th>Rmqessui</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for accesoirexterieur in accesoirexterieurs %}
+            <tr>
+                <td><a href="{{ path('accesoirexterieur_show', { 'id': accesoirexterieur.id }) }}">{{ accesoirexterieur.id }}</a></td>
+                <td>{{ accesoirexterieur.isolation }}</td>
+                <td>{{ accesoirexterieur.finition }}</td>
+                <td>{{ accesoirexterieur.retroviseur }}</td>
+                <td>{{ accesoirexterieur.fixationpara }}</td>
+                <td>{{ accesoirexterieur.etatparachoc }}</td>
+                <td>{{ accesoirexterieur.cachefeu }}</td>
+                <td>{{ accesoirexterieur.grillebouches }}</td>
+                <td>{{ accesoirexterieur.baguette }}</td>
+                <td>{{ accesoirexterieur.porte }}</td>
+                <td>{{ accesoirexterieur.essui }}</td>
+                <td>{{ accesoirexterieur.rmqisolation }}</td>
+                <td>{{ accesoirexterieur.rmqfinition }}</td>
+                <td>{{ accesoirexterieur.rmqretroviseur }}</td>
+                <td>{{ accesoirexterieur.rmqfixationpara }}</td>
+                <td>{{ accesoirexterieur.rmqetatparachoc }}</td>
+                <td>{{ accesoirexterieur.rmqcachefeu }}</td>
+                <td>{{ accesoirexterieur.rmqgrillebouches }}</td>
+                <td>{{ accesoirexterieur.rmqbaguette }}</td>
+                <td>{{ accesoirexterieur.rmqporte }}</td>
+                <td>{{ accesoirexterieur.rmqessui }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('accesoirexterieur_show', { 'id': accesoirexterieur.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('accesoirexterieur_edit', { 'id': accesoirexterieur.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('accesoirexterieur_new') }}">Create a new accesoirexterieur</a>
+        </li>
+    </ul>
+{% endblock %}

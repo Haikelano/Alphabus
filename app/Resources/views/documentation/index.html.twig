@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Documentations list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Modelclimatisation</th>
+                <th>Compresseurclim</th>
+                <th>Evaporateur</th>
+                <th>Condenseur</th>
+                <th>Refrigerateur</th>
+                <th>Installationaudio</th>
+                <th>Posteradio</th>
+                <th>Amplificateur</th>
+                <th>Lecteurdvd</th>
+                <th>Afficheurdestination</th>
+                <th>Afficheurdestination2</th>
+                <th>Necran</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for documentation in documentations %}
+            <tr>
+                <td><a href="{{ path('documentation_show', { 'id': documentation.id }) }}">{{ documentation.id }}</a></td>
+                <td>{{ documentation.modelclimatisation }}</td>
+                <td>{{ documentation.compresseurclim }}</td>
+                <td>{{ documentation.evaporateur }}</td>
+                <td>{{ documentation.condenseur }}</td>
+                <td>{{ documentation.refrigerateur }}</td>
+                <td>{{ documentation.installationaudio }}</td>
+                <td>{{ documentation.posteradio }}</td>
+                <td>{{ documentation.amplificateur }}</td>
+                <td>{{ documentation.lecteurdvd }}</td>
+                <td>{{ documentation.afficheurdestination }}</td>
+                <td>{{ documentation.afficheurdestination2 }}</td>
+                <td>{{ documentation.necran }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('documentation_show', { 'id': documentation.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('documentation_edit', { 'id': documentation.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('documentation_new') }}">Create a new documentation</a>
+        </li>
+    </ul>
+{% endblock %}

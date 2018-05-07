@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Soutebagages list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Etancheite</th>
+                <th>Serrures</th>
+                <th>Amortisseurs</th>
+                <th>Ouverfermer</th>
+                <th>Poignee</th>
+                <th>Fixationverin</th>
+                <th>Absencevisserie</th>
+                <th>Rmqetancheite</th>
+                <th>Rmqserrures</th>
+                <th>Rmqamortisseurs</th>
+                <th>Rmqouverfermer</th>
+                <th>Rmqpoignee</th>
+                <th>Rmqfixationverin</th>
+                <th>Rmqabsencevisserie</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for soutebagage in soutebagages %}
+            <tr>
+                <td><a href="{{ path('soutebagage_show', { 'id': soutebagage.id }) }}">{{ soutebagage.id }}</a></td>
+                <td>{{ soutebagage.etancheite }}</td>
+                <td>{{ soutebagage.serrures }}</td>
+                <td>{{ soutebagage.amortisseurs }}</td>
+                <td>{{ soutebagage.ouverfermer }}</td>
+                <td>{{ soutebagage.poignee }}</td>
+                <td>{{ soutebagage.fixationverin }}</td>
+                <td>{{ soutebagage.absencevisserie }}</td>
+                <td>{{ soutebagage.rmqetancheite }}</td>
+                <td>{{ soutebagage.rmqserrures }}</td>
+                <td>{{ soutebagage.rmqamortisseurs }}</td>
+                <td>{{ soutebagage.rmqouverfermer }}</td>
+                <td>{{ soutebagage.rmqpoignee }}</td>
+                <td>{{ soutebagage.rmqfixationverin }}</td>
+                <td>{{ soutebagage.rmqabsencevisserie }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('soutebagage_show', { 'id': soutebagage.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('soutebagage_edit', { 'id': soutebagage.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('soutebagage_new') }}">Create a new soutebagage</a>
+        </li>
+    </ul>
+{% endblock %}

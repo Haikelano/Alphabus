@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Maintiens list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Fixation</th>
+                <th>Fixationmantiens</th>
+                <th>Toleprotection</th>
+                <th>Rmqfixation</th>
+                <th>Rmqfixationmantiens</th>
+                <th>Rmqtoleprotection</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for maintien in maintiens %}
+            <tr>
+                <td><a href="{{ path('maintiens_show', { 'id': maintien.id }) }}">{{ maintien.id }}</a></td>
+                <td>{{ maintien.fixation }}</td>
+                <td>{{ maintien.fixationmantiens }}</td>
+                <td>{{ maintien.toleprotection }}</td>
+                <td>{{ maintien.rmqfixation }}</td>
+                <td>{{ maintien.rmqfixationmantiens }}</td>
+                <td>{{ maintien.rmqtoleprotection }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('maintiens_show', { 'id': maintien.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('maintiens_edit', { 'id': maintien.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('maintiens_new') }}">Create a new maintien</a>
+        </li>
+    </ul>
+{% endblock %}

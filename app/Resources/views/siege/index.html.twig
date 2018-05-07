@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Sieges list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Fixatino</th>
+                <th>Balancement</th>
+                <th>Habillage</th>
+                <th>Ceinturesecurite</th>
+                <th>Rmqfixatino</th>
+                <th>Rmqbalancement</th>
+                <th>Rmqhabillage</th>
+                <th>Rmqceinturesecurite</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for siege in sieges %}
+            <tr>
+                <td><a href="{{ path('siege_show', { 'id': siege.id }) }}">{{ siege.id }}</a></td>
+                <td>{{ siege.fixatino }}</td>
+                <td>{{ siege.balancement }}</td>
+                <td>{{ siege.habillage }}</td>
+                <td>{{ siege.ceinturesecurite }}</td>
+                <td>{{ siege.rmqfixatino }}</td>
+                <td>{{ siege.rmqbalancement }}</td>
+                <td>{{ siege.rmqhabillage }}</td>
+                <td>{{ siege.rmqceinturesecurite }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('siege_show', { 'id': siege.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('siege_edit', { 'id': siege.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('siege_new') }}">Create a new siege</a>
+        </li>
+    </ul>
+{% endblock %}

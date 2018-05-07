@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Vitrage</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ vitrage.id }}</td>
+            </tr>
+            <tr>
+                <th>Etat</th>
+                <td>{{ vitrage.etat }}</td>
+            </tr>
+            <tr>
+                <th>Overclose</th>
+                <td>{{ vitrage.overclose }}</td>
+            </tr>
+            <tr>
+                <th>Montagejoint</th>
+                <td>{{ vitrage.montagejoint }}</td>
+            </tr>
+            <tr>
+                <th>Montagecle</th>
+                <td>{{ vitrage.montagecle }}</td>
+            </tr>
+            <tr>
+                <th>Rmqetat</th>
+                <td>{{ vitrage.rmqetat }}</td>
+            </tr>
+            <tr>
+                <th>Rmqoverclose</th>
+                <td>{{ vitrage.rmqoverclose }}</td>
+            </tr>
+            <tr>
+                <th>Rmqmontagejoint</th>
+                <td>{{ vitrage.rmqmontagejoint }}</td>
+            </tr>
+            <tr>
+                <th>Rmqmontagecle</th>
+                <td>{{ vitrage.rmqmontagecle }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('vitrage_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('vitrage_edit', { 'id': vitrage.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

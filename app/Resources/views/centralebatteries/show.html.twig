@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Centralebattery</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ centralebattery.id }}</td>
+            </tr>
+            <tr>
+                <th>Fixationelectrique</th>
+                <td>{{ centralebattery.fixationelectrique }}</td>
+            </tr>
+            <tr>
+                <th>Fixationcable</th>
+                <td>{{ centralebattery.fixationcable }}</td>
+            </tr>
+            <tr>
+                <th>Fixationbatteries</th>
+                <td>{{ centralebattery.fixationbatteries }}</td>
+            </tr>
+            <tr>
+                <th>Chargebatterie</th>
+                <td>{{ centralebattery.chargebatterie }}</td>
+            </tr>
+            <tr>
+                <th>Niveauelectrolite</th>
+                <td>{{ centralebattery.niveauelectrolite }}</td>
+            </tr>
+            <tr>
+                <th>Rmqfixationelectrique</th>
+                <td>{{ centralebattery.rmqfixationelectrique }}</td>
+            </tr>
+            <tr>
+                <th>Rmqfixationcable</th>
+                <td>{{ centralebattery.rmqfixationcable }}</td>
+            </tr>
+            <tr>
+                <th>Rmqfixationbatteries</th>
+                <td>{{ centralebattery.rmqfixationbatteries }}</td>
+            </tr>
+            <tr>
+                <th>Rmqchargebatterie</th>
+                <td>{{ centralebattery.rmqchargebatterie }}</td>
+            </tr>
+            <tr>
+                <th>Rmqniveauelectrolite</th>
+                <td>{{ centralebattery.rmqniveauelectrolite }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('centralebatteries_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('centralebatteries_edit', { 'id': centralebattery.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
