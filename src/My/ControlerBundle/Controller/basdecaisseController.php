@@ -67,7 +67,14 @@ class basdecaisseController extends Controller
     {
         $deleteForm = $this->createDeleteForm($basdecaisse);
 
+        $em = $this->getDoctrine()->getManager();
+        $id_chassis=$basdecaisse->getChassis();
+
+        $client = $em->getRepository('MyAlphabusBundle:Affectation')->findBy(array('chassis' => $id_chassis));
+
+
         return $this->render('basdecaisse/show.html.twig', array(
+            'client' => $client,
             'basdecaisse' => $basdecaisse,
             'delete_form' => $deleteForm->createView(),
         ));

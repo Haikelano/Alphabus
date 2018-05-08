@@ -1,95 +1,145 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    <style>
+        [class*="alert"]{
+            border-radius: 6px;
+            line-height: 40px;
+            text-align: center;
+        }
+    </style>
     <div class="container">
+        <h2>Test Carosserie :</h2>
+                    <div class="row">
+                         <div class="col-md-4">
+                             <p><h4><span class="badge badge-secondary">N°Chassis <span class="badge badge-warning">{{ basdecaisse.chassis }}</span></span></h4></p>
+                         </div>
+                        <div class="col-md-4">
+                            <p><h4><span class="badge badge-secondary">Date d'ajout <span class="badge badge-warning">{{ basdecaisse.date|date('Y-m-d H:i:s') }} </span></span></h4></p>
+                         </div>
+                        {% if client != '' %}
+                        {% for id in client %}
+                         <div class="col-md-4">
+                             <p><h4><span class="badge badge-secondary">Affecter à <span class="badge badge-warning">{{ id.nclients }}</span></span></h4></p>
+                                 </div>
+                        {% endfor %}
+                        {% endif %}
+                    </div>
         <div class="row">
+                      <div class="col-lg-10">
+                        <table class="table  table-striped">
+                            <tbody>
+                            <thead class="table-dark">
+                            <tr>
+                                <th scope="col" class="col-sm-1">Code</th>
+                                <th scope="col" class="col-lg-3"> Désignation</th>
+                                <th scope="col" class="col-md-2">Confirme/Non</th>
+                                <th scope="col" class="col-md-4">Remarque</th>
+                            </tr>
+                            </thead>
+                        <tr>
+                            <th>1</th>
+                            <th name="a">Soudure des connections</th>
 
+                            <td>{% if basdecaisse.soudurecnx == "" or basdecaisse.soudurecnx == "OK" or basdecaisse.soudurecnx == "ok"  %}
+                                    <span class="alert alert-success">Confirme</span>
+                                {% else %}
+                                    <span class="alert alert-danger" >Non Confirme</span>
+                                {% endif %}</td>
+                             <td>{{ basdecaisse.rmqsoudurecnx }}</td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <th name="a">Fixation des boulons des membrures</th>
+                            <td>{% if basdecaisse.fixation == "" or basdecaisse.fixation == "OK" or basdecaisse.fixation == "ok"  %}
+                                    <span class="alert alert-success">Confirme</span>
+                                {% else %}
+                                    <span class="alert alert-danger">Non Confirme</span>
+                                {% endif %}</td>
+                            <td>{{ basdecaisse.rmqfixation }}</td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <th name="a">Etancheite de la carrosseriere</th>
+                            <td>{% if basdecaisse.etancheite == "" or basdecaisse.etancheite == "OK" or basdecaisse.etancheite == "ok"  %}
+                                    <span class="alert alert-success">Confirme</span>
+                                {% else %}
+                                    <span class="alert alert-danger" >Non Confirme</span>
+                                {% endif %}</td>
+                            <td>{{ basdecaisse.rmqetancheite }}</td>
+                        </tr>
+                        <tr>
+                            <th>4</th>
+                            <th name="a">Peinture bas de caisse</th>
+                               <td>{% if basdecaisse.peinture == "" or basdecaisse.peinture == "OK" or basdecaisse.peinture == "ok"  %}
+                                    <span class="alert alert-success">Confirme</span>
+                                {% else %}
+                                    <span class="alert alert-danger" >Non Confirme</span>
+                                {% endif %}</td>
+                            <td>{{ basdecaisse.rmqpeinture }}</td>
+                        </tr>
+                        <tr>
+                            <th>5</th>
+                            <th name="a">Absence depassement Visserie</th>
+                               <td>{% if basdecaisse.visserie == "" or basdecaisse.visserie == "OK" or basdecaisse.visserie == "ok"  %}
+                                    <span class="alert alert-success">Confirme</span>
+                                {% else %}
+                                    <span class="alert alert-danger" >Non Confirme</span>
+                                {% endif %}</td>
+                            <td>{{ basdecaisse.rmqvisserie }}</td>
+                        </tr>
+                        <tr>
+                            <th>6</th>
+                            <th name="a">Absence de déchet de Carrosserie</th>
+                             <td>{% if basdecaisse.carrosserie == "" or basdecaisse.carrosserie == "OK" or basdecaisse.carrosserie == "ok"  %}
+                                    <span class="alert alert-success">Confirme</span>
+                                {% else %}
+                                    <span class="alert alert-danger" >Non Confirme</span>
+                                {% endif %}</td>
+                            <td>{{ basdecaisse.rmqcarrosserie }}</td>
+                        </tr>
+                        <tr>
+                            <th>7</th>
+                            <th name="a">Absence de Frottement entre</th>
+                            <td>{% if basdecaisse.frottement == "" or basdecaisse.frottement == "OK" or basdecaisse.frottement == "ok"  %}
+                                    <span class="alert alert-success">Confirme</span>
+                                {% else %}
+                                    <span class="alert alert-danger" >Non Confirme</span>
+                                {% endif %}</td>
+                            <td>{{ basdecaisse.rmqfrottement }}</td>
+                        </tr>
+                        <tr>
+                            <th>8</th>
+                            <th name="a">Fixation Roue de secours</th>
+                               <td>{% if basdecaisse.fixationroue == "" or basdecaisse.fixationroue == "OK" or basdecaisse.fixationroue == "ok"  %}
+                                    <span class="alert alert-success">Confirme</span>
+                                {% else %}
+                                    <span class="alert alert-danger" >Non Confirme</span>
+                                {% endif %}</td>
+                            <td>{{ basdecaisse.rmqfixationroue }}</td>
+                        </tr>
+                        <tr>
+                            <th>9</th>
+                            <th name="a">Passage et fixation des cables et flexibles</th>
+                            <td>{% if basdecaisse.fixationcable == "" or basdecaisse.fixationcable == "OK" or basdecaisse.fixationcable == "ok"  %}
+                                    <span class="alert alert-success">Confirme</span>
+                                {% else %}
+                                    <span class="alert alert-danger" >Non Confirme</span>
+                                {% endif %}</td>
+                            <td>{{ basdecaisse.rmqfixationcable }}</td>
+                        </tr>
 
-    <h1>Basdecaisse</h1>
+                    </tbody>
+                </table>
+            </div>
 
-            <table class="table  table-striped">
-                <tbody>
-                <thead class="table-dark">
-                <tr>
+          <div id="aa" class="col-md-2">
+            <ul class="list-group" style="position: fixed; background-repeat: no-repeat ">
+               <li class="list-group-item"><a href="{{ path('basdecaisse_index') }}">Back to the list</a></li>
+               <li class="list-group-item"><a href="{{ path('basdecaisse_edit', { 'id': basdecaisse.id }) }}">Edit</a></li>
+            </ul>
+          </div>
 
-                    <th scope="col" class="col-sm-1">Code</th>
-                    <th scope="col" class="col-lg-3"> Désignation</th>
-                    <th scope="col" class="col-md-1">Confirme/Non</th>
-                    <th scope="col" class="col-md-5">Remarque</th>
-                </tr>
-                </thead>
-
-            <tr>
-                <th>1</th>
-                <th name="a">Soudure des connections</th>
-                 <td>{{ basdecaisse.soudurecnx }}</td>
-                 <td>{{ basdecaisse.rmqsoudurecnx }}</td>
-            </tr>
-            <tr>
-                <th>2</th>
-                <th name="a">Fixation des boulons des membrures</th>
-                <td>{{ basdecaisse.fixation }}</td>
-                <td>{{ basdecaisse.rmqfixation }}</td>
-            </tr>
-            <tr>
-                <th>3</th>
-                <th name="a">Etancheite de la carrosseriere</th>
-                <td>{{ basdecaisse.etancheite }}</td>
-                <td>{{ basdecaisse.rmqetancheite }}</td>
-            </tr>
-            <tr>
-                <th>4</th>
-                <th name="a">Peinture bas de caisse</th>
-                <td>{{ basdecaisse.peinture }}</td>
-                <td>{{ basdecaisse.rmqpeinture }}</td>
-            </tr>
-            <tr>
-                <th>5</th>
-                <th name="a">Absence depassement Visserie</th>
-                <td>{{ basdecaisse.visserie }}</td>
-                <td>{{ basdecaisse.rmqvisserie }}</td>
-            </tr>
-            <tr>
-                <th>6</th>
-                <th name="a">Absence de déchet de Carrosserie</th>
-                <td>{{ basdecaisse.carrosserie }}</td>
-                <td>{{ basdecaisse.rmqcarrosserie }}</td>
-            </tr>
-            <tr>
-                <th>7</th>
-                <th name="a">Absence de Frottement entre</th>
-                <td>{{ basdecaisse.frottement }}</td>
-                <td>{{ basdecaisse.rmqfrottement }}</td>
-            </tr>
-            <tr>
-                <th>8</th>
-                <th name="a">Fixation Roue de secours</th>
-                <td>{{ basdecaisse.fixationroue }}</td>
-                <td>{{ basdecaisse.rmqfixationroue }}</td>
-            </tr>
-            <tr>
-                <th>9</th>
-                <th name="a">Passage et fixation des cables et flexibles</th>
-                <td>{{ basdecaisse.fixationcable }}</td>
-                <td>{{ basdecaisse.rmqfixationcable }}</td>
-            </tr>
-
-        </tbody>
-    </table>
-
-    <ul>
-        <li>
-            <a href="{{ path('basdecaisse_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('basdecaisse_edit', { 'id': basdecaisse.id }) }}">Edit</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
         </div>
     </div>
 {% endblock %}

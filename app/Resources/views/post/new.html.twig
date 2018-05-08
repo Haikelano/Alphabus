@@ -7,7 +7,7 @@
             <h1>Ajouter votre Problème</h1>
          <br/>
             <div class="row">
-                        <div class="col-lg-10">
+              <div class="col-lg-10">
                         <table class="table" >
                       <tr>
                           <td>{{form_label(form.titre)}}</td>
@@ -26,13 +26,13 @@
                           <td>{{form_widget(form.file)}}</td>
                       </tr>
                       </table>
-                          <input type="submit" value="Ajouter " class="btn btn-primary" />
-                                {{ form_end(form) }}
+                   <input type="submit" value="Ajouter " class="btn btn-outline-primary" />
+                    {{ form_end(form) }}
             </div>
 
-              <ul>
-                  <li>
-                      <a class="linked" href="{{ path('post_index') }}">Retournée </a>
+              <ul class="list-group">
+                  <li class="list-group-item">
+                      <a  href="{{ path('post_index') }}">Retournée </a>
                   </li>
               </ul>
 
