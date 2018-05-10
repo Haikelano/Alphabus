@@ -162,8 +162,7 @@
                                         <td>{{ form_widget(f.etat )}}</td>
                                         <td></td>
                                     </tr>
-
-                                    </tbody>
+                                          </tbody>
 
                                 </table>
 
@@ -182,19 +181,27 @@
                     <div class="col-lg-3">
 
                         <h1>Validation</h1>
-                        <table class="table">
-                            <tr>
-                                <th>Mecanicien</th>
-                                <th>Contqualite</th>
-                                <th>Responsablequalite</th>
-                            </tr>
+                       <table class="table">
+                           <tr>
+                         <th>Mecanicien</th>
+                        <td> {{ form_widget(f.mecanicien)}}</td>
 
-                            <tr>
-                                <td>{{ receptionchassi.mecanicien }}</td>
-                                <td>{{ receptionchassi.contqualite }}</td>
-                                <td>{{ receptionchassi.responsablequalite }}</td>
-                            </tr>
-                        </table>
+                        </tr>
+                        <tr>
+
+                            <th>Controel Qualité</th>
+                            <td> {{ form_widget(f.contqualite)}}</td>
+
+                        </tr>
+                        <tr>
+
+                            <th>Responsable Qualité</th>
+                            <td> {{ form_widget(f.responsablequalite)}}</td>
+
+                        </tr>
+
+
+                       </table>
 
                         <h4 style="padding-top: 50px">
                             <a href="{{ path('receptionchassis_index') }}">Back to the list</a>

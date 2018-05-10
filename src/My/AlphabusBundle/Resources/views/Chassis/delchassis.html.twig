@@ -1,7 +1,41 @@
 {% extends "::base.html.twig" %}
 
-{% block title %}MyAlphabusBundle:Chassis:delchassis{% endblock %}
+{% block title %}Chassis{% endblock %}
 
 {% block body %}
-<h1>Welcome to the Chassis:delchassis page</h1>
+<div class="container">
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Supprimer Chassis  </h1>
+
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="{{ path('homepage') }}">Home</a>
+        </li>
+        <li class="breadcrumb-item active">Chassis</li>
+    </ol>
+    <!-- End Page Content -->
+    <div class="row">
+        <div class="col-md-8">
+<p style="margin-top: 50px">
+            <span class="alert alert-danger"> vous n'avait pas  le droit de supprimer un chassis</span>
+</p>
+            <p style="margin-top: 70px">
+            <span class="alert alert-info" > Merci de contacter votre administrateur
+                ou d'ajouter votre propbleme sur c'est  <a href="{{ path('post_new') }}" > lien </a>
+
+            </span>
+        </p>
+            <p class="offset-4" style="margin-top: 30px">
+                <a href="{{ path('list_chassis') }} " Class ="btn btn-outline-danger btn-light btn-lg">
+                    <span class ="glyphicon-plus"/>Retourner
+                </a>
+
+            </p>
+        </div>
+        <div class="col-md-4" style="margin-top: auto">
+            <img src="{{ asset('images/icon/warnig.jpg') }}" height="300px" width="300px"/>
+
+        </div>
+    </div>
+</div>
 {% endblock %}

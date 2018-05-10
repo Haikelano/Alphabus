@@ -3,54 +3,55 @@
 {% block title %}MyAlphabusBundle:Chassis:listchassis{% endblock %}
 
 {% block body %}
-<h1>Welcome to the Chassis:listchassis page</h1>
-
-
-
-
-
     <div class="container">
-        <h1>Enseignants</h1>
-        <form style="margin-bottom: 10px;" action="cherchassis" method="GET">
-            <input class="form-control" type="text" placeholder="Recherche par N° Chassis" name="nchassis" />
-        </form>
-        <form>
-            <table class="table">
-                <thead>
-                <tr>
-                   
-                    <th>N° Chassis</th>
-                    <th>Type chassis</th>
-                    <th>Date Reception</th>
-                    <th>Controler</th>
 
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-4 mb-3">Liste de chasssis disponible
 
+        </h1>
 
-                </tr>
-                </thead>
-                <tbody>
-                {% for st in enss %}
-                    <tr>
-                      
-                        <td>{{ st.nchassis }}</td>
-                        <td>{{ st.typechassis }}</td>
-                        <td>{{ st.datereception|date('d-m-Y')  }}</td>
-                        <td>{{ st.controler }}</td>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="{{ path('homepage') }}">Home</a>
+            </li>
+            <li class="breadcrumb-item active">Liste Chassis</li>
+        </ol>
+        <!-- End Page Content -->
 
-                        <td><a class="btn btn-success" href="{{ path('edit_chassis', { 'id': st.nchassis}) }}">Modifier</a></td>
-                        <td><a class="btn btn-danger" href="{{ path('del_chassis', { 'id': st.nchassis }) }}"><i class="glyphicon glyphicon-trash"></i> Supprimer</a></td>
-                    </tr>
-                {% else %}
-                    <tr><td>Aucun Enseignnat n''a été trouvé.</td></tr>
-                    </tr>
-                {% endfor %}
-                </tbody>
-            </table>
-            <a href="{{ path('new_chassis') }}" class="btn btn-primary">
-                Ajouter
-            </a>
+        <!-- chercher les chassis -->
+                <form style="margin-bottom: 10px;" action="cherchassis" method="GET">
+                    <small> <h2>Réchercher tous le Type </h2></small>
+                   <input class="form-control" type="text" placeholder="Recherche par N° Chassis" name="nchassis" />
+               </form>
+        <!--End chercher les chassis -->
 
-        </form>
+        <div class="row">
+        {% for st in enss %}
+            <div class="col-lg-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top" src="{{ asset('images/icon/chassis.jpg') }}" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#">{{ st.nchassis }}</a>
+                        </h4>
+                        <p class="card-text"> <p>Type Chassis :{{ st.typechassis }}</p>
+                        <p>Date Reception :{{ st.datereception|date('d-m-Y')  }}</p>
+                        <p>Controler :{{ st.controler }}</p>
+                          <p>  <a class="btn btn-outline-primary" href="{{ path('edit_chassis', { 'id': st.nchassis}) }}" style="margin-right: 10px">Modifier</a>
+                            <a class="btn btn-outline-danger" href="{{ path('del_chassis', { 'id': st.nchassis }) }}"><i class="glyphicon glyphicon-trash"></i> Supprimer</a></p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            <span class="badge badge-danger">Aucune chassis trouvé</span>
+
+            {% endfor %}
+
+        </div>
     </div>
+
+
+
 {% endblock %}
 

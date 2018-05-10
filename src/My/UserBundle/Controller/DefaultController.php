@@ -5,6 +5,7 @@ namespace My\UserBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+use My\AlphabusBundle\Entity\Chassis;
 class DefaultController extends Controller
 {
     /**
@@ -18,7 +19,37 @@ class DefaultController extends Controller
         }
         if($this->get('security.authorization_checker')->isGranted('ROLE_USER')){
 
-            return $this->render('MyAlphabusBundle:Default:index.html.twig');
+
+            $em = $this->getDoctrine()->getManager();
+            $chassis = $em->getRepository('MyAlphabusBundle:Chassis')->findAll();
+
+            $repository = $this->getDoctrine()
+                ->getManager()
+                ->getRepository('MyAlphabusBundle:Chassis');
+
+            $listeArticles = $repository->findBy(array('typechassis'=>'RR8'),
+                array('datereception' => 'desc'),
+                3,
+                0);
+            $rr2 = $repository->findBy(array('typechassis'=>'RR2'),
+                array('datereception' => 'desc'),
+                3,
+                0);
+            $rra = $repository->findBy(array('typechassis'=>'RRA'),
+                array('datereception' => 'desc'),
+                3,
+                0);
+
+            return $this->render('MyAlphabusBundle:Default:index.html.twig',
+
+                array('enss' => $listeArticles,
+                     'rr2'=>$rr2,
+                    'rra' =>$rra
+
+                )
+                );
+
+
         }
 
     }

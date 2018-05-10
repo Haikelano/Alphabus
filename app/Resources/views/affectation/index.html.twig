@@ -1,52 +1,49 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Affectations list</h1>
-      <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Seriealpha</th>
-                <th>Dateaffectation</th>
-                <th>Controleacier</th>
-                <th>Dateacier</th>
-                <th>Controlepeinture</th>
-                <th>Datepeinture</th>
-                <th>Controlcontroler</th>
-                <th>Datecontrole</th>
-                <th>Controleessai</th>
-                <th>Dateessai</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for affectation in affectations %}
-            <tr>
-                <td><a href="{{ path('affectation_show', { 'id': affectation.id }) }}">{{ affectation.id }}</a></td>
-                <td>{{ affectation.seriealpha }}</td>
-                <td>{% if affectation.dateaffectation %}{{ affectation.dateaffectation|date('Y-m-d') }}{% endif %}</td>
-                <td>{{ affectation.controleacier }}</td>
-                <td>{% if affectation.dateacier %}{{ affectation.dateacier|date('Y-m-d') }}{% endif %}</td>
-                <td>{{ affectation.controlepeinture }}</td>
-                <td>{% if affectation.datepeinture %}{{ affectation.datepeinture|date('Y-m-d') }}{% endif %}</td>
-                <td>{{ affectation.controlcontroler }}</td>
-                <td>{% if affectation.datecontrole %}{{ affectation.datecontrole|date('Y-m-d') }}{% endif %}</td>
-                <td>{{ affectation.controleessai }}</td>
-                <td>{% if affectation.dateessai %}{{ affectation.dateessai|date('Y-m-d') }}{% endif %}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('affectation_show', { 'id': affectation.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('affectation_edit', { 'id': affectation.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+<div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Liste de chasssis Affecter à leur client
+
+    </h1>
+
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="{{ path('homepage') }}">Home</a>
+        </li>
+        <li class="breadcrumb-item active">Affectation Liste</li>
+    </ol>
+    <!-- End Page Content -->
+
+    <div class="row">
+    {% for affectation in affectations %}
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="{{ asset('images/icon/chassis.jpg') }}" alt=""></a>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a href="#">{{ affectation.chassis }} </a>
+                    </h4>
+                    <p class="card-text"> <p>N° Serie Alpha :{{ affectation.seriealpha }}</p>
+                    <p> Client : {{ affectation.nclients}} </p>
+                    <p> Date peinture :{{ affectation.datepeinture|date('Y-m-d') }}</p>
+                    <p> Date Acier : {{ affectation.dateacier|date('Y-m-d') }}</p>
+                    <p> Date Essai de route :{{ affectation.dateessai|date('Y-m-d') }} </p>
+                    <p><h4><span class="badge badge-secondary">Date Affectation<span class="badge badge-warning">{{ affectation.dateaffectation|date('Y-m-d') }} </span></span></h4></p>
 
 
-{% endblock %}
+                    <p>  <a class="btn btn-outline-primary" href="{{ path('affectation_show', { 'id': affectation.id }) }}" style="margin-right: 10px">Consulter</a>
+                        <a class="btn btn-outline-danger" href="{{ path('affectation_edit', { 'id': affectation.id }) }}"><i class="glyphicon glyphicon-trash"></i> Modifier</a></p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <span class="badge badge-danger">Aucune chassis trouvé</span>
+
+    {% endfor %}
+</div>
+</div>
+
+    {% endblock %}

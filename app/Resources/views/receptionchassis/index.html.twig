@@ -1,56 +1,51 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-
     <div class="container">
-        <div class="row">
-            <div class="col-lg-10">
-                    <h1>Receptionchasses list</h1>
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-4 mb-3">Service Controle Chassis
 
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>N° Chassis</th>
-                        <th>Generalchassis</th>
-                        <th>Mecanicien</th>
-                        <th>Contqualite</th>
-                        <th>Responsablequalite</th>
-                        <th>Actions</th>
-                    </tr>
-                    </thead>
-                    <tbody>
+        </h1>
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="{{ path('homepage') }}">Home</a>
+            </li>
+            <li class="breadcrumb-item active">Liste Chassis</li>
+        </ol>
+                <div class="list-group" style="margin-bottom: 20px">
+                <a href="{{ path('receptionchassis_new') }}">Ajouter une Chassis à le serice de controle</a>
+                </div>
+        <!-- End Page Content -->
+                <div class="row">
                     {% for receptionchassi in receptionchasses %}
-                        <tr>
-                            <td><a href="{{ path('receptionchassis_show', { 'id': receptionchassi.id }) }}">{{ receptionchassi.id }}</a></td>
-                            <td>{{ receptionchassi.nchassis }}</td>
-                            <td>{{ receptionchassi.generalchassis }}</td>
-                            <td>{{ receptionchassi.mecanicien }}</td>
-                            <td>{{ receptionchassi.contqualite }}</td>
-                            <td>{{ receptionchassi.responsablequalite }}</td>
-                            <td>
-                                <ul>
-                                    <li>
-                                        <a href="{{ path('receptionchassis_show', { 'id': receptionchassi.id }) }}">show</a>
+                    <div class="col-lg-4 col-sm-6 portfolio-item">
+                        <div class="card h-100">
+                            <a href="#"><img class="card-img-top" src="{{ asset('images/icon/controlechassis.jpg') }}" alt=""></a>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <a href="#">{{ receptionchassi.nchassis }}</a>
+                                </h4>
+                                <p class="card-text"><p>Etat generale chassis: {{ receptionchassi.generalchassis }}</p>
+                                                    <p> Le Mecanicien :     {{ receptionchassi.mecanicien }}  </p>
+                                                    <p> Controle qualité : {{ receptionchassi.contqualite }} </p>
+                                                    <p> Responsable Qualité :{{ receptionchassi.responsablequalite }}  </p>
+
+                                <p>
+                                    <a class="btn btn-outline-primary" href="{{ path('receptionchassis_show', { 'id': receptionchassi.id }) }}" style="margin-right: 20px">Consulter</a>
                                     </li>
-                                    <li>
-                                        <a href="{{ path('receptionchassis_edit', { 'id': receptionchassi.id }) }}">edit</a>
-                                    </li>
-                                   
-                                </ul>
-                            </td>
-                        </tr>
+
+                                    <a class="btn btn-outline-warning " href="{{ path('receptionchassis_edit', { 'id': receptionchassi.id }) }}">Modifier</a>
+                                </p>
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                     {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-
-    <ul>
-        <li>
-            <a href="{{ path('receptionchassis_new') }}">Create a new receptionchassi</a>
-        </li>
-    </ul>
+                </div>
     </div>
+
+
+
 {% endblock %}

@@ -1,7 +1,20 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Affectation edit</h1>
+    <div class="container">
+
+            <!-- Page Heading/Breadcrumbs -->
+            <h1 class="mt-4 mb-3">Modif affectation chassis
+
+            </h1>
+
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="{{ path('homepage') }}">Home</a>
+                </li>
+                <li class="breadcrumb-item active">Affectation Liste</li>
+            </ol>
+            <!-- End Page Content -->
 
     {{ form_start(edit_form) }}
         {{ form_widget(edit_form) }}
@@ -14,4 +27,5 @@
         </li>
 
     </ul>
+    </div>
 {% endblock %}

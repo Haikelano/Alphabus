@@ -1,62 +1,69 @@
 {% extends "::base.html.twig" %}
 
-{% block title %}MyAlphabusBundle:Chassis:editchassis{% endblock %}
+{% block title %}Chassis{% endblock %}
 
 {% block body %}
+<div class="container">
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Modifier le chassis  </h1>
 
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="{{ path('homepage') }}">Home</a>
+        </li>
+        <li class="breadcrumb-item active">Chassis</li>
+    </ol>
+    <!-- End Page Content -->
 
-
-
-
-
-
-    <form action="" method="post" {{ form_enctype(f) }} >
-        <div class ="container">
-            <h1>Welcome to the Chassis:editchassis page</h1>
-            <div class ="row">
-                <div class="col-md-8">
+    <div class="row">
+        <div class="col-md-10">
+            <form action="" method="post" {{ form_enctype(f) }} >
                 <div class ="form-group">
+                    {% if message %}
+                        <p class="alert alert-success">{{ message }}</p>
+                    {% endif %}
+                </div>
+
+                    <div class ="form-group">
                         <label>{{ form_label(f.nchassis) }}</label>
                         {{ form_widget(f.nchassis,{attr:{'class':'form-control'}}) }}
-                </div>
-                <div class ="form-group">
+                    </div>
+                    <div class ="form-group">
 
                         <label>{{ form_label(f.typechassis) }}</label>
                         {{ form_widget(f.typechassis,{attr:{'class':'form-control'}}) }}
 
-                </div>
+                    </div>
 
-                <div class ="form-group">
+                    <div class ="form-group">
                         <label>{{ form_label(f.datereception) }}</label>
                         {{ form_widget(f.datereception,{attr:{'class':'form-control'}}) }}
-                </div>
-
-                <div class ="form-group">
-                    <label>{{ form_label(f.controler) }}</label>
-                    {{ form_widget(f.controler,{attr:{'class':'form-control'}}) }}
-                </div>
+                    </div>
 
                     <div class ="form-group">
-                        <div>
-                            <button type="submit" Class ="btn btn-primary">
+                        <label>{{ form_label(f.controler) }}</label>
+                        {{ form_widget(f.controler,{attr:{'class':'form-control'}}) }}
+                    </div>
+
+                    <div class ="form-group" style="margin-top: 50px">
+                        <div class="offset-4">
+                            <button type="submit" Class ="btn btn-outline-primary btn-light btn-lg" style="margin-right: 20px">
                                 <span class ="glyphicon-plus"/>Valider
                             </button>
+                            <a href="{{ path('list_chassis') }} " Class ="btn btn-outline-danger btn-light btn-lg">
+                                <span class ="glyphicon-plus"/>Annuler
+                            </a>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class ="form-group">
-                            <p><a href="{{ path('list_chassis') }} ">Retour à la liste des Enseignants</a></p>
-                        {% if message %}
-                            <p class="alert alert-success">{{ message }}</p>
-                        {% endif %}
-                    </div>
-                </div>
+
+                    {{ form_widget(f) }}
+                </form>
+
             </div>
-                {{ form_widget(f) }}
-            </div>
-        </div>
-    </form>
+    </div>
+</div>
+
+
 
 {% endblock %}
 

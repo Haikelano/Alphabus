@@ -1,64 +1,85 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Affectation</h1>
+<div class="container">
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Affectation chassis
 
-    <table>
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ affectation.id }}</td>
-            </tr>
-            <tr>
-                <th>Seriealpha</th>
-                <td>{{ affectation.seriealpha }}</td>
-            </tr>
-            <tr>
-                <th>Dateaffectation</th>
-                <td>{% if affectation.dateaffectation %}{{ affectation.dateaffectation|date('Y-m-d') }}{% endif %}</td>
-            </tr>
-            <tr>
-                <th>Controleacier</th>
-                <td>{{ affectation.controleacier }}</td>
-            </tr>
-            <tr>
-                <th>Dateacier</th>
-                <td>{% if affectation.dateacier %}{{ affectation.dateacier|date('Y-m-d') }}{% endif %}</td>
-            </tr>
-            <tr>
-                <th>Controlepeinture</th>
-                <td>{{ affectation.controlepeinture }}</td>
-            </tr>
-            <tr>
-                <th>Datepeinture</th>
-                <td>{% if affectation.datepeinture %}{{ affectation.datepeinture|date('Y-m-d') }}{% endif %}</td>
-            </tr>
-            <tr>
-                <th>Controlcontroler</th>
-                <td>{{ affectation.controlcontroler }}</td>
-            </tr>
-            <tr>
-                <th>Datecontrole</th>
-                <td>{% if affectation.datecontrole %}{{ affectation.datecontrole|date('Y-m-d') }}{% endif %}</td>
-            </tr>
-            <tr>
-                <th>Controleessai</th>
-                <td>{{ affectation.controleessai }}</td>
-            </tr>
-            <tr>
-                <th>Dateessai</th>
-                <td>{% if affectation.dateessai %}{{ affectation.dateessai|date('Y-m-d') }}{% endif %}</td>
-            </tr>
-        </tbody>
-    </table>
+    </h1>
 
-    <ul>
-        <li>
-            <a href="{{ path('affectation_index') }}">Back to the list</a>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="{{ path('homepage') }}">Home</a>
         </li>
-        <li>
-            <a href="{{ path('affectation_edit', { 'id': affectation.id }) }}">Edit</a>
-        </li>
+        <li class="breadcrumb-item active">Affectation Liste</li>
+    </ol>
+    <!-- End Page Content -->
 
-    </ul>
+    <div class="row">
+        <div class="col-md-10">
+            <table class="table">
+                <tbody>
+                <tr>
+                    <th>Id</th>
+                    <td>{{ affectation.id }}</td>
+                </tr>
+                <tr>
+                    <th>Seriealpha</th>
+                    <td>{{ affectation.seriealpha }}</td>
+                </tr>
+                <tr>
+                    <th>Dateaffectation</th>
+                    <td>{% if affectation.dateaffectation %}{{ affectation.dateaffectation|date('Y-m-d') }}{% endif %}</td>
+                </tr>
+                <tr>
+                    <th>Controleacier</th>
+                    <td>{{ affectation.controleacier }}</td>
+                </tr>
+                <tr>
+                    <th>Dateacier</th>
+                    <td>{% if affectation.dateacier %}{{ affectation.dateacier|date('Y-m-d') }}{% endif %}</td>
+                </tr>
+                <tr>
+                    <th>Controlepeinture</th>
+                    <td>{{ affectation.controlepeinture }}</td>
+                </tr>
+                <tr>
+                    <th>Datepeinture</th>
+                    <td>{% if affectation.datepeinture %}{{ affectation.datepeinture|date('Y-m-d') }}{% endif %}</td>
+                </tr>
+                <tr>
+                    <th>Controlcontroler</th>
+                    <td>{{ affectation.controlcontroler }}</td>
+                </tr>
+                <tr>
+                    <th>Datecontrole</th>
+                    <td>{% if affectation.datecontrole %}{{ affectation.datecontrole|date('Y-m-d') }}{% endif %}</td>
+                </tr>
+                <tr>
+                    <th>Controleessai</th>
+                    <td>{{ affectation.controleessai }}</td>
+                </tr>
+                <tr>
+                    <th>Dateessai</th>
+                    <td>{% if affectation.dateessai %}{{ affectation.dateessai|date('Y-m-d') }}{% endif %}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-2">
+            <ul>
+                <li>
+                    <a href="{{ path('affectation_index') }}">Back to the list</a>
+                </li>
+                <li>
+                    <a href="{{ path('affectation_edit', { 'id': affectation.id }) }}">Edit</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+
+</div>
+
 {% endblock %}

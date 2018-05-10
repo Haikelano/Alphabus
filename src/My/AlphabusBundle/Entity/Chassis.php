@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Table(name="chassis")
  * @ORM\Entity(repositoryClass="My\AlphabusBundle\Repository\ChassisRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Chassis
 {
