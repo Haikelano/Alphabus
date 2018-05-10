@@ -1,16 +1,160 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Circuitelectrique creation</h1>
 
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="Create" />
-    {{ form_end(form) }}
+<div class="container">
 
-    <ul>
-        <li>
-            <a href="{{ path('circuitelectrique_index') }}">Back to the list</a>
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Ajouter le test Circuit électrique
+        <small> <h2> </h2></small>
+    </h1>
+
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="{{ path('homepage') }}">Home</a>
         </li>
-    </ul>
+        <li class="breadcrumb-item active">Service Circuit électrique</li>
+    </ol>
+    <!-- End Page Content -->
+
+    <div class="row">
+        <div class="col-lg-10">
+            {{ form_start(form) }}
+            <table class="table  table-striped" style="margin-top: 40px">
+                <tbody>
+                <thead class="table-dark">
+                <tr>
+                    <th scope="col" class="col-sm-1">Code</th>
+                    <th scope="col" class="col-lg-3"> Désignation</th>
+                    <th scope="col" class="col-md-2">Confirme/Non</th>
+                    <th scope="col" class="col-md-4">Remarque</th>
+                </tr>
+                </thead>
+
+
+                <tr>
+                    <th>21</th>
+                    <th>Eclairage extérieur</th>
+
+
+                    <td>{{ form_widget(form.eclairage )}}</td>
+                    <td>{{ form_widget(form.rmqeclairage )}}</td>
+                </tr>
+                <tr>
+                    <th>22</th>
+                    <th>Eclairage intérieur</th>
+
+
+
+                    <td>{{ form_widget(form.eclairageinter )}}</td>
+                    <td>{{ form_widget(form.rmqeclairageinter )}}</td>
+                </tr>
+                <tr>
+                    <th>23</th>
+                    <th>Fonctionnement des boutons</th>
+
+
+
+                    <td>{{ form_widget(form.fonctbutton )}}</td>
+                    <td>{{ form_widget(form.rmqfonctbutton )}}</td>
+                </tr>
+                <tr>
+                    <th>24</th>
+                    <th>Fonctionnement frein d'arret</th>
+
+
+                    <td>{{ form_widget(form.foncfreint )}}</td>
+                    <td>{{ form_widget(form.rmqfoncfreint )}}</td>
+                </tr>
+                <tr>
+                    <th>25</th>
+                    <th>Button reglage volant</th>
+
+
+                    <td>{{ form_widget(form.buttonregl )}}</td>
+                    <td>{{ form_widget(form.rmqbuttonregl )}}</td>
+                </tr>
+                <tr>
+                    <th>26</th>
+                    <th>Button poste receveur</th>
+
+
+                    <td>{{ form_widget(form.buttonposte )}}</td>
+                    <td>{{ form_widget(form.rmqbuttonposte )}}</td>
+                </tr>
+                <tr>
+                    <th>27</th>
+                    <th>Controle charge batterie</th>
+
+
+
+                    <td>{{ form_widget(form.controlecharge )}}</td>
+                    <td>{{ form_widget(form.rmqcontrolecharge )}}</td>
+                </tr>
+                <tr>
+                    <th>28</th>
+                    <th>Fonct de l'avertissuer sonore</th>
+
+
+                    <td>{{ form_widget(form.fonctavertiseur )}}</td>
+                    <td>{{ form_widget(form.rmqfonctavertiseur )}}</td>
+                </tr>
+                <tr>
+                    <th>29</th>
+                    <th>Fonctionnement capteur incendie moteur</th>
+
+
+                    <td>{{ form_widget(form.fonctcapteur )}}</td>
+                    <td>{{ form_widget(form.rmqfonctcapteur )}}</td>
+                </tr>
+                <tr>
+                    <th>30</th>
+                    <th>Sonnerie marche arriére</th>
+
+
+                    <td>{{ form_widget(form.sonneriemarche )}}</td>
+                    <td>{{ form_widget(form.rmqsonneriemarche )}}</td>
+                </tr>
+                <tr>
+                    <th>31</th>
+                    <th>Fonctionnement button arret moteur</th>
+
+
+                    <td>{{ form_widget(form.fontbuttonmoteur )}}</td>
+                    <td>{{ form_widget(form.rmqfontbuttonmoteur )}}</td>
+                </tr>
+                <tr>
+                    <th>32</th>
+                    <th>Capteur porte moteur</th>
+
+
+                    <td>{{ form_widget(form.capteurportemoteur )}}</td>
+                    <td>{{ form_widget(form.rmqcapteurportemoteur )}}</td>
+                </tr>
+
+                <tr>
+                    <th>***</th>
+                    <th name="a">Affecter à chassis</th>
+
+                    <td class="alert-info">{{ form_widget(form.chassis )}}</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div class="offset-4" style="margin-top: 40px ; margin-bottom: 100px">
+                <input type="submit" value="Modifier" class="btn btn-outline-primary btn-lg" style="margin-right: 50px"/>
+                {{ form_end(form) }}
+                <a value="Annuler" class="btn btn-outline-danger btn-lg"href="{{ path('circuitelectrique_index') }}">Annuler</a>
+            </div>
+        </div>
+        <div id="aa" class="col-md-2">
+            <ul class="list-group" style="position: fixed; background-repeat: no-repeat ">
+                <li class="list-group-item"><a class="aler alert-info" href="{{ path('circuitelectrique_index') }}">Retourner à la liste</a></li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
 {% endblock %}

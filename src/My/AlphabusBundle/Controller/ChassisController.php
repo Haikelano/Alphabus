@@ -73,7 +73,7 @@ class ChassisController extends Controller
             $em->flush();
             if (isset($id))
             {
-                $message='CHassis modifié avec succès !';
+                $message='Chassis modifié avec succès !';
             }
             else
             {

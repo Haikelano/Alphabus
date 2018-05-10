@@ -1,0 +1,630 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}ServiceCarroserie:{% endblock %}
+
+{% block body %}
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-4 mb-3">Inspection avant livraison carrosserie
+            <small> <h2>Ensembles de Test</h2></small>
+        </h1>
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="{{ path('homepage') }}">Home</a>
+            </li>
+            <li class="breadcrumb-item active">Service Carrosserie</li>
+        </ol>
+        <!-- End Page Content -->
+
+        <!-- END Page Heading/Breadcrumbs -->
+
+
+        <!-- rechercher le chassis -->
+        <div class="container" style="padding-top: 20px; padding-bottom: 10px" >
+            <h2>Tapez le N° chassis</h2>
+            <form method="get" action="carrosserie" style="margin-top: 20px">
+
+                N°Chassis <input type="text" name="nchassis" class="search">
+                <input type="submit" value="Rechercher" class="btn btn-outline-primary btn-bg">
+            </form>
+
+                <!--    Bare d'information de chassis -->
+                    <div class="row">
+                         <div class="col-md-3">
+                             {% for chassis in chassis %}
+                             <p><h4><span class="badge badge-secondary">N°Chassis <span class="badge badge-warning">{{ chassis.nchassis }}</span></span></h4></p>
+                              {% endfor %}
+                         </div>
+
+                         <div class="col-md-3">
+                             {% for chassis in chassis %}
+                                 <p><h4><span class="badge badge-secondary">Type Chassis <span class="badge badge-warning">{{ chassis.typechassis }} </span></span></h4></p>
+                             {% endfor %}
+                         </div>
+
+                         <div class="col-md-3">
+                             {% for chassis in chassis %}
+                             <p><h4><span class="badge badge-secondary">Date Reception <span class="badge badge-warning">{{ chassis.datereception|date('Y-m-d') }} </span></span></h4></p>
+                             {% endfor %}
+                         </div>
+
+                         {% if client != '' %}
+                             {% for id in client %}
+                                 <div class="col-md-3">
+                                     <p><h4><span class="badge badge-secondary">Affecter à <span class="badge badge-warning">{{ id.nclients }}</span></span></h4></p>
+                                 </div>
+                             {% endfor %}
+                         {% endif %}
+                     </div>
+            <!--  End  Bare d'information de chassis -->
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top" src="{{ asset('images/carrosserie/bascaise.jpg') }}" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            {% if chassis == null  %}
+                                      <a href="#">  Bas de caisse</a></h4>
+                                {% else %}
+                                      {% if basdecaisse == null %}
+                                            <h4>  <a href="{{ path('basdecaisse_new') }}">Bas de caisse</a></h4>
+                                            {% else %}
+                                                {% for basdecaisse in basdecaisse %}
+                                                <h4> <a href="{{ path('basdecaisse_show', { 'id': basdecaisse.id }) }}" data-toggle="tooltip" title="page de test!" >Bas de caisse</a>
+                                            {% endfor %}
+                                      {% endif %}
+                        {% endif %}
+                        </h4>
+                        <p class="card-text">
+                            {%  if basdecaisse ==null   %}
+                            <img src="{{ asset('images/icon/red.png')}}" style="width: 200px ; height: 200px" >
+                                {% else %}
+
+                                {% for basdecaisse in basdecaisse %}
+                            {% if basdecaisse.soudurecnx == "" or basdecaisse.soudurecnx == "OK" or basdecaisse.soudurecnx == "ok"  %}
+                                 <img src="{{ asset('images/atelier/succus.png') }}" data-toggle="tooltip" title="Soudure de connection" style="width: 50px;height: 50px ">
+
+                            {% else %}
+                                <img src="{{ asset('images/atelier/a.png') }}" data-toggle="tooltip" title="Soudure de connection" style="width: 50px;height: 50px ">
+
+                            {% endif %}
+
+
+                               {% if basdecaisse.fixation == "" or basdecaisse.fixation == "OK" or basdecaisse.fixation == "ok"  %}
+                        <img src="{{ asset('images/atelier/succus.png') }}" style="width: 50px; height: 50px " data-toggle="tooltip" title="fixation des boulons des membrures">
+                                    {% else %}
+                                        <img src="{{ asset('images/atelier/a.png') }}" data-toggle="tooltip" title="fixation des boulons des membrures" style="width: 50px;height: 50px ">
+                                    {% endif %}
+
+
+                                {% if basdecaisse.etancheite == "" or basdecaisse.etancheite == "OK" or basdecaisse.etancheite == "ok"  %}
+                        <img src="{{ asset('images/atelier/succus.png') }}" style="width: 50px;height: 50px ">
+                                    {% else %}
+                               <img src="{{ asset('images/atelier/a.png') }}" style="width: 50px;height: 50px ">
+
+                                    {% endif %}
+
+                                {% if basdecaisse.peinture == "" or basdecaisse.peinture == "OK" or basdecaisse.peinture == "ok"  %}
+                        <img src="{{ asset('images/atelier/succus.png') }}" style="width: 50px;height: 50px ">
+                                    {% else %}
+                                  <img src="{{ asset('images/atelier/a.png') }}" style="width: 50px;height: 50px ">
+
+                                    {% endif %}
+
+                                {% if basdecaisse.visserie == "" or basdecaisse.visserie == "OK" or basdecaisse.visserie == "ok"  %}
+                        <img src="{{ asset('images/atelier/succus.png') }}" style="width: 50px;height: 50px ">
+                                    {% else %}
+                                    <img src="{{ asset('images/atelier/a.png') }}" style="width: 50px;height: 50px ">
+
+                                    {% endif %}
+
+                                {% if basdecaisse.carrosserie == "" or basdecaisse.carrosserie == "OK" or basdecaisse.carrosserie == "ok"  %}
+                                        <img src="{{ asset('images/atelier/succus.png') }}" style="width: 50px;height: 50px ">
+                                    {% else %}
+                                        <img src="{{ asset('images/atelier/a.png') }}" style="width: 50px;height: 50px ">
+
+                                    {% endif %}
+
+
+
+                                {% if basdecaisse.frottement == "" or basdecaisse.frottement == "OK" or basdecaisse.frottement == "ok"  %}
+                        <img src="{{ asset('images/atelier/succus.png') }}" style="width: 50px;height: 50px ">
+                                    {% else %}
+                              <img src="{{ asset('images/atelier/a.png') }}" style="width: 50px;height: 50px ">
+
+                                    {% endif %}
+
+
+
+                                {% if basdecaisse.fixationroue == "" or basdecaisse.fixationroue == "OK" or basdecaisse.fixationroue == "ok"  %}
+                        <img src="{{ asset('images/atelier/succus.png') }}" style="width: 50px;height: 50px ">
+                                    {% else %}
+                                     <img src="{{ asset('images/atelier/a.png') }}" style="width: 50px;height: 50px ">
+
+                                    {% endif %}
+
+                                {% if basdecaisse.fixationcable == "" or basdecaisse.fixationcable == "OK" or basdecaisse.fixationcable == "ok"  %}
+                        <img src="{{ asset('images/atelier/succus.png') }}" style="width: 50px;height: 50px ">
+                                    {% else %}
+                            <img src="{{ asset('images/atelier/a.png') }}" style="width: 50px;height: 50px ">
+
+                                    {% endif %}
+
+                        <p> <span class="badge badge-secondary"> Date d'ajout {{ basdecaisse.date|date('Y-m-d H:i:s') }} </span></p>
+
+
+                            {% endfor %}
+                            {% endif %}
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accesoir Exterier -->
+            <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top" src="{{ asset('images/carrosserie/accesoirexterier.jpg') }}" alt="" height="147px"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                                {% if chassis == null  %}
+                                <a href="#">  Accesoir Exterier</a></h4>
+                            {% else %}
+                            {% if accesoirexterieur == null %}
+                            <h5>  <a href="{{ path('accesoirexterieur_new') }}">Accesoir Exterier</a></h5>
+                            {% else %}
+                            {% for accesoirexterieur in accesoirexterieur %}
+                            <h5> <a href="{{ path('accesoirexterieur_show', { 'id': accesoirexterieur.id }) }}" data-toggle="tooltip" title="page de test!" >Accesoir Exterier</a>
+                                {% endfor %}
+                                {% endif %}
+                                {% endif %}
+                            </h5>
+                        </h5>
+                           <p class="card-text">
+                               {%  if accesoirexterieur ==null   %}
+                               <img src="{{ asset('images/icon/red.png')}}" style="width: 200px ; height: 200px" >
+                               {% else %}
+                                   {% for  accesoirexterieur in accesoirexterieur%}
+                               {% if accesoirexterieur.isolation == "" or accesoirexterieur.isolation == "OK" or accesoirexterieur.isolation == "ok"  %}
+                              <img src="{{ asset('images/atelier/succus.png') }}" style="width: 50px;height: 50px ">
+
+                               {% else %}
+                              <img src="{{ asset('images/atelier/a.png') }}" style="width: 50px;height: 50px ">
+
+                            {% endif %}
+
+                               {% if accesoirexterieur.finition == "" or accesoirexterieur.finition == "OK" or accesoirexterieur.finition == "ok"  %}
+                                    <img src="{{ asset('images/atelier/succus.png') }}" style="width: 50px;height: 50px ">
+
+                               {% else %}
+                                   <img src="{{ asset('images/atelier/a.png') }}" style="width: 50px;height: 50px ">
+
+                            {% endif %}
+
+
+                               {% if accesoirexterieur.retroviseur == "" or accesoirexterieur.retroviseur == "OK" or accesoirexterieur.retroviseu == "ok"  %}
+                                      <img src="{{ asset('images/atelier/succus.png') }}" style="width: 50px;height: 50px ">
+
+                               {% else %}
+                                         <img src="{{ asset('images/atelier/a.png') }}" style="width: 50px;height: 50px ">
+
+                            {% endif %}
+
+                               {% if accesoirexterieur.fixationpara == "" or accesoirexterieur.fixationpara == "OK" or accesoirexterieur.fixationpara == "ok"  %}
+                                                           <img src="{{ asset('images/atelier/succus.png') }}" style="width: 50px;height: 50px ">
+                               {% else %}
+                                                <img src="{{ asset('images/atelier/a.png') }}" style="width: 50px;height: 50px ">
+
+                            {% endif %}
+
+
+                               {% if accesoirexterieur.etatparachoc == "" or accesoirexterieur.etatparachoc == "OK" or accesoirexterieur.etatparachoc == "ok"  %}
+                                                           <img src="{{ asset('images/atelier/succus.png') }}" style="width: 50px;height: 50px ">
+
+                               {% else %}
+                                                                      <img src="{{ asset('images/atelier/a.png') }}" style="width: 50px;height: 50px ">
+
+                            {% endif %}
+
+
+
+                               {% if accesoirexterieur.cachefeu == "" or accesoirexterieur.cachefeu == "OK" or accesoirexterieur.cachefeu == "ok"  %}
+                                                           <img src="{{ asset('images/atelier/succus.png') }}" style="width: 50px;height: 50px ">
+
+                               {% else %}
+                                                                      <img src="{{ asset('images/atelier/a.png') }}" style="width: 50px;height: 50px ">
+
+                            {% endif %}
+
+
+
+                               {% if accesoirexterieur.grillebouches == "" or accesoirexterieur.grillebouches == "OK" or accesoirexterieur.grillebouches == "ok"  %}
+                                                           <img src="{{ asset('images/atelier/succus.png') }}" style="width: 50px;height: 50px ">
+
+                               {% else %}
+                                                                      <img src="{{ asset('images/atelier/a.png') }}" style="width: 50px;height: 50px ">
+
+                            {% endif %}
+
+
+
+                               {% if accesoirexterieur.baguette == "" or accesoirexterieur.baguette == "OK" or accesoirexterieur.baguette == "ok"  %}
+                                                           <img src="{{ asset('images/atelier/succus.png') }}" style="width: 50px;height: 50px ">
+
+                               {% else %}
+                                                                      <img src="{{ asset('images/atelier/a.png') }}" style="width: 50px;height: 50px ">
+
+                            {% endif %}
+                               {% if accesoirexterieur.porte == "" or accesoirexterieur.porte == "OK" or accesoirexterieur.porte == "ok"  %}
+                                   <img src="{{ asset('images/atelier/succus.png') }}" style="width: 50px;height: 50px ">
+
+                               {% else %}
+                                   <img src="{{ asset('images/atelier/a.png') }}" style="width: 50px;height: 50px ">
+
+                               {% endif %}
+                               {% if accesoirexterieur.essui  == "" or accesoirexterieur.essui == "OK" or accesoirexterieur.essui == "ok"  %}
+                                   <img src="{{ asset('images/atelier/succus.png') }}" style="width: 50px;height: 50px ">
+
+                               {% else %}
+                                   <img src="{{ asset('images/atelier/a.png') }}" style="width: 50px;height: 50px ">
+
+                               {% endif %}
+
+
+                           </p>
+
+                        <p> <span class="badge badge-secondary"> Date d'ajout {{ accesoirexterieur.date|date('Y-m-d H:i:s') }} </span></p>
+                        {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Circuit électrique   -->
+
+            <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top" src="{{ asset('images/carrosserie/circuit electrique.jpg') }}" alt="" height="148px"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            {% if chassis == null  %}
+                            <a href="#">  Circuit Electrique</a></h4>
+                            {% else %}
+                            {% if circuit == null %}
+                            <h5>  <a href="{{ path('circuitelectrique_new') }}">Circuit Electrique</a></h5>
+                            {% else %}
+                            {% for circuitelectrique in circuit %}
+                            <h5> <a href="{{ path('circuitelectrique_show', { 'id': circuitelectrique.id }) }}" data-toggle="tooltip" title="page de test!" >Circuit Electrique</a>
+                                {% endfor %}
+                                {% endif %}
+                                {% endif %}
+                            </h5>
+                        </h5>
+                        <p class="card-text">
+                            {%  if  circuit ==null   %}
+                            <img src="{{ asset('images/icon/red.png')}}" style="width: 200px ; height: 200px" >
+                            {% else %}
+
+                            {% for circuitelectrique in circuit %}
+                            {% if circuitelectrique.eclairage == "" or circuitelectrique.eclairage == "OK" or circuitelectrique.eclairage == "ok"  %}
+                                <img src="{{ asset('images/atelier/succus.png') }}" data-toggle="tooltip" title="Eclairage extérieur" style="width: 50px;height: 50px ">
+
+                            {% else %}
+                                <img src="{{ asset('images/atelier/a.png') }}" data-toggle="tooltip" title="Eclairage extérieur" style="width: 50px;height: 50px ">
+
+                            {% endif %}
+
+                            {% if circuitelectrique.eclairageinter == "" or circuitelectrique.eclairageinter == "OK" or circuitelectrique.eclairageinter == "ok"  %}
+                                <img src="{{ asset('images/atelier/succus.png') }}" data-toggle="tooltip" title="Eclairage intérieur" style="width: 50px;height: 50px ">
+
+                            {% else %}
+                                <img src="{{ asset('images/atelier/a.png') }}" data-toggle="tooltip" title="Eclairage intérieur" style="width: 50px;height: 50px ">
+
+                            {% endif %}
+
+                            {% if circuitelectrique.fonctbutton == "" or circuitelectrique.fonctbutton == "OK" or circuitelectrique.fonctbutton == "ok"  %}
+                                <img src="{{ asset('images/atelier/succus.png') }}" data-toggle="tooltip" title="Fonctionnement des boutons" style="width: 50px;height: 50px ">
+
+                            {% else %}
+                                <img src="{{ asset('images/atelier/a.png') }}" data-toggle="tooltip" title="Fonctionnement des boutons" style="width: 50px;height: 50px ">
+
+                            {% endif %}
+
+
+
+
+                            {% if circuitelectrique.foncfreint == "" or circuitelectrique.foncfreint == "OK" or circuitelectrique.foncfreint == "ok"  %}
+                                <img src="{{ asset('images/atelier/succus.png') }}" data-toggle="tooltip" title="Fonctionnement frein d'arret" style="width: 50px;height: 50px ">
+
+                            {% else %}
+                                <img src="{{ asset('images/atelier/a.png') }}" data-toggle="tooltip" title="Fonctionnement frein d'arret" style="width: 50px;height: 50px ">
+
+                            {% endif %}
+
+                            {% if circuitelectrique.buttonregl == "" or circuitelectrique.buttonregl == "OK" or circuitelectrique.buttonregl == "ok"  %}
+                                <img src="{{ asset('images/atelier/succus.png') }}" data-toggle="tooltip" title="Button reglage volant" style="width: 50px;height: 50px ">
+
+                            {% else %}
+                                <img src="{{ asset('images/atelier/a.png') }}" data-toggle="tooltip" title="Button reglage volant" style="width: 50px;height: 50px ">
+
+                            {% endif %}
+
+
+
+
+                            {% if circuitelectrique.buttonposte == "" or circuitelectrique.buttonposte == "OK" or circuitelectrique.buttonposte == "ok"  %}
+                                <img src="{{ asset('images/atelier/succus.png') }}" data-toggle="tooltip" title="Button poste receveur" style="width: 50px;height: 50px ">
+
+                            {% else %}
+                                <img src="{{ asset('images/atelier/a.png') }}" data-toggle="tooltip" title="Button poste receveur" style="width: 50px;height: 50px ">
+
+                            {% endif %}
+
+
+                            {% if circuitelectrique.controlecharge == "" or circuitelectrique.controlecharge == "OK" or circuitelectrique.controlecharge == "ok"  %}
+                                <img src="{{ asset('images/atelier/succus.png') }}" data-toggle="tooltip" title="Controle charge batteri" style="width: 50px;height: 50px ">
+
+                            {% else %}
+                                <img src="{{ asset('images/atelier/a.png') }}" data-toggle="tooltip" title="Controle charge batteri" style="width: 50px;height: 50px ">
+
+                            {% endif %}
+
+                            {% if circuitelectrique.fonctavertiseur == "" or circuitelectrique.fonctavertiseur == "OK" or circuitelectrique.fonctavertiseur == "ok"  %}
+                                <img src="{{ asset('images/atelier/succus.png') }}" data-toggle="tooltip" title="Fonct de l'avertissuer sonore" style="width: 50px;height: 50px ">
+
+                            {% else %}
+                                <img src="{{ asset('images/atelier/a.png') }}" data-toggle="tooltip" title="Fonct de l'avertissuer sonore" style="width: 50px;height: 50px ">
+
+                            {% endif %}
+
+                            {% if circuitelectrique.fonctcapteur == "" or circuitelectrique.fonctcapteur == "OK" or circuitelectrique.fonctcapteur == "ok"  %}
+                                <img src="{{ asset('images/atelier/succus.png') }}" data-toggle="tooltip" title="Fonctionnement capteur incendie moteur" style="width: 50px;height: 50px ">
+
+                            {% else %}
+                                <img src="{{ asset('images/atelier/a.png') }}" data-toggle="tooltip" title="Fonctionnement capteur incendie moteur" style="width: 50px;height: 50px ">
+
+                            {% endif %}
+
+                            {% if circuitelectrique.sonneriemarche == "" or circuitelectrique.sonneriemarche == "OK" or circuitelectrique.sonneriemarche == "ok"  %}
+                                <img src="{{ asset('images/atelier/succus.png') }}" data-toggle="tooltip" title="Sonnerie marche arriére" style="width: 50px;height: 50px ">
+
+                            {% else %}
+                                <img src="{{ asset('images/atelier/a.png') }}" data-toggle="tooltip" title="Sonnerie marche arriére" style="width: 50px;height: 50px ">
+
+                            {% endif %}
+
+                            {% if circuitelectrique.fontbuttonmoteur == "" or circuitelectrique.fontbuttonmoteur == "OK" or circuitelectrique.fontbuttonmoteur == "ok"  %}
+                                <img src="{{ asset('images/atelier/succus.png') }}" data-toggle="tooltip" title="Fonctionnement button arret moteur" style="width: 50px;height: 50px ">
+
+                            {% else %}
+                                <img src="{{ asset('images/atelier/a.png') }}" data-toggle="tooltip" title="Fonctionnement button arret moteur" style="width: 50px;height: 50px ">
+
+                            {% endif %}
+
+
+
+
+                            {% if circuitelectrique.capteurportemoteur == "" or circuitelectrique.capteurportemoteur == "OK" or circuitelectrique.capteurportemoteur == "ok"  %}
+                                <img src="{{ asset('images/atelier/succus.png') }}" data-toggle="tooltip" title="Capteur porte moteur" style="width: 50px;height: 50px ">
+
+                            {% else %}
+                                <img src="{{ asset('images/atelier/a.png') }}" data-toggle="tooltip" title="Capteur porte moteur" style="width: 50px;height: 50px ">
+
+                            {% endif %}
+
+                        <p> <span class="badge badge-secondary"> Date d'ajout {{ circuitelectrique.date|date('Y-m-d H:i:s') }} </span></p>
+
+                    {% endfor %}
+                            {% endif %}
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Centrale et batteries  -->
+            <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top" src="{{ asset('images/carrosserie/cbatteries.jpg') }}" alt="" height="147px"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            {% if chassis == null  %}
+                            <a href="#">  Centrale et batteries </a></h4>
+                            {% else %}
+                            {% if accesoirexterieur == null %}
+                            <h5>  <a href="{{ path('accesoirexterieur_new') }}">Centrale et batteries </a></h5>
+                            {% else %}
+                            {% for accesoirexterieur in accesoirexterieur %}
+                            <h5> <a href="{{ path('accesoirexterieur_show', { 'id': accesoirexterieur.id }) }}" data-toggle="tooltip" title="page de test!" >Centrale et batteries </a>
+                                {% endfor %}
+                                {% endif %}
+                                {% endif %}
+                            </h5>
+                        </h5>
+                        <p class="card-text">
+                            {%  if accesoirexterieur ==null   %}
+                            <img src="{{ asset('images/icon/red.png')}}" style="width: 200px ; height: 200px" >
+                            {% else %}
+                            {% for  accesoirexterieur in accesoirexterieur%}
+                            {% if accesoirexterieur.isolation == "" or accesoirexterieur.isolation == "OK" or accesoirexterieur.isolation == "ok"  %}
+                                <img src="{{ asset('images/atelier/succus.png') }}" style="width: 50px;height: 50px ">
+
+                            {% else %}
+                                <img src="{{ asset('images/atelier/a.png') }}" style="width: 50px;height: 50px ">
+
+                            {% endif %}
+
+                            {% if accesoirexterieur.finition == "" or accesoirexterieur.finition == "OK" or accesoirexterieur.finition == "ok"  %}
+                                <img src="{{ asset('images/atelier/succus.png') }}" style="width: 50px;height: 50px ">
+
+                            {% else %}
+                                <img src="{{ asset('images/atelier/a.png') }}" style="width: 50px;height: 50px ">
+
+                            {% endif %}
+
+
+                            {% if accesoirexterieur.retroviseur == "" or accesoirexterieur.retroviseur == "OK" or accesoirexterieur.retroviseu == "ok"  %}
+                                <img src="{{ asset('images/atelier/succus.png') }}" style="width: 50px;height: 50px ">
+
+                            {% else %}
+                                <img src="{{ asset('images/atelier/a.png') }}" style="width: 50px;height: 50px ">
+
+                            {% endif %}
+
+                            {% if accesoirexterieur.fixationpara == "" or accesoirexterieur.fixationpara == "OK" or accesoirexterieur.fixationpara == "ok"  %}
+                                <img src="{{ asset('images/atelier/succus.png') }}" style="width: 50px;height: 50px ">
+                            {% else %}
+                                <img src="{{ asset('images/atelier/a.png') }}" style="width: 50px;height: 50px ">
+
+                            {% endif %}
+
+
+                            {% if accesoirexterieur.etatparachoc == "" or accesoirexterieur.etatparachoc == "OK" or accesoirexterieur.etatparachoc == "ok"  %}
+                                <img src="{{ asset('images/atelier/succus.png') }}" style="width: 50px;height: 50px ">
+
+                            {% else %}
+                                <img src="{{ asset('images/atelier/a.png') }}" style="width: 50px;height: 50px ">
+
+                            {% endif %}
+
+
+
+                            {% if accesoirexterieur.cachefeu == "" or accesoirexterieur.cachefeu == "OK" or accesoirexterieur.cachefeu == "ok"  %}
+                                <img src="{{ asset('images/atelier/succus.png') }}" style="width: 50px;height: 50px ">
+
+                            {% else %}
+                                <img src="{{ asset('images/atelier/a.png') }}" style="width: 50px;height: 50px ">
+
+                            {% endif %}
+
+
+
+                            {% if accesoirexterieur.grillebouches == "" or accesoirexterieur.grillebouches == "OK" or accesoirexterieur.grillebouches == "ok"  %}
+                                <img src="{{ asset('images/atelier/succus.png') }}" style="width: 50px;height: 50px ">
+
+                            {% else %}
+                                <img src="{{ asset('images/atelier/a.png') }}" style="width: 50px;height: 50px ">
+
+                            {% endif %}
+
+
+
+                            {% if accesoirexterieur.baguette == "" or accesoirexterieur.baguette == "OK" or accesoirexterieur.baguette == "ok"  %}
+                                <img src="{{ asset('images/atelier/succus.png') }}" style="width: 50px;height: 50px ">
+
+                            {% else %}
+                                <img src="{{ asset('images/atelier/a.png') }}" style="width: 50px;height: 50px ">
+
+                            {% endif %}
+                            {% if accesoirexterieur.porte == "" or accesoirexterieur.porte == "OK" or accesoirexterieur.porte == "ok"  %}
+                                <img src="{{ asset('images/atelier/succus.png') }}" style="width: 50px;height: 50px ">
+
+                            {% else %}
+                                <img src="{{ asset('images/atelier/a.png') }}" style="width: 50px;height: 50px ">
+
+                            {% endif %}
+                            {% if accesoirexterieur.essui  == "" or accesoirexterieur.essui == "OK" or accesoirexterieur.essui == "ok"  %}
+                                <img src="{{ asset('images/atelier/succus.png') }}" style="width: 50px;height: 50px ">
+
+                            {% else %}
+                                <img src="{{ asset('images/atelier/a.png') }}" style="width: 50px;height: 50px ">
+
+                            {% endif %}
+
+
+                        </p>
+
+                        <p> <span class="badge badge-secondary"> Date d'ajout {{ accesoirexterieur.date|date('Y-m-d H:i:s') }} </span></p>
+                        {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soute à Baguage     -->
+
+            <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top" src="{{ asset('images/carrosserie/baguage.jpg') }}"  height="148px" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#">Soute à Baguage</a>
+                        </h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- chauffage & Aeration   -->
+
+            <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top" src="{{ asset('images/carrosserie/chauffage.jpg') }}" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#">chauffage & Aeration</a>
+                        </h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Climatisation -->
+
+            <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top" src="{{ asset('images/carrosserie/climatisation.jpg') }}" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#">Climatisation</a>
+                        </h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Essai de route  -->
+
+            <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top" src="{{ asset('images/carrosserie/essairoute.jpg') }}" alt="" height="148px"></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#">Essai de route</a>
+                        </h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius adipisci dicta dignissimos neque animi ea, veritatis, provident hic consequatur ut esse! Commodi ea consequatur accusantium, beatae qui deserunt tenetur ipsa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       <!-- test  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--   -->
+
+    </div>
+    <!-- /.container -->
+
+{% endblock %}

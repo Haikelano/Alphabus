@@ -7,16 +7,7 @@
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Fixationelectrique</th>
-                <th>Fixationcable</th>
-                <th>Fixationbatteries</th>
-                <th>Chargebatterie</th>
-                <th>Niveauelectrolite</th>
-                <th>Rmqfixationelectrique</th>
-                <th>Rmqfixationcable</th>
-                <th>Rmqfixationbatteries</th>
-                <th>Rmqchargebatterie</th>
-                <th>Rmqniveauelectrolite</th>
+                <th>Date</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -24,16 +15,8 @@
         {% for centralebattery in centralebatteries %}
             <tr>
                 <td><a href="{{ path('centralebatteries_show', { 'id': centralebattery.id }) }}">{{ centralebattery.id }}</a></td>
-                <td>{{ centralebattery.fixationelectrique }}</td>
-                <td>{{ centralebattery.fixationcable }}</td>
-                <td>{{ centralebattery.fixationbatteries }}</td>
-                <td>{{ centralebattery.chargebatterie }}</td>
-                <td>{{ centralebattery.niveauelectrolite }}</td>
-                <td>{{ centralebattery.rmqfixationelectrique }}</td>
-                <td>{{ centralebattery.rmqfixationcable }}</td>
-                <td>{{ centralebattery.rmqfixationbatteries }}</td>
-                <td>{{ centralebattery.rmqchargebatterie }}</td>
-                <td>{{ centralebattery.rmqniveauelectrolite }}</td>
+                <td>{{ centralebattery.date }}</td>
+
                 <td>
                     <ul>
                         <li>

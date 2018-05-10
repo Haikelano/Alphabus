@@ -5,7 +5,8 @@ namespace My\ControlerBundle\Controller;
 use My\ControlerBundle\Entity\circuitelectrique;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Circuitelectrique controller.
@@ -66,8 +67,13 @@ class circuitelectriqueController extends Controller
     public function showAction(circuitelectrique $circuitelectrique)
     {
         $deleteForm = $this->createDeleteForm($circuitelectrique);
+        $em = $this->getDoctrine()->getManager();
+        $id_chassis=$circuitelectrique->getChassis();
+
+        $client = $em->getRepository('MyAlphabusBundle:Affectation')->findBy(array('chassis' => $id_chassis));
 
         return $this->render('circuitelectrique/show.html.twig', array(
+            'client' => $client,
             'circuitelectrique' => $circuitelectrique,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -84,6 +90,10 @@ class circuitelectriqueController extends Controller
         $deleteForm = $this->createDeleteForm($circuitelectrique);
         $editForm = $this->createForm('My\ControlerBundle\Form\circuitelectriqueType', $circuitelectrique);
         $editForm->handleRequest($request);
+        $em = $this->getDoctrine()->getManager();
+        $id_chassis=$circuitelectrique->getChassis();
+
+        $client = $em->getRepository('MyAlphabusBundle:Affectation')->findBy(array('chassis' => $id_chassis));
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
@@ -92,8 +102,9 @@ class circuitelectriqueController extends Controller
         }
 
         return $this->render('circuitelectrique/edit.html.twig', array(
+            'client'=>$client,
             'circuitelectrique' => $circuitelectrique,
-            'edit_form' => $editForm->createView(),
+            'form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
     }

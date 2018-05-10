@@ -35,7 +35,40 @@ class centralebatteries
     function setChassis($chassis) {
         $this->chassis = $chassis;
     }
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date", type="datetime", nullable=true)
+     */
+    private $date;
 
+
+    public function __construct()
+    {
+        $this->date = new \DateTime();
+    }
+    /**
+     * Set date
+     *
+     * @param \DateTime $date
+     * @return Post
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    /**
+     * Get date
+     *
+     * @return \DateTime
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
     /**
      * @var string
      *

@@ -106,6 +106,12 @@ class Structure
      * @ORM\Column(name="niveauchassis", type="string", length=255, nullable=true)
      */
     private $niveauchassis;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="valider", type="string", length=255, nullable=true)
+     */
+    private $valider;
 
     /**
      * @var string
@@ -113,6 +119,22 @@ class Structure
      * @ORM\Column(name="geometriechassis", type="string", length=255, nullable=true)
      */
     private $geometriechassis;
+
+    /**
+     * @return string
+     */
+    public function getValider()
+    {
+        return $this->valider;
+    }
+
+    /**
+     * @param string $valider
+     */
+    public function setValider($valider)
+    {
+        $this->valider = $valider;
+    }
 
     /**
      * @var string

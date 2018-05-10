@@ -1,16 +1,123 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Accesoirexterieur creation</h1>
+<div class="container">
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Ajouter le test de Accessoires Exterieurs
+        <small> <h2> </h2></small>
+    </h1>
 
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="Create" />
-    {{ form_end(form) }}
-
-    <ul>
-        <li>
-            <a href="{{ path('accesoirexterieur_index') }}">Back to the list</a>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="{{ path('homepage') }}">Home</a>
         </li>
-    </ul>
+        <li class="breadcrumb-item active">Service Accessoires Exterieurs</li>
+    </ol>
+    <!-- End Page Content -->
+    <div class="row">
+        <div class="col-md-11">
+            {{ form_start(form) }}
+                    <div class="row">
+                        <div class="col-lg-10">
+                            {{ form_start(form) }}
+                            <table class="table  table-striped" style="margin-top: 40px">
+                                <tbody>
+                                <thead class="table-dark">
+                                <tr>
+                                    <th scope="col" class="col-md-1">Code</th>
+                                    <th scope="col" class="col-md-3"> Désignation</th>
+                                    <th scope="col" class="col-md-2">Confirme/Non</th>
+                                    <th scope="col" class="col-md-4">Remarque</th>
+                                </tr>
+                                </thead>
+
+                                <tr>
+                                    <th>10</th>
+                                    <th>Isolation thermique CM</th>
+                                    <td>{{ form_widget(form.isolation )}}</td>
+                                    <td>{{ form_widget(form.rmqisolation )}}</td>
+                                </tr>
+                                <tr>
+                                    <th>11</th>
+                                    <th>Finition décoration & sérigraphi</th>
+
+                                    <td>{{ form_widget(form.finition )}}</td>
+                                    <td>{{ form_widget(form.rmqfinition )}}</td>
+                                </tr>
+                                <tr>
+                                    <th>12</th>
+                                    <th>Reglage Rétroviseur</th>
+                                    <td>{{ form_widget(form.retroviseur )}}</td>
+                                    <td>{{ form_widget(form.rmqretroviseur )}}</td>
+                                </tr>
+                                <tr>
+                                    <th>14</th>
+                                    <th>Fixation parachoc</th>
+                                    <td>{{ form_widget(form.fixationpara )}}</td>
+                                    <td>{{ form_widget(form.rmqfixationpara )}}</td>
+                                </tr>
+                                <tr>
+                                    <th>15</th>
+                                    <th>Etat du Parachoc</th>
+                                    <td>{{ form_widget(form.etatparachoc )}}</td>
+                                    <td>{{ form_widget(form.rmqetatparachoc )}}</td>
+                                </tr>
+                                <tr>
+                                    <th>16</th>
+                                    <th>Cache feu de route</th>
+                                    <td>{{ form_widget(form.cachefeu )}}</td>
+                                    <td>{{ form_widget(form.rmqcachefeu )}}</td>
+                                </tr>
+                                <tr>
+                                    <th>17</th>
+                                    <th>Grille des bouches d'aeration moteur</th>
+                                    <td>{{ form_widget(form.grillebouches )}}</td>
+                                    <td>{{ form_widget(form.rmqgrillebouches )}}</td>
+                                </tr>
+                                <tr>
+                                    <th>18</th>
+                                    <th>Baguette</th>
+                                    <td>{{ form_widget(form.baguette )}}</td>
+                                    <td>{{ form_widget(form.rmqbaguette )}}</td>
+                                </tr>
+                                <tr>
+                                    <th>19</th>
+                                    <th>Porte réservoir</th>
+                                    <td>{{ form_widget(form.porte )}}</td>
+                                    <td>{{ form_widget(form.rmqporte )}}</td>
+                                </tr>
+                                <tr>
+                                    <th>20</th>
+                                    <th>Essuie glaces & lave glace</th>
+                                    <td>{{ form_widget(form.essui )}}</td>
+                                    <td>{{ form_widget(form.rmqessui )}}</td>
+                                </tr>
+                                <tr>
+                                    <th>***</th>
+                                    <th>Affecter à </th>
+                                    <td class="badge badge-info">{{ form_widget(form.chassis )}}</td>
+                                </tr>
+
+
+                                </tbody>
+                            </table>
+
+                            <div class="offset-4" style="margin-top: 40px ; margin-bottom: 100px">
+                                <input type="submit" value="Create" class="btn btn-outline-primary btn-lg" style="margin-right: 70px"/>
+                                <input type="reset" value="Annuler" class="btn btn-outline-danger btn-lg"/>
+                            </div>
+                            {{ form_end(form) }}
+                        </div>
+
+             <div id="aa" class="col-md-2">
+                 <ul class="list-group" style="position: fixed; background-repeat: no-repeat ">
+                     <li class="list-group-item"><a class="badge badge-info " href="{{ path('accesoirexterieur_index') }}">Retourner à la liste</a></li>
+
+                 </ul>
+             </div>
+             </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}

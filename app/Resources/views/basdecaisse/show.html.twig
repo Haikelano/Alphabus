@@ -9,8 +9,19 @@
         }
     </style>
     <div class="container">
-        <h2>Test Carosserie :</h2>
-                    <div class="row">
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-4 mb-3">Test de Bas de caise
+            <small> <h2> </h2></small>
+        </h1>
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="{{ path('homepage') }}">Home</a>
+            </li>
+            <li class="breadcrumb-item active">Service Bas de caise</li>
+        </ol>
+        <!-- End Page Content -->
+                   <div class="row">
                          <div class="col-md-4">
                              <p><h4><span class="badge badge-secondary">N°Chassis <span class="badge badge-warning">{{ basdecaisse.chassis }}</span></span></h4></p>
                          </div>
@@ -135,8 +146,8 @@
 
           <div id="aa" class="col-md-2">
             <ul class="list-group" style="position: fixed; background-repeat: no-repeat ">
-               <li class="list-group-item"><a href="{{ path('basdecaisse_index') }}">Back to the list</a></li>
-               <li class="list-group-item"><a href="{{ path('basdecaisse_edit', { 'id': basdecaisse.id }) }}">Edit</a></li>
+               <li class="list-group-item"><a href="{{ path('basdecaisse_index') }}">Rétourner à la liste</a></li>
+               <li class="list-group-item"><a href="{{ path('basdecaisse_edit', { 'id': basdecaisse.id }) }}">Modifier</a></li>
             </ul>
           </div>
 

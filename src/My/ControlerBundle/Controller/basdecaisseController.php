@@ -91,6 +91,10 @@ class basdecaisseController extends Controller
         $deleteForm = $this->createDeleteForm($basdecaisse);
         $editForm = $this->createForm('My\ControlerBundle\Form\basdecaisseType', $basdecaisse);
         $editForm->handleRequest($request);
+        $em = $this->getDoctrine()->getManager();
+        $id_chassis=$basdecaisse->getChassis();
+
+        $client = $em->getRepository('MyAlphabusBundle:Affectation')->findBy(array('chassis' => $id_chassis));
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
@@ -99,8 +103,9 @@ class basdecaisseController extends Controller
         }
 
         return $this->render('basdecaisse/edit.html.twig', array(
+            'client' => $client,
             'basdecaisse' => $basdecaisse,
-            'edit_form' => $editForm->createView(),
+            'form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
     }

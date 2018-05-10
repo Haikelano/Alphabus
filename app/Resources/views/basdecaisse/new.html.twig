@@ -3,8 +3,20 @@
 {% block body %}
 
     <div class="container">
-        <h1>Basdecaisse creation</h1>
-                <div class="row">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-4 mb-3">Ajouter le test de Bas de caise
+            <small> <h2> </h2></small>
+        </h1>
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="{{ path('homepage') }}">Home</a>
+            </li>
+            <li class="breadcrumb-item active">Service Bas de caise</li>
+        </ol>
+        <!-- End Page Content -->
+        <div class="row">
             <div class="col-md-10">
                  {{ form_start(form) }}
                 <table class="table  table-striped" style="margin-top: 40px">
